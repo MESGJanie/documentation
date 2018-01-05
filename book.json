@@ -1,3 +1,18 @@
 {
-  "plugins": ["theme-api"]
+  "plugins": ["edit-link", "prism", "-highlight", "github"],
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/mesg-tech/documentation/tree/master",
+      "label": "Edit This Page"
+    },
+    "github": {
+      "url": "https://github.com/mesg-tech/documentation/"
+    }
+  },
+  "links": {
+    "sharing": {
+      "facebook": false,
+      "twitter": false
+    }
+  }
 }
