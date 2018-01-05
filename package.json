@@ -1,0 +1,29 @@
+{
+  "name": "documentation",
+  "version": "1.0.0",
+  "description": "{% include \"./SUMMARY.md\" %}",
+  "main": "index.js",
+  "scripts": {
+    "start": "gitbook serve",
+    "gitbook-install": "gitbook install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mesg-tech/documentation.git"
+  },
+  "author": "Anthony Estebe <contact@anthonyestebe.com> (http://microblog.anthonyestebe.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mesg-tech/documentation/issues"
+  },
+  "homepage": "https://github.com/mesg-tech/documentation#readme",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  },
+  "dependencies": {
+    "gitbook-plugin-edit-link": "^2.0.2",
+    "gitbook-plugin-github": "^2.0.0",
+    "gitbook-plugin-prism": "^2.3.0"
+  }
+}

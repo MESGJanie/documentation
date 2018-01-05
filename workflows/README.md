@@ -1,6 +1,6 @@
 # What is a workflow ?
 
-A workflow is the link between an event from one service to an action on another service.
+A workflow is the link between an event from one service to a command on another service.
 
 Workflows will let you connect anything from any technologies to everything you want.
 
@@ -15,9 +15,9 @@ Also if you are worried about data centralisation and single points of failures,
 There are 4 different steps in a workflow with 2 required and 2 optionals.
 
 1. [Source](./source.md) (required): The event that will trigger this workflow. 
-2. [Filter](./filter.md) (optional): Some filter to select only some event that matches your needs
-3. [Parameters](./parameters.md) (optional): Parameters required to trigger the action
-4. [Action](./action.md) (required): Action to trigger
+2. [Filters](./filters.md) (optional): Some filters to select only some event that matches your needs
+3. [Parameters](./parameters.md) (optional): Parameters required to trigger the command
+4. [Command](./command.md) (required): Command to trigger
 
 ## Exemples of workflows
 

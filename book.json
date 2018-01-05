@@ -14,5 +14,11 @@
       "facebook": false,
       "twitter": false
     }
+  },
+  "variables": {
+    "wallet": "[MESG Wallet](/installation.md)",
+    "endpoints": {
+      "services": "https://mesg.tech/services"
+    }
   }
 }
