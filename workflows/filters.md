@@ -6,7 +6,10 @@ In order to do that you can define some data matching between the data from the 
 
 Filters will be defined with an event's attribute and it's predicate(s). The filter will be valid when all the predicates from all the attributes are true. If the attribute doesn't exists or cannot match the predicate, this predicate will be ignored.
 
-## Data attribute predicates
+The filter will need to be a triplet like follow :
+`attribute <predicate> value`
+
+## List of predicates
 
 #### eq
 > The `eq` predicate accept the event, when the event's data attribute is equal to the value

@@ -8,7 +8,6 @@
 * [What is a workflow ?](./workflows/README.md)
   * [Source](./workflows/source.md)
   * [Filters](./workflows/filters.md)
-  * [Data Binding](./workflows/binding.md)
   * [Command](./workflows/command.md)
 * [Using the interface](./workflows/ui/README.md)
 * [Using the CLI](./workflows/cli/README.md)

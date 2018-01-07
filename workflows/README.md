@@ -14,10 +14,9 @@ Also if you are worried about data centralisation and single points of failures,
 
 There are 4 different steps in a workflow with 2 required and 2 optionals.
 
-1. [Source](./source.md) (required): The event that will trigger this workflow. 
-2. [Filters](./filters.md) (optional): Some filters to select only some event that matches your needs
-3. [Parameters](./parameters.md) (optional): Parameters required to trigger the command
-4. [Command](./command.md) (required): Command to trigger
+1. [Source](./source.md): The event that will trigger this workflow. 
+2. [Filters](./filters.md): Some filters to select only some event that matches your needs
+4. [Command](./command.md): Command to trigger
 
 ## Exemples of workflows
 
