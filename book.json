@@ -1,5 +1,11 @@
 {
-  "plugins": ["edit-link", "prism", "-highlight", "github"],
+  "plugins": [
+    "edit-link",
+    "prism", 
+    "-highlight", 
+    "github",
+    "include-codeblock"
+  ],
   "pluginsConfig": {
     "edit-link": {
       "base": "https://github.com/mesg-tech/documentation/tree/master",
@@ -7,6 +13,9 @@
     },
     "github": {
       "url": "https://github.com/mesg-tech/documentation/"
+    },
+    "include-codeblock": {
+      "template": "default"
     }
   },
   "links": {
@@ -16,9 +25,12 @@
     }
   },
   "variables": {
+    "token": "MESG token",
+    "network": "MESG decentralised network",
     "wallet": "[MESG Wallet](/installation.md)",
     "endpoints": {
-      "services": "https://mesg.tech/services"
+      "services": "https://mesg.tech/services",
+      "validationSchema": "https://github.com/mesg-tech/validation-schema"
     }
   }
 }

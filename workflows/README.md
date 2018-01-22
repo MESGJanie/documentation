@@ -18,9 +18,9 @@ There are 4 different steps in a workflow with 2 required and 2 optionals.
 2. [Filters](./filters.md): Some filters to select only some event that matches your needs
 4. [Command](./command.md): Command to trigger
 
-## Exemples of workflows
+## Workflow examples
 
-1. **When** I receive a payment on Ethereum blockchain, **then** send me an email notification
+1. **When** I receive a payment on Ethereum blockchain, **then** send me a Slack notification
 2. **When** I call a specific webhook **then** trigger a payment in Bitcoin blockchain
 3. **When** I receive a payment on Stripe **then** save it in a spreadsheet
 4. ...

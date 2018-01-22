@@ -4,9 +4,9 @@ The command will be the action executed every time the selected event is trigger
 
 When you want to make complex workflow you might need to trigger multiple commands. For every workflow you will be able to set a single command or a list of commands that will be executed in the order you defined.
 
-###### Exemple
+###### Example
 
-Let's take the exemple of one command `commandX` with the parameters `key` and `value` and suppose that you have one event `eventX` that return the data `eventValue` and you want to `process` this data before send it to `commandX`. You might have a similar workflow :
+Let's take the example of one command `commandX` with the parameters `key` and `value` and suppose that you have one event `eventX` that return the data `eventValue` and you want to `process` this data before send it to `commandX`. You might have a similar workflow :
 
 ```javascript
 └── eventX() // event that you need to connect

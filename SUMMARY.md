@@ -14,6 +14,7 @@
   * [Installation](./workflows/cli/installation.md)
   * [Workflow File](./workflows/cli/file.md)
   * [Validation](./workflows/cli/validation.md)
+  * [Testing](./workflows/cli/testing.md)
   * [Deployment](./workflows/cli/deployment.md)
 * [Using the API](./workflows/api/README.md)
   * [API Endpoint](./workflows/api/endpoint.md)
