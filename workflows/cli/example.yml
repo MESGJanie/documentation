@@ -67,9 +67,10 @@ commands:
     # Parameters needed to execute the command please refers to the service's details 
     # in the MESG Wallet or on the MESG website https://mesg.tech/services
     parameters:
+      data:
+        amount: ${source:amount}
       function: |
-        module.exports = (environment, event) => 
-          ({ amount: event.amount / 1000000000000000000 })
+        export default ({ amount }) => amount / 1000000000000000000
     # OPTIONAL (default: [])
     # List of authorised event command executors from the MESG decentralised network. 
     # Only the following nodes (identified by their id) will be able to process this 
