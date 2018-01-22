@@ -9,7 +9,7 @@
   * [Source](./workflows/source.md)
   * [Filters](./workflows/filters.md)
   * [Command](./workflows/command.md)
-* [Using the interface](./workflows/ui/README.md)
+* [Using the MESG Wallet](./workflows/ui/README.md)
 * [Using the CLI](./workflows/cli/README.md)
   * [Installation](./workflows/cli/installation.md)
   * [Workflow File](./workflows/cli/file.md)
@@ -19,7 +19,9 @@
 * [Using the API](./workflows/api/README.md)
   * [API Endpoint](./workflows/api/endpoint.md)
   * [Authentication](./workflows/api/authentication.md)
-  * [Parameters](./workflows/api/parameters.md)
+  * [Validation](./workflows/api/validation.md)
+  * [Testing](./workflows/api/testing.md)
+  * [Deployment](./workflows/api/deployment.md)
 
 ### Creating Runners
 
