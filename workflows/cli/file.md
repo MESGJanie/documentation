@@ -63,6 +63,10 @@ parameterX: ${env:PARAMETER_X, 42}
 
 If your worflow contains multiple commands to execute, the {{ book.network }} will automatically optimise the workflow to parallelise the commands. In order to parallelise the execution, a dependency graph will be generated with the source event as a root node and for parallelise all the child with the same depth.
 
+#### Instant commands
+
+If a command doesn't have a direct or indirect dependency to the event, this command will be executed from your computer while deploying and will not be executed everytime the workflow starts but will use the value from the result during the deployment.
+
 #### Concurrency
 
 Because of the parralelisation of the command it is not guarantee to have an command executed before another one if they don't have any dependencies. If you want to ensure that a command run after another one you need to create a [workflow variable](#worflow-variables) from this command.
