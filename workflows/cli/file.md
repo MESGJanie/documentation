@@ -18,9 +18,11 @@ Parameters needs to be send with the right type (Number, String, Object, Array, 
 
 Every parameters can be binded to a dynamic value or from the workflow execution or the workflow deployment. Here are the following syntaxes to achieve this.
 
-##### Worflow variables
+##### Workflow variables
 
 Your workflow will need to access variable from the event or some other steps from the workflow. In order to do that you can refer the result directly from your template. The value will be applied during the processing of the workflow.
+
+With the worfklow variables you can have access to the **inputs** of the workflow, the **source** event data or any **command** result 
 
 ```yaml
 source:
@@ -31,16 +33,19 @@ commands:
   processAmount:
     ...
     parameters:
-      amount: ${worflow.source:amount}
+      amount: ${workflow:source.amount}
   notify:
     ...
     parameters:
-      value: ${worflow.processAmount:result}
+      title: ${workflow:inputs.notificationTitle}
+      value: ${workflow:processAmount.result}
+inputs:
+  notificationTitle: "Title for the notification"
 ```
 
 ##### Environment variables
 
-In many case you don't need to write some private data on the file, in case you want to use a versioning system, if you want to have different environments etc... In this case you can use environmental variables. The value will be replace when the worflow is deployed
+In many case you don't need to write some private data on the file, in case you want to use a versioning system, if you want to have different environments etc... In this case you can use environmental variables. The value will be replace when the workflow is deployed
 
 ```yaml
 ...
@@ -61,7 +66,7 @@ parameterX: ${env:PARAMETER_X, 42}
 
 ## Command processing
 
-If your worflow contains multiple commands to execute, the {{ book.network }} will automatically optimise the workflow to parallelise the commands. In order to parallelise the execution, a dependency graph will be generated with the source event as a root node and for parallelise all the child with the same depth.
+If your workflow contains multiple commands to execute, the {{ book.network }} will automatically optimise the workflow to parallelise the commands. In order to parallelise the execution, a dependency graph will be generated with the source event as a root node and for parallelise all the child with the same depth.
 
 #### Instant commands
 
@@ -69,7 +74,7 @@ If a command doesn't have a direct or indirect dependency to the event, this com
 
 #### Concurrency
 
-Because of the parralelisation of the command it is not guarantee to have an command executed before another one if they don't have any dependencies. If you want to ensure that a command run after another one you need to create a [workflow variable](#worflow-variables) from this command.
+Because of the parralelisation of the command it is not guarantee to have an command executed before another one if they don't have any dependencies. If you want to ensure that a command run after another one you need to create a [workflow variable](#workflow-variables) from this command.
 
 #### Cycles
 

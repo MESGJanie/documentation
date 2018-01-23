@@ -51,7 +51,7 @@ commands:
   # REQUIRED
   # Name of your command, this will be used in order to access the result from others
   # commands.
-  convertWeiToEth:
+  generateSlackTitle:
     # REQUIRE
     # Type of service to execute. The list of all available services 
     # can be find in the MESG Wallet or on the MESG website https://mesg.tech/services
@@ -68,9 +68,11 @@ commands:
     # in the MESG Wallet or on the MESG website https://mesg.tech/services
     parameters:
       data:
-        amount: ${source:amount}
+        amount: ${workflow:source.amount}
+        from: ${workflow:source.from}
       function: |
-        export default ({ amount }) => amount / 1000000000000000000
+        export default ({ amount, from }) => 
+          `You received ${amount / 1000000000000000000} ETH from ${from}`
     # OPTIONAL (default: [])
     # List of authorised event command executors from the MESG decentralised network. 
     # Only the following nodes (identified by their id) will be able to process this 
@@ -86,11 +88,19 @@ commands:
     command: notify
     # Parameters for this command
     parameters:
-      webhook: https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXX
-      title: "You received ${convertWeiToEth:amount} ETH from ${source:from}"
+      webhook: ${workflow:inputs.slackEndpoint}
+      title: ${workflow:generateSlackTitle.result}
     
     # OPTIONAL (default: [])
     # List of unauthorised node from the MESG decentralised network. Events from the 
     # given nodes (identified by their id) will never be selected to process this step
     blacklist:
       - RT8t2bUMYKlNzMxnk8yEa0lZNsN5XSkkjHa5/TRS4/zZcHDrTNr3iTOyDXLCwyv3THeN+FKllGvntFRk
+
+# OPTIONAL (default: {})
+# List of input that your commands might need. This is not required and you can directly 
+# set the value from the definition of your command but it might be usefull to keep
+# your workflow clean
+inputs:
+  # Input for slack endpoint
+  slackEndpoint: https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXX
