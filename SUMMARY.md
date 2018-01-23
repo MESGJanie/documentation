@@ -16,12 +16,6 @@
   * [Validation](./workflows/cli/validation.md)
   * [Testing](./workflows/cli/testing.md)
   * [Deployment](./workflows/cli/deployment.md)
-* [Using the API](./workflows/api/README.md)
-  * [API Endpoint](./workflows/api/endpoint.md)
-  * [Authentication](./workflows/api/authentication.md)
-  * [Validation](./workflows/api/validation.md)
-  * [Testing](./workflows/api/testing.md)
-  * [Deployment](./workflows/api/deployment.md)
 
 ### Creating Runners
 
