@@ -16,7 +16,7 @@ There are 4 different steps in a workflow with 2 required and 2 optionals.
 
 1. [Source](./source.md): The event that will trigger this workflow. 
 2. [Filters](./filters.md): Some filters to select only some event that matches your needs
-4. [Command](./command.md): Command to trigger
+4. [Task](./task.md): Task to trigger
 
 ## Workflow examples
 

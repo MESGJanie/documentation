@@ -2,13 +2,13 @@
 
 Before deploying your worflow you might want to test it to ensure that everything is working as expected.
 
-Every time you run some test all the services that you need to execute will be executed on your computer and this service will also be available for the rest of {{ book.network }} so your computer might process some other commands.
+Every time you run some test all the services that you need to execute will be executed on your computer and this service will also be available for the rest of {{ book.network }} so your computer might process some other tasks.
 
 > We recommand to test with a live event in order to have some valid data and then use the previous results from the live event to retry with the custom event if you need to debug your workflow.
 
 ## Testing with a live event
 
-Using the `livetest` command, the source's service will run aditionnaly to the command's services so this might take some ressource from your computed. Also this source's service will be participating for the {{ book.network }}.
+Using the `livetest` command, the source's service will run aditionnaly to the task's services so this might take some ressource from your computed. Also this source's service will be participating for the {{ book.network }}.
 
 ```bash
 mesg-cli livetest workflow.yml

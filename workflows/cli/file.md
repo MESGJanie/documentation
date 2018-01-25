@@ -2,7 +2,7 @@
 
 In order to define your workflow, you can use a `YAML` formatted file that describes all your needs.
 
-This file need to contains a [source event](../source.md) and one or multiple [commands](../command.md)
+This file need to contains a [source event](../source.md) and one or multiple [tasks](../task.md)
 
 [include](./example.yml)
 
@@ -22,14 +22,14 @@ Every parameters can be binded to a dynamic value or from the workflow execution
 
 Your workflow will need to access variable from the event or some other steps from the workflow. In order to do that you can refer the result directly from your template. The value will be applied during the processing of the workflow.
 
-With the worfklow variables you can have access to the **inputs** of the workflow, the **source** event data or any **command** result 
+With the worfklow variables you can have access to the **inputs** of the workflow, the **source** event data or any **task** result 
 
 ```yaml
 source:
   service: Ethereum
   ...
 ...
-commands:
+tasks:
   processAmount:
     ...
     parameters:
@@ -49,7 +49,7 @@ In many case you don't need to write some private data on the file, in case you 
 
 ```yaml
 ...
-commands:
+tasks:
   xxx:
     ...
     parameters:
@@ -64,18 +64,18 @@ You might need to have some default value in case the variable are not present d
 parameterX: ${env:PARAMETER_X, 42}
 ```
 
-## Command processing
+## Task processing
 
-If your workflow contains multiple commands to execute, the {{ book.network }} will automatically optimise the workflow to parallelise the commands. In order to parallelise the execution, a dependency graph will be generated with the source event as a root node and for parallelise all the child with the same depth.
+If your workflow contains multiple tasks to execute, the {{ book.network }} will automatically optimise the workflow to parallelise the tasks. In order to parallelise the execution, a dependency graph will be generated with the source event as a root node and for parallelise all the child with the same depth.
 
-#### Instant commands
+#### Instant tasks
 
-If a command doesn't have a direct or indirect dependency to the event, this command will be executed from your computer while deploying and will not be executed everytime the workflow starts but will use the value from the result during the deployment.
+If a task doesn't have a direct or indirect dependency to the event, this task will be executed from your computer while deploying and will not be executed everytime the workflow starts but will use the value from the result during the deployment.
 
 #### Concurrency
 
-Because of the parralelisation of the command it is not guarantee to have an command executed before another one if they don't have any dependencies. If you want to ensure that a command run after another one you need to create a [workflow variable](#workflow-variables) from this command.
+Because of the parralelisation of the task it is not guarantee to have an task executed before another one if they don't have any dependencies. If you want to ensure that a task run after another one you need to create a [workflow variable](#workflow-variables) from this task.
 
 #### Cycles
 
-Because of the dependency generation your workflow cannot contain two command that depends to each others (even through different depths). If you have a cycle in your workflow, you will have an error while validating or deploying.
+Because of the dependency generation your workflow cannot contain two task that depends to each others (even through different depths). If you have a cycle in your workflow, you will have an error while validating or deploying.

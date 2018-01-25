@@ -1,6 +1,6 @@
 # Filters
 
-Filters are a powerfull way to select only some kind of events. Let's imagine that your application wants to execute a command every time an event occurs but **only** when the data in the event are matching your needs.
+Filters are a powerfull way to select only some kind of events. Let's imagine that your application wants to execute a task every time an event occurs but **only** when the data in the event are matching your needs.
 
 In order to do that you can define some data matching between the data from the event and the filter you want
 
