@@ -21,15 +21,6 @@ source:
   # service's details in the MESG Wallet or on the MESG website 
   # https://mesg.tech/services
   event: onTransaction
-
-  # OPTIONAL (default: {})
-  # List of filters to apply on the event before processing the workflow.
-  # The wokflow will only be triggered if ALL the filters are valid
-  # To know all available filters you can refer to the 
-  # "What is a worfklow ? > Filters" page
-  filters:
-    to:
-      - eq: 0x0000000000000000000000000000000000000000
   
   # OPTIONAL (default: [])
   # List of authorised event emmiters from the MESG decentralised network. Only 
@@ -73,6 +64,17 @@ tasks:
       function: |
         export default ({ amount, from }) => 
           `You received ${amount / 1000000000000000000} ETH from ${from}`
+    
+    # OPTIONAL (default: {})
+    # List of filters to apply before processing the task.
+    # The task will only be triggered if ALL the filters are valid
+    # To know all available filters you can refer to the 
+    # "What is a worfklow ? > Filters" page
+    filters:
+      - attribute: ${workflow:source.from}
+        predicate: eq
+        value: 0x0000000000000000000000000000000000000000
+
     # OPTIONAL (default: [])
     # List of authorised event task executors from the MESG decentralised network. 
     # Only the following nodes (identified by their id) will be able to process this 

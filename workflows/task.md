@@ -1,4 +1,4 @@
-# Task
+# Task(s)
 
 The task will be the action executed every time the selected event is triggerd. Every task will have different purpose and various parameters that you will need to fullfil.
 
@@ -35,6 +35,12 @@ The task from the service that you want execute. This task will be executed by a
 Parameters needs to be set for the task accordingly to the parameters required from the task documentation. If you task needs the parameters `foo` and `bar` you will need to send value for thoses two parameters like `foo=3` and `bar=5`.
 
 In many case you may want to bind the data from the event to the parameter of the task, in this case you will be able to use the data from the event. In case you have a workflow with multiple tasks you will also be able to connect every result from one of the previous task as parameter of the new one.
+
+#### filters
+
+> Object
+
+List of filter to apply before the execution of the task. Only if all the filters are valid then the task will be executed. This let you customise your workflow and add some conditions on your processing. You can check the list of availables filters on the [filter page](./filters.md).
 
 #### whitelist
 

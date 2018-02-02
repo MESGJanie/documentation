@@ -16,12 +16,6 @@ The type of the source to connect, this will be the id of the service to connect
 
 The event from the service that you want to connect. This event will be send from the node of the network and will contains some data that you can find on the description of the event in the service detail that you can find in {{ book.wallet }} or on {{ book.endpoints.services }}.
 
-#### filters
-
-> Object
-
-List of filters to apply on the data from the event. This let you customise you event in order to receive only the one that your workflow needs and rejects all the other one. You can check the list of availables filters on the [filter page](./filters.md).
-
 #### whitelist
 
 > String[] optional
