@@ -1,0 +1,104 @@
+
+# MESG service definition version
+version: 0
+# name of the service
+name: "Ethereum Blockchain"
+requirements:
+  memory: 1024M  # Memory RAM to run the service
+  cpu: 2  # Number of CPU required to run the service
+  disk: 50G  # Disk space to reserve for this service
+# Visibility of the service
+visibility: ALL | USERS | WORKERS | NONE
+# What need to be published
+publish: ALL | SOURCE | CONTAINER | NONE
+# List of events that will be emitted from the worker
+events:
+  transaction:
+    data: # data sent with the event
+      hash:
+        description: "hash ot the transaction"
+        type: String
+      timestamp:
+        description: "timestamp ot the transaction"
+        type: Number
+      from:
+        type: String
+      to:
+        type: String
+      value:
+        type: Number
+# tasks that the service can execute from the application
+tasks:
+  transfer: # name of the command
+    verifiable: true # This task can be executed as a decentralized task
+    inputs: # arguments that the command can accept
+      from:
+        name: "Sender"
+        description: "The address that send the transaction"
+        type: String
+      to:
+        name: "Receiver"
+        type: String
+      amount:
+        type: Number
+        optional: true
+    outputs: # events that this command will trigger
+      transferResult:
+        description: "Transfer succeed"
+        data:
+          txHash:
+            type: String
+      failure:
+        description: "Transfer failed"
+        data:
+          error:
+            type: String
+  methodX:
+    verifiable: false # This task cannot be run as a decentralized task
+    inputs:
+      from:
+        type: String
+      contractAddress:
+        type: String
+      contractArguments:
+        type: JSON
+      amount:
+        type: Number
+        description: "Default value is 42"
+        optional: true
+    secrets:
+      PRIVATE_KEY:
+        type: String
+      ENDPOINT:
+        type: String
+    outputs:
+      methodResult:
+        data: 
+          txHash:
+            type: String
+            optional: true
+            
+transfers:
+  verifiable: false
+  inputs:
+    receiver:
+      type: String
+    tag:
+      type: Number
+  secrets:
+    PRIVATE_KEY:
+      type: String
+    ENDPOINT:
+      type: String
+      
+# services needed to run the service with all dependencies (docker-compose format)
+dependencies:
+  app:
+    image: ./ # Replace by the docker image hash when deployed
+  ethereumNode:
+    image: parity
+    volumes:
+      - "/root/.local/share/io.parity.ethereum" # /!\ Will be bind a folder on the host machine
+    ports:
+      - 8546 # /!\ Will be bind to random exterior port
+      - 30303
