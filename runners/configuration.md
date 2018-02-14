@@ -71,5 +71,49 @@ List of the secrets needed for the service to run. Those secrets are stored dire
 
 If the task is verifiable, a verifiable function should be implemented in order to check that an output is correct according to the inputs. This is really useful in order to verify that a node has correctly executed a task by asking other nodes to verify it.
 
+
+## Transfers
+
+A service can implement the network functionality of transfers (see Transfers for more explanation).
+The implementation is composed of a require action and an optional verification event.
+
+Action
+
+The action is required and has predefined parameters:
+
+- Transfer ID: the transfer ID of this transfer.
+- Inputs: a payload of parameters the service defines. Same structure as Task Inputs.
+- Secrets: a payload of secrets the service defines. Same structure as Task Secrets.
+
+The result is also required and predefined. It can be either:
+
+- Success
+  - Message
+- Error
+  - Message
+
+Verification
+
+If the transaction on this technology is verifiable, the service emits a predefined event that has a structure of:
+
+- Transfer ID: the transfer ID of that was encoded in the transaction
+- Success: Boolean, yes if success, false otherwise.
+- Message: Reason of failure or confirmation
+
+
+## Dependencies
+
+Services can specify internal dependencies like database, cache or blockchain client.
+If docker is used we could use the docker-compose syntax.
+
+
+## Visibility
+
+A service defines who can see it by setting a visibility parameter. The possible values are: all, users, workers, none. If set to users, any user will be able to select the service in a task. If set to workers, any worker will be able to run the service. If set to all, any user and worker will be able to access it. If set to none, the service will be accessible by manually entering its service ID (that will be creating when deploying the service).
+
+
+## Publish
+
+A service defines what is published on the network when deploying by setting a publish parameter. The possible values are: all, source, container, none. If set to source, only the source code will be published (the developer will have to execute the service itself). If set to container, only the container will be published (any worker will be able to run it). If set to all, both the source code and the container will be published. If set to none, only the service config file will be published (the developer will have to execute the service itself).
 [include](./example.yml)
 
