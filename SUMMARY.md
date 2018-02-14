@@ -21,3 +21,4 @@
 
 * [Setup](runners/setup.md)
 * [Deployment](runners/deployment.md)
+* [Configuration](runners/configuration.md)
