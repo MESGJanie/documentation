@@ -1,3 +1,1 @@
-test
-
 {% include "./SUMMARY.md" %}
