@@ -28,6 +28,7 @@
     "token": "MESG token",
     "network": "MESG decentralised network",
     "wallet": "[MESG Wallet](/installation.md)",
+    "cli": "MESG CLI",
     "endpoints": {
       "services": "https://mesg.tech/services",
       "validationSchema": "https://github.com/mesg-tech/validation-schema"

@@ -4,22 +4,29 @@
 * [Installation](installation.md)
 * [What is MESG ?](intro.md)
 
-## Create workflows
+## Create a Workflow
 
-* [What is a workflow ?](./workflows/README.md)
-  * [Source](./workflows/source.md)
-  * [Task\(s\)](./workflows/task.md)
-* [Using the MESG Application](./workflows/ui/README.md)
-* [Using the CLI](./workflows/cli/README.md)
-  * [Installation](./workflows/cli/installation.md)
-  * [Workflow File](./workflows/cli/file.md)
-  * [Validation](./workflows/cli/validation.md)
-  * [Testing](./workflows/cli/testing.md)
-  * [Deployment](./workflows/cli/deployment.md)
+* [What is a workflow ?](./workflow/README.md)
+  * [Source](./workflow/source.md)
+  * [Task\(s\)](./workflow/task.md)
+* [Using the MESG Application](./workflow/ui/README.md)
+* [Using the MESG CLI](./workflow/cli/README.md)
+  * [Installation](./workflow/cli/installation.md)
+  * [Workflow File](./workflow/cli/file.md)
+  * [Validation](./workflow/cli/validation.md)
+  * [Testing](./workflow/cli/testing.md)
+  * [Deployment](./workflow/cli/deployment.md)
 
-## Create Services
+## Create a Service
 
-* [Setup](runners/setup.md)
-* [Deployment](runners/deployment.md)
-* [Configuration](runners/configuration.md)
+* [What is a Service ?](./service/README.md)
+* [Setup](./service/setup.md)
+* [Deployment](./service/deployment.md)
+* [Configuration](./service/configuration.md)
 
+## Run a Node
+
+* [What is a Node ?](./node/README.md)
+* [Why should I run a Node ?](./node/why.md)
+* [Run a simple Node](./node/simple.md)
+* [Run an high availability Node](./node/high-availability.md)

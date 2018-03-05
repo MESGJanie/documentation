@@ -115,5 +115,7 @@ A service defines who can see it by setting a visibility parameter. The possible
 ## Publish
 
 A service defines what is published on the network when deploying by setting a publish parameter. The possible values are: all, source, container, none. If set to source, only the source code will be published (the developer will have to execute the service itself). If set to container, only the container will be published (any worker will be able to run it). If set to all, both the source code and the container will be published. If set to none, only the service config file will be published (the developer will have to execute the service itself).
+
+# Example of service
 [include](./example.yml)
 

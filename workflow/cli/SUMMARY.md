@@ -1,4 +1,4 @@
-# Create a Worflow with the CLI
+# Create a Worflow with the {{ book.cli }}
 
 * [Installation](./installation.md)
 * [Workflow File](./file.md)
