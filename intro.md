@@ -8,9 +8,9 @@ The goal of MESG is to help building some high quality applications that are not
 
 MESG is also a set of tools that you can use in order to create your different workflows. If you are a developer and want to create complex workflows you should definitely check the CLI, otherwise you can anytime create your workflow using the CLI Application.
 
-
-
 ## A decentralized infrastructure
+
+MESG is a decentralized infrastructure based on Blockchain technology and this means that your application is secure and not controlled by anyone else than you \(and the people you want to give access to\). This also means that the infrastructure heavily rely on **YOU** because you will be the ones 
 
 
 
