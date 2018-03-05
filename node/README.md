@@ -4,7 +4,7 @@ A Node is an application running and registered on the MESG Network. Nodes are i
 
 
 
-By running the MESG {{ book.wallet }} you will be a node of the MESG Network but still not really participating to the Network. Participating to the network might use some resources on your computer so this should be an action that only you can take.
+By running the {{ book.wallet }} you will be a node of the MESG Network but still not really participating to the Network. Participating to the network might use some resources on your computer so this should be an action that only you can take.
 
 
 
