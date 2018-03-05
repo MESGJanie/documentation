@@ -20,7 +20,7 @@ As you can see your node will have a big responsibility in the MESG Network, in 
 
 #### Stake
 
-The stake is a system that "punish" bad actors in the Network. Every Node of the Network needs to deposit a certain amount of {{ book.token }} to show their sincerity. If they behave correctly they will be able to withdraw their deposit and recover 100% of it. If they misbehave, for every bad behavior they had, a penalty will be applied and a part of their stake will be lost and if there is too many bad behaviors the full stake might be taken.
+The stake is a system that "punish" bad actors in the Network. Every Node of the Network needs to deposit a certain amount of {{ books.token }} to show their sincerity. If they behave correctly they will be able to withdraw their deposit and recover 100% of it. If they misbehave, for every bad behavior they had, a penalty will be applied and a part of their stake will be lost and if there is too many bad behaviors the full stake might be taken.
 
 #### Period of time
 
