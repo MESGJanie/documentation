@@ -22,6 +22,9 @@ MESG requires [Docker](https://www.docker.com/) to run on your machine.
 
 If you don't have Docker installed on your machine yet, go and download it now from the official website:
 
-- [Mac OS](https://www.docker.com/docker-mac)
-- [Windows](https://www.docker.com/docker-windows)
-- [Other](https://docs.docker.com/engine/installation/)
+* [Mac OS](https://www.docker.com/docker-mac)
+* [Windows](https://www.docker.com/docker-windows)
+* [Other](https://docs.docker.com/engine/installation/)
+
+
+

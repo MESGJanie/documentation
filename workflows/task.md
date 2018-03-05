@@ -40,7 +40,7 @@ In many case you may want to bind the data from the event to the parameter of th
 
 > Object
 
-List of filter to apply before the execution of the task. Only if all the filters are valid then the task will be executed. This let you customise your workflow and add some conditions on your processing. You can check the list of availables filters on the [filter page](./filters.md).
+List of filter to apply before the execution of the task. Only if all the filters are valid then the task will be executed. This let you customize your workflow and add some conditions on your processing. Every filters will be obfuscated based on the hashing of the value.
 
 #### whitelist
 
