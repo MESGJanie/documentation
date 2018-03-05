@@ -10,7 +10,7 @@ MESG is also a set of tools that you can use in order to create your different w
 
 ## A decentralized infrastructure
 
-MESG is a decentralized infrastructure based on Blockchain technology and this means that your application is secure and not controlled by anyone else than you \(and the people you want to give access to\). This also means that the infrastructure heavily rely on **YOU** because you will be the ones 
+MESG is a decentralized infrastructure based on Blockchain technology and this means that your application is secure and not controlled by anyone else than you \(and the people you want to give access to\). This also means that the infrastructure heavily rely on **YOU.**
 
-
+The MESG infrastructure will be running on every single user of the application and the more user are participating in the network, the more secure your workflows will be secure so we highly encourage you to run the application and to start some services. You can find more details on how to run the application and run services here.
 

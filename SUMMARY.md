@@ -4,7 +4,7 @@
 * [Installation](installation.md)
 * [What is MESG ?](intro.md)
 
-## Creating workflows
+## Create workflows
 
 * [What is a workflow ?](./workflows/README.md)
   * [Source](./workflows/source.md)
@@ -17,7 +17,7 @@
   * [Testing](./workflows/cli/testing.md)
   * [Deployment](./workflows/cli/deployment.md)
 
-## Creating Runners
+## Create Services
 
 * [Setup](runners/setup.md)
 * [Deployment](runners/deployment.md)
