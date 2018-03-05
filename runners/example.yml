@@ -14,6 +14,8 @@ publish: ALL | SOURCE | CONTAINER | NONE
 # List of events that will be emitted from the worker
 events:
   transaction:
+    title: "On new transaction"
+    description: "Listen to every new transactions on the Ethereum blockchain"
     data: # data sent with the event
       hash:
         description: "hash ot the transaction"
@@ -29,7 +31,11 @@ events:
         type: Number
 # tasks that the service can execute from the application
 tasks:
-  transfer: # name of the command
+  transaction: # name of the command
+    title: "Create and send a transaction"
+    description: "This will create and send a transaction on the Ethereum network"
+    fee: 10 MESG # Fee to pay in order to execute this task
+    payable: true # Mark this task as payable, workflows will be able to send some MESG through this transaction
     verifiable: true # This task can be executed as a decentralized task
     inputs: # arguments that the command can accept
       from:
@@ -42,18 +48,23 @@ tasks:
       amount:
         type: Number
         optional: true
+    secrets:
+      PRIVATE_KEY:
+        description: "The address that will be used to sign the transaction"
+        type: String
     outputs: # events that this command will trigger
-      transferResult:
-        description: "Transfer succeed"
+      transactionResult:
+        description: "Transaction succeed"
         data:
           txHash:
             type: String
       failure:
-        description: "Transfer failed"
+        description: "Transaction failed"
         data:
           error:
             type: String
   methodX:
+    fee: 5 MESG
     verifiable: false # This task cannot be run as a decentralized task
     inputs:
       from:
@@ -66,31 +77,12 @@ tasks:
         type: Number
         description: "Default value is 42"
         optional: true
-    secrets:
-      PRIVATE_KEY:
-        type: String
-      ENDPOINT:
-        type: String
     outputs:
       methodResult:
         data: 
           txHash:
             type: String
             optional: true
-            
-transfers:
-  verifiable: false
-  inputs:
-    receiver:
-      type: String
-    tag:
-      type: Number
-  secrets:
-    PRIVATE_KEY:
-      type: String
-    ENDPOINT:
-      type: String
-      
 # services needed to run the service with all dependencies (docker-compose format)
 dependencies:
   app:
