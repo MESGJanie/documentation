@@ -1,14 +1,15 @@
 # Summary
 
+* [Introduction](README.md)
 * [Installation](installation.md)
 * [What is MESG ?](intro.md)
 
-### Creating workflows
+## Creating workflows
 
 * [What is a workflow ?](./workflows/README.md)
   * [Source](./workflows/source.md)
-  * [Task(s)](./workflows/task.md)
-* [Using the MESG Wallet](./workflows/ui/README.md)
+  * [Task\(s\)](./workflows/task.md)
+* [Using the MESG Application](./workflows/ui/README.md)
 * [Using the CLI](./workflows/cli/README.md)
   * [Installation](./workflows/cli/installation.md)
   * [Workflow File](./workflows/cli/file.md)
@@ -16,8 +17,9 @@
   * [Testing](./workflows/cli/testing.md)
   * [Deployment](./workflows/cli/deployment.md)
 
-### Creating Runners
+## Creating Runners
 
 * [Setup](runners/setup.md)
 * [Deployment](runners/deployment.md)
 * [Configuration](runners/configuration.md)
+
