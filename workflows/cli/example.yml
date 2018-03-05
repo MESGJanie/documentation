@@ -68,12 +68,9 @@ tasks:
     # OPTIONAL (default: {})
     # List of filters to apply before processing the task.
     # The task will only be triggered if ALL the filters are valid
-    # To know all available filters you can refer to the 
-    # "What is a worfklow ? > Filters" page
     filters:
-      - attribute: ${workflow:source.from}
-        predicate: eq
-        value: 0x0000000000000000000000000000000000000000
+      data:
+        from: 0x1341341973194938491371937311397314931971
 
     # OPTIONAL (default: [])
     # List of authorised event task executors from the MESG decentralised network. 

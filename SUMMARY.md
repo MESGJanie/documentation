@@ -8,7 +8,6 @@
 * [What is a workflow ?](./workflows/README.md)
   * [Source](./workflows/source.md)
   * [Task(s)](./workflows/task.md)
-  * [Filters](./workflows/filters.md)
 * [Using the MESG Wallet](./workflows/ui/README.md)
 * [Using the CLI](./workflows/cli/README.md)
   * [Installation](./workflows/cli/installation.md)
