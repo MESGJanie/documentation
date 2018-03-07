@@ -9,6 +9,7 @@
 * [What is a workflow ?](./workflow/README.md)
   * [Source](./workflow/source.md)
   * [Task\(s\)](./workflow/task.md)
+  * [Use cases](./workflow/use-case.md)
 * [Using the MESG Application](./workflow/ui/README.md)
 * [Using the MESG CLI](./workflow/cli/README.md)
   * [Installation](./workflow/cli/installation.md)

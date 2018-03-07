@@ -8,21 +8,23 @@ Every time you run some test all the services that you need to execute will be e
 
 ## Testing with a live event
 
-Using the `livetest` command, the source's service will run aditionnaly to the task's services so this might take some ressource from your computed. Also this source's service will be participating for the {{ book.network }}.
+The `test` command have different options and always have the workflow file you want to test.
 
-```bash
-mesg-cli livetest workflow.yml
+Using the `test` command, the source's service will run aditionnaly to the task's services so this might take some ressource from your computed.
+
+During the testing, no stake will be taken in order to start the services and the services you will be running will not participate to the network.
+
+#### Test a specific event
+
+If you want to try your workflow with a specific event you can run the following command:
+```
+mesg-cli test --event event.json workflow.yml
 ```
 
-Using the `livetest` command, all the event processed that matches your workflow will be dumped as file in order to let you reuse them with a [custom event](#testing-with-a-custom-event)
+#### Test a live event 
 
-##### Warning
-The live event cannot be use to process your workflow, the live event testing might stop after a certain time of inactivity and the events receive will not be validated by the MESG concensus so the event might be invalid.
+When you want to test that your workflow is working fine with any events you are trying to connect to you can run the following command:
 
-## Testing with a custom event
-
-With a `test` command, the source's service will not run, and the test will assume that the json file is valid and have the data that the source's service might emit.
-
-```bash
-mesg-cli test workflow.yml eventfile.json
+```
+mesg-cli test --live workflow.yml
 ```

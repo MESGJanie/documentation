@@ -10,19 +10,12 @@ If you want to connect different services together even comming from different t
 
 Also if you are worried about data centralisation and single points of failures, workflows are great because running in a secure decentralised architecture.
 
+You can find a list of potential use case [here](./use-case.md)
+
 ## Steps in a workflow
 
 There are 4 different steps in a workflow with 2 required and 2 optionals.
 
 1. [Source](./source.md): The event that will trigger this workflow. 
 2. [Task](./task.md): Task to trigger
-
-## Workflow examples
-
-1. **When** I receive a payment on Ethereum blockchain, **then** send me a Slack notification
-2. **When** I call a specific webhook **then** trigger a payment in Bitcoin blockchain
-3. **When** I receive a payment on Stripe **then** save it in a spreadsheet
-4. ...
-
-
 
