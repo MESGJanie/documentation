@@ -28,3 +28,5 @@ When you want to test that your workflow is working fine with any events you are
 ```
 mesg-cli workflow test --live workflow.yml
 ```
+
+**Note**: Every live event will be stored as a file and can be re-use as an event flag
