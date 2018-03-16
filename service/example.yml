@@ -16,6 +16,9 @@ events:
   transaction:
     title: "On new transaction"
     description: "Listen to every new transactions on the Ethereum blockchain"
+    fees: # TODO here or in task
+      developer: 1 MESG
+      emitters: 1 MESG
     data: # data sent with the event
       hash:
         description: "hash ot the transaction"
@@ -34,9 +37,12 @@ tasks:
   transaction: # name of the command
     title: "Create and send a transaction"
     description: "This will create and send a transaction on the Ethereum network"
-    fee: 10 MESG # Fee to pay in order to execute this task
     payable: true # Mark this task as payable, workflows will be able to send some MESG through this transaction
     verifiable: true # This task can be executed as a decentralized task
+    fees: # Fee to pay in order to execute this task
+      developer: 1 MESG
+      validator: 1 MESG
+      executor: 10 MESG
     inputs: # arguments that the command can accept
       from:
         name: "Sender"
@@ -66,6 +72,9 @@ tasks:
   methodX:
     fee: 5 MESG
     verifiable: false # This task cannot be run as a decentralized task
+    fees:
+      developer: 0.1 MESG
+      executor: 1 MESG
     inputs:
       from:
         type: String
