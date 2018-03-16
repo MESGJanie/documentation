@@ -7,7 +7,7 @@ Each deployment will cost you a small amount of {{ book.token }} be aware that t
 You can deploy your workflow using the command
 
 ```bash
-mesg-cli deploy worfklow.yml
+mesg-cli workflow deploy worfklow.yml
 ```
 
 If your workflow is valid it will be deployed through the {{ book.network }} and will be ready to be executed
