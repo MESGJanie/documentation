@@ -20,3 +20,5 @@ mesg-cli service publish ./PATH_TO_SERVICE_FOLDER
 
 
 
+**TODO: add update system**
+
