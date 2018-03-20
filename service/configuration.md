@@ -1,6 +1,6 @@
 # Service File
 
-To define a service, you need to create a specific folder with a `mesg.yml` file that describes its functionalities. This file should/may contains the following informations in a `YAML `syntax.
+To define a service, you need to create a specific folder with a `mesg.yml` file that describes its functionalities. This file should/may contains the following informations in a `YAML`syntax.
 
 ## Name
 
@@ -116,7 +116,7 @@ If the transaction on this technology is verifiable, the service emits a predefi
 Services can specify internal dependencies like database, cache or blockchain client.  
 If docker is used we could use the docker-compose syntax.
 
-# Example of service
+# Example of a service file
 
 [include](./example.yml)
 
