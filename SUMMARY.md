@@ -19,7 +19,7 @@
 ## Create a Service
 
 * [What is a Service ?](./service/README.md)
-* [Setup](./service/setup.md)
+* [Create a Service](./service/setup.md)
 * [Deployment](./service/deployment.md)
 * [Configuration](./service/configuration.md)
 
@@ -28,3 +28,4 @@
 * [What is a Node ?](./node/README.md)
 * [Why should I run a Node ?](./node/why.md)
 * [Deploy a Node](./installation/node.md)
+
