@@ -10,7 +10,13 @@ To publish a service, run the command:
 mesg-cli service publish
 ```
 
-If your service is valid, it will be published on the Network.
+The first time you publish the service, it will be publish as a new service and an unique service Id will be created. This Id will be saved in a `.mesg` file.
+
+When publishing an already published service \(when a `.mesg` file containing the service Id exist\), the service will be updated on the Network. Users that use this service, will have to manually update their workflow to use the last service version.
+
+A version Id is created every time you publish the service. This version id is also saved in the `.mesg` file\).
+
+---
 
 By default, the `publish` command looks in the **current folder** for the `mesg.yml` file. If you want to run it in a different folder, you can specify the path to your service folder at the end of any command like so:
 
@@ -19,6 +25,4 @@ mesg-cli service publish ./PATH_TO_SERVICE_FOLDER
 ```
 
 
-
-**TODO: add update system**
 
