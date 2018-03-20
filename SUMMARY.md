@@ -13,15 +13,17 @@
   * [Installation](./workflow/cli/installation.md)
   * [Workflow File](./workflow/cli/file.md)
   * [Validation](./workflow/cli/validation.md)
-  * [Testing](./workflow/cli/testing.md)
+  * [Test](./workflow/cli/test.md)
   * [Deployment](./workflow/cli/deployment.md)
 
 ## Service
 
-* [What is a Service ?](./service/README.md)
-* [Create a Service](./service/setup.md)
+* [What is a Service?](./service/README.md)
+* [Create a Service](./service/create.md)
+* [Service File](./service/configuration.md)
+* [Validation](service/validation.md)
+* [Test](service/test.md)
 * [Deployment](./service/deployment.md)
-* [Configuration](./service/configuration.md)
 
 ## Node
 
