@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [What is MESG ?](intro.md)
 
-## Create a Workflow
+## Workflow
 
 * [What is a workflow ?](./workflow/README.md)
   * [Source](./workflow/source.md)
@@ -16,16 +16,16 @@
   * [Testing](./workflow/cli/testing.md)
   * [Deployment](./workflow/cli/deployment.md)
 
-## Create a Service
+## Service
 
 * [What is a Service ?](./service/README.md)
 * [Create a Service](./service/setup.md)
 * [Deployment](./service/deployment.md)
 * [Configuration](./service/configuration.md)
 
-## Run a Node
+## Node
 
 * [What is a Node ?](./node/README.md)
 * [Why should I run a Node ?](./node/why.md)
-* [Deploy a Node](./installation/node.md)
+* [Run a Node](./installation/node.md)
 
