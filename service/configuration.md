@@ -1,6 +1,6 @@
 # Service File
 
-To define a service, you need to create a folder with a `mesg.yml` file that describes its functionalities. This file should/may contains the following informations.
+To define a service, you need to create a specific folder with a `mesg.yml` file that describes its functionalities. This file should/may contains the following informations.
 
 ## Name
 
