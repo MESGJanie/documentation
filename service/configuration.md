@@ -1,5 +1,7 @@
 # Service File
 
+To define a service, you need to create a `YAML` file that describes its functionalities. This file should/may contains the following informations.
+
 ## Name
 
 A service has a name chosen by the developer. This name is for user to identify the service is a nice human way.
@@ -11,6 +13,14 @@ Each service have 2 unique identifiers: service ID and version ID. Both are gene
 ## Computation requirements
 
 Services can specify its cpu, memory and disk requirements. The Application will check if the requirements are compatible with the machine it is running on.
+
+## Visibility
+
+A service defines who can see it by setting a visibility parameter. The possible values are: all, users, workers, none. If set to users, any user will be able to select the service in a task. If set to workers, any worker will be able to run the service. If set to all, any user and worker will be able to access it. If set to none, the service will be accessible by manually entering its service ID \(that will be creating when deploying the service\).
+
+## Publish
+
+A service defines what is published on the network when deploying by setting a publish parameter. The possible values are: all, source, container, none. If set to source, only the source code will be published \(the developer will have to execute the service itself\). If set to container, only the container will be published \(any worker will be able to run it\). If set to all, both the source code and the container will be published. If set to none, only the service config file will be published \(the developer will have to execute the service itself\).
 
 ## Events
 
@@ -105,14 +115,6 @@ If the transaction on this technology is verifiable, the service emits a predefi
 
 Services can specify internal dependencies like database, cache or blockchain client.  
 If docker is used we could use the docker-compose syntax.
-
-## Visibility
-
-A service defines who can see it by setting a visibility parameter. The possible values are: all, users, workers, none. If set to users, any user will be able to select the service in a task. If set to workers, any worker will be able to run the service. If set to all, any user and worker will be able to access it. If set to none, the service will be accessible by manually entering its service ID \(that will be creating when deploying the service\).
-
-## Publish
-
-A service defines what is published on the network when deploying by setting a publish parameter. The possible values are: all, source, container, none. If set to source, only the source code will be published \(the developer will have to execute the service itself\). If set to container, only the container will be published \(any worker will be able to run it\). If set to all, both the source code and the container will be published. If set to none, only the service config file will be published \(the developer will have to execute the service itself\).
 
 # Example of service
 
