@@ -1,12 +1,20 @@
 # Validation {#validation}
 
-Before each deployment your file will be verified by the MESG CLI but you can check anytime if your file is well formatted and valid using the following command:
+Before deployment, the `mesg.yml` file is verified for syntax verification.
+
+You can also check it manually using the following command:
 
 ```
-mesg-cli service validate ./service.yml
+mesg-cli service validate
 ```
 
-This command will validate your file and let you know if there is any error.
+By default, the `validate` command looks in the **current folder** for the `mesg.yml` file. If you want to run it in a different folder, you can specify the path to your service folder at the end of any command like so:
 
-All definitions can be found in the [Service File](/./service/configuration.md) page.
+```bash
+mesg-cli service validate ./PATH_TO_SERVICE_FOLDER
+```
+
+
+
+All the definitions of the `mesg.yml` file can be found in the [Service File](/./service/configuration.md) page.
 
