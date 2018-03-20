@@ -10,7 +10,7 @@ mesg-cli service test
 
 This command will start your service \(the docker container of your service\), wait for your service to emit the `started` system event, and then will log any event the Application is receiving from your service. To quit, press `ctrl+c`.
 
-By default, the `test`command looks in the **current folder** for the `mesg.yml` file. If you want to run it in a different folder, you can specify the path to the service folder at the end of any command like so:
+By default, the `test`command looks in the **current folder** for the `mesg.yml` file. If you want to run it in a different folder, you can specify the path to your service folder at the end of any command like so:
 
 ```bash
 mesg-cli service test ./PATH_TO_SERVICE_FOLDER
@@ -40,7 +40,7 @@ You can also provide the path to a file containing the `inputs` and `secrets`:
 mesg-cli service test --task myServiceTaskName --data ./PATH_TO_DATA_FILE.yml
 ```
 
-The file should be a `yaml `with a format like:
+The file should be a `yaml`with a format like:
 
 ```yml
 inputs:
