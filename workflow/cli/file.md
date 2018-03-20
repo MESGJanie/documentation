@@ -2,7 +2,7 @@
 
 In order to define your workflow, you can use a `YAML` formatted file that describes all your needs.
 
-This file need to contains a [source event](../source.md) and one or multiple [tasks](../task.md)
+This file needs to contain a [source event](../source.md) and one or multiple [tasks](../task.md)
 
 [include](./example.yml)
 
