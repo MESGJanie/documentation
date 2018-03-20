@@ -2,30 +2,30 @@
 
 Before deploying your service you want to test it to ensure that everything is working as expected.
 
-The `test `command have different options but always requires the path to the service file you want to test.
+The `test`command have different options but always requires the path to the service file you want to test.
 
-## Test container/docker
+## Test start service
 
 To test that the Application is able to start your service, run the command:
 
 ```
-mesg-cli service test service.yml
+mesg-cli service test ./service.yml
 ```
 
-This command will start your service \(the docker container of your service\), wait for your service to emit the `started` systen event, and then stop it.
+This command will start your service \(the docker container of your service\), wait for your service to emit the `started` system event, and then stop it.
 
 ## Test events
 
-To 
+To
 
 ```
-mesg-cli service test service.yml --event
+mesg-cli service test ./service.yml --event
 ```
 
 If you want to try your workflow with a specific event you can run the following command:
 
 ```
-mesg-cli service test service.yml --event myServiceEventName
+mesg-cli service test ./service.yml --event myServiceEventName
 ```
 
 ## Test a task
