@@ -14,7 +14,6 @@
   * [Workflow File](./workflow/cli/file.md)
   * [Validation](./workflow/cli/validation.md)
   * [Test](./workflow/cli/test.md)
-  * [Deployment](./workflow/cli/deployment.md)
 
 ## Service
 
@@ -24,7 +23,7 @@
 * [Service File](./service/configuration.md)
 * [Validation](service/validation.md)
 * [Test](service/test.md)
-* [Deployment](./service/deployment.md)
+* [Publish](./service/publish.md)
 
 ## Node
 
