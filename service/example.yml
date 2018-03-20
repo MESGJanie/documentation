@@ -14,7 +14,7 @@ publish: ALL | SOURCE | CONTAINER | NONE
 # List of events that will be emitted from the worker
 events:
   transaction:
-    title: "On new transaction"
+    name: "On new transaction"
     description: "Listen to every new transactions on the Ethereum blockchain"
     fees: # TODO here or in task
       developer: 1 MESG
@@ -35,7 +35,7 @@ events:
 # tasks that the service can execute from the application
 tasks:
   transaction: # name of the command
-    title: "Create and send a transaction"
+    name: "Create and send a transaction"
     description: "This will create and send a transaction on the Ethereum network"
     payable: true # Mark this task as payable, workflows will be able to send some MESG through this transaction
     verifiable: true # This task can be executed as a decentralized task
@@ -70,7 +70,6 @@ tasks:
           error:
             type: String
   methodX:
-    fee: 5 MESG
     verifiable: false # This task cannot be run as a decentralized task
     fees:
       developer: 0.1 MESG
@@ -81,7 +80,7 @@ tasks:
       contractAddress:
         type: String
       contractArguments:
-        type: JSON
+        type: Object
       amount:
         type: Number
         description: "Default value is 42"
@@ -95,7 +94,7 @@ tasks:
 # services needed to run the service with all dependencies (docker-compose format)
 dependencies:
   app:
-    image: ./ # Replace by the docker image hash when deployed
+    image: my-docker-image
   ethereumNode:
     image: parity
     volumes:
