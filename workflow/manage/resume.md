@@ -1,9 +1,9 @@
 # Resume a workflow
 
-To resume the  a previously paused workflow, run the command:
+To resume new executions of a previously paused workflow, run the command:
 
 ```bash
-mesg-cli workflow pause WORKFLOW_ID
+mesg-cli workflow resume WORKFLOW_ID
 ```
 
 **TO DO: **description
