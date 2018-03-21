@@ -16,7 +16,7 @@
   * [Deploy](./workflow/create/deploy.md)
 * [Manage your workflows](./workflow/manage/README.md)
   * [List](./workflow/manage/list.md)
-  * [Topup](./workflow/manage/topup.md)
+  * [Top up](./workflow/manage/topup.md)
   * [Kill](./workflow/manage/kill.md)
   * [Pause](./workflow/manage/pause.md)
   * [Resume](./workflow/manage/resume.md)
