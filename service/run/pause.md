@@ -6,9 +6,9 @@ To pause a service, run the command:
 mesg-cli service pause SERVICE_ID
 ```
 
-This command will stop the docker container, unregister from the Network that your node is running this service.
+This command will stop the docker container and tell the Network that your node has pause this service.
 
-You will **NOT** get your stake back immediately. You will get your remaining stake only after a delay. See [stake explanation](/service/run/README.md).
+You will **NOT** get your stake back with this command. The goal of this command is to give you an opportunity to stop running a service for a short period of time without losing your stake.
 
 **TODO:** add accountable system
 
