@@ -1,4 +1,4 @@
-# Detail of a published service
+# Detail of a service
 
 To get the details of a specific published service, run the command:
 
