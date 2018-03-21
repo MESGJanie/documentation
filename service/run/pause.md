@@ -10,7 +10,7 @@ This command will stop the docker container and tell the Network that your node 
 
 You will **NOT** get your stake back with this command. The goal of this command is to give you an opportunity to stop running a service for a short period of time without losing your stake.
 
-When a service is paused, the stake duration count is also pause.
+When a service is paused, the stake duration count is also paused.
 
 When you tell the Application to quit, it will run this command for every started service.
 
