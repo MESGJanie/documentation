@@ -22,7 +22,7 @@ If you want to try your workflow with a specific event you can run the following
 mesg-cli workflow test --event event.json ./workflow.yml
 ```
 
-#### Test a live event 
+#### Test a live event
 
 When you want to test that your workflow is working fine with any events you are trying to connect to you can run the following command:
 
@@ -31,3 +31,4 @@ mesg-cli workflow test --live ./workflow.yml
 ```
 
 **Note**: Every live event will be stored as a file and can be re-use as an event flag
+
