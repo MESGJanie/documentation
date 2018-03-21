@@ -1,6 +1,6 @@
-# Pause a workflow
+# Resume a workflow
 
-To stop new executions of a workflow without killing, run the command:
+To resume the  a previously paused workflow, run the command:
 
 ```bash
 mesg-cli workflow pause WORKFLOW_ID
