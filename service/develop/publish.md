@@ -24,5 +24,7 @@ By default, the `publish` command looks in the **current folder** for the `mesg.
 mesg-cli service publish ./PATH_TO_SERVICE_FOLDER
 ```
 
+**TODO:** add accountable system
 
+**TODO:** add confirmable system
 
