@@ -27,7 +27,7 @@
 * [Run published service](service/run-published-service.md)
   * [List](service/run-published-service/list.md)
   * Start
-  * Stop
+  * [Stop](service/run-published-service/stop.md)
   * Pause
   * Resume
 
