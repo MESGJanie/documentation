@@ -25,7 +25,7 @@
   * [Test](service/test.md)
   * [Publish](./service/publish.md)
 * [Run published service](service/run-published-service.md)
-  * List
+  * [List](service/run-published-service/list.md)
   * Start
   * Stop
   * Pause
