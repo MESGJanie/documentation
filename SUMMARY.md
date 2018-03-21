@@ -26,6 +26,7 @@
   * [Publish](./service/develop/publish.md)
 * [Run published service](service/run/README.md)
   * [List](service/run/list.md)
+  * [Detail](service/run/detail.md)
   * [Start](service/run/start.md)
   * [Stop](service/run/stop.md)
   * [Pause](service/run/pause.md)
