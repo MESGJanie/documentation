@@ -10,7 +10,7 @@ This command will return all published services with basic information. To have 
 
 Optionally, you can filter the services published by a specific developer:
 
-```
+```bash
 mesg-cli service list --account ACCOUNT_ADDRESS
 ```
 
