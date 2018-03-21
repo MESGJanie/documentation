@@ -8,5 +8,5 @@ mesg-cli workflow detail WORKFLOW_ID
 
 **TO DO: **description
 
-**TO DO: **can it be merge with logs?
+**TO DO: **can it be merge with logs command?
 
