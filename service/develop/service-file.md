@@ -118,5 +118,5 @@ If docker is used we could use the docker-compose syntax.
 
 # Example of a service file
 
-[include](./example.yml)
+[include](./mesg.yml)
 
