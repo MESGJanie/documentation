@@ -1,4 +1,4 @@
-# Validation
+# Validate
 
 Before each deployment your file will be verified by the {{ book.cli }} but you can at anytime check if your file is well formatted and valid using the following command :
 

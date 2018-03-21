@@ -6,9 +6,9 @@ Workflows will let you connect anything from any technologies to everything you 
 
 ## When should I use workflows ?
 
-If you want to connect different services together even comming from different technologies but you have no skills in how to connect with thoses technologies or if you are a company or developer that want to connect different services but don't want to loose a lot of time to learn all those technologies and how to interact with it in order to just focus on your most important work.
+If you want to connect different services together even coming from different technologies but you have no skills in how to connect with those technologies or if you are a company or developer that want to connect different services but don't want to loose a lot of time to learn all those technologies and how to interact with it in order to just focus on your most important work.
 
-Also if you are worried about data centralisation and single points of failures, workflows are great because running in a secure decentralised architecture.
+Also if you are worried about data centralization and single points of failures, workflows are great because running in a secure decentralized architecture.
 
 You can find a list of potential use case [here](./use-case.md)
 

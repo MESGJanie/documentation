@@ -1,6 +1,6 @@
 # Test
 
-Before deploying your worflow you want to test it to ensure that everything is working as expected.
+Before deploying your workflow you want to test it to ensure that everything is working as expected.
 
 When you run tests, all services the workflow is using will be started on your computer.
 
@@ -10,7 +10,7 @@ When you run tests, all services the workflow is using will be started on your c
 
 The `test` command have different options but you always need to specify the path to the workflow file you want to test.
 
-Using the `test` command, the source's service will run aditionnaly to the task's services so this might take some ressource from your computer.
+Using the `test` command, the source's service will run additionally to the task's services so this might take some resource from your computer.
 
 During the testing, no stake will be taken in order to start the services and the services you will be running will not participate to the network.
 
