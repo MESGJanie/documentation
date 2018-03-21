@@ -12,8 +12,8 @@
     "type": "git",
     "url": "git+https://github.com/mesg-tech/documentation.git"
   },
-  "author": "Anthony Estebe <contact@anthonyestebe.com> (http://microblog.anthonyestebe.com/)",
-  "license": "ISC",
+  "author": "Anthony Estebe <anthony@mesg.tech>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mesg-tech/documentation/issues"
   },
