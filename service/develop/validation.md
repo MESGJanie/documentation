@@ -16,3 +16,5 @@ mesg-cli service validate ./PATH_TO_SERVICE_FOLDER
 
 All the definitions of the `mesg.yml` file can be found in the [Service File](/./service/configuration.md) page.
 
+
+
