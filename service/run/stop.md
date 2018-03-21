@@ -8,7 +8,7 @@ To stop a service, run the command:
 mesg-cli service stop SERVICE_ID
 ```
 
-This command will stop the docker container, unregister from the Network that your node is running this service.
+This command will stop the docker container and unregister from the Network that your node is running this service.
 
 You will **NOT** get your stake back immediately. You will get your remaining stake only after a delay. See [stake explanation](/service/run/README.md).
 
