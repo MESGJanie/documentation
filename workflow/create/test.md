@@ -32,3 +32,7 @@ mesg-cli workflow test --live ./workflow.yml
 
 **Note**: Every live event will be stored as a file and can be re-use as an event flag
 
+
+
+**TODO:** add specific task test. May have to update the CLI doc as well
+
