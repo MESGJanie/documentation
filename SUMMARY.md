@@ -18,12 +18,18 @@
 ## Service
 
 * [What is a Service?](./service/README.md)
-* [Create a Service](./service/create.md)
-* [Communication with the Application](service/test/communication-with-the-application.md)
-* [Service File](./service/configuration.md)
-* [Validation](service/validation.md)
-* [Test](service/test.md)
-* [Publish](./service/publish.md)
+* [Develop a Service](./service/create.md)
+  * [Communication with the Application](service/test/communication-with-the-application.md)
+  * [Service File](./service/configuration.md)
+  * [Validation](service/validation.md)
+  * [Test](service/test.md)
+  * [Publish](./service/publish.md)
+* [Run published service](service/run-published-service.md)
+  * List
+  * Start
+  * Stop
+  * Pause
+  * Resume
 
 ## Node
 
