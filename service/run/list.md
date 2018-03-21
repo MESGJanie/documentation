@@ -1,4 +1,4 @@
-# List published services
+# List available services
 
 To list all published services on the Network, run the command:
 
