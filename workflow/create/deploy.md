@@ -10,6 +10,6 @@ You can deploy your workflow using the command:
 mesg-cli workflow deploy ./PATH_TO_WORKFLOW_FILE
 ```
 
-If your workflow is valid, it will be deployed through the {{ book.network }} and will be ready to be executed.
+If your workflow is valid, it will be deployed through the Network and will be ready to be executed.
 
-Congratulation! You have deployed your first MESG workflow that connect technologies through the {{ book.network }}.
+Congratulation! You have deployed your first MESG workflow that connect technologies through the Network.
