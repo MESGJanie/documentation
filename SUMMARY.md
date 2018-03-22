@@ -8,8 +8,8 @@
 * [What is an account](./account/README.md)
 * [Create](./account/create.md)
 * [Delete](./account/delete.md)
-* [Import](./account/import.md)
 * [Export](./account/export.md)
+* [Import](./account/import.md)
 * [List](./account/list.md)
 
 ## Workflow
