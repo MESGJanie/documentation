@@ -18,7 +18,7 @@
   * [Source](./workflow/source.md)
   * [Task\(s\)](./workflow/task.md)
   * [Use cases](./workflow/use-case.md)
-* [Create a Workflow](./workflow/create/README.md)
+* [Create a workflow](./workflow/create/README.md)
   * [Workflow File](./workflow/create/workflow-file.md)
   * [Validate](./workflow/create/validate.md)
   * [Test](./workflow/create/test.md)
@@ -34,8 +34,8 @@
 
 ## Service
 
-* [What is a Service?](./service/README.md)
-* [Develop a Service](./service/develop/README.md)
+* [What is a service?](./service/README.md)
+* [Develop a service](./service/develop/README.md)
   * [Communication with the Application](service/develop/communication-with-the-application.md)
   * [Service folder](service/develop/service-folder.md)
   * [Service file](./service/develop/service-file.md)
