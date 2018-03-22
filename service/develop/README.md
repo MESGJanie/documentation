@@ -1,6 +1,7 @@
-# Develop a Service
+# Develop a service
 
 ## Requirements
 
-To create and deploy services the Application needs to be installed.
+To create and deploy services the Application needs to be installed.  
 Follow this link to install the [Application](/./installation/node.md)
+
