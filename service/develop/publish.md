@@ -24,9 +24,5 @@ A version Id is created every time you publish the service. This version id is a
 
 
 
-```
-{% include "./accountable.md" %}
-```
-
 
 
