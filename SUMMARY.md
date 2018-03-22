@@ -11,6 +11,7 @@
 * [Export](./account/export.md)
 * [Import](./account/import.md)
 * [List](./account/list.md)
+* [Detail](account/detail.md)
 
 ## Workflow
 
