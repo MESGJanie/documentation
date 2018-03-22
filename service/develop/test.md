@@ -2,19 +2,15 @@
 
 Before deploying your service you want to test it to ensure that everything is working as expected.
 
-To test that the Application is able to start your service and receive event from your service, simply run the command:
-
-```bash
-mesg-cli service test
-```
-
-This command will start your service \(the docker container of your service\), wait for your service to emit the `started` system event, and then will log any event the Application is receiving from your service. To quit, press `ctrl+c`.
-
-By default, the `test`command looks in the **current folder** for the `mesg.yml` file. If you want to run it in a different folder, you can specify the path to your service folder at the end of any command like so:
+To test that the Application is able to start your service and receive event from it, execute the following method:
 
 ```bash
 mesg-cli service test ./PATH_TO_SERVICE_FOLDER
 ```
+
+This method starts your service \(the docker container of your service\), wait for your service to emit the `started` system event, and then logs any event the Application is receiving from your service.
+
+If you don't specify the path to the service folder, the method looks in the **current folder** for the `mesg.yml` file.
 
 ## Listen to an event
 
