@@ -1,6 +1,6 @@
 # Validate
 
-Before each deployment your file will be verified by the {{ book.cli }} but you can at anytime check if your file is well formatted and valid using the following command :
+Before each deployment your file will be verified by the Application but you can at anytime check if your file is well formatted and valid using the following command :
 
 ```bash
 mesg-cli workflow validate workflow.yml
