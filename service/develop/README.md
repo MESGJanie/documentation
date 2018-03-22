@@ -2,5 +2,5 @@
 
 ## Requirements
 
-To create and deploy services the {{ book.cli }} need to be installed.
-Follow this link to install the [{{ book.cli }}](/./installation/node.md)
+To create and deploy services the Application needs to be installed.
+Follow this link to install the [Application](/./installation/node.md)
