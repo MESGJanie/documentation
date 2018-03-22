@@ -10,7 +10,7 @@ mesg-cli account export
 
 This method creates a file containing the information about your accounts. The private keys of your accounts are encrypted with each account's password.
 
-You can import the created file on any other Application with the [import method](/./account/import.md).
+You can import the backup file on any other Application with the [import method](/./account/import.md).
 
 You can also export only one account with the `name` parameter:
 
