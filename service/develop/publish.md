@@ -10,7 +10,7 @@ To publish a service, run the command:
 mesg-cli service publish ./PATH_TO_SERVICE_FOLDER
 ```
 
-If you don't specify the path to the service folder, the method looks in the **current folder** for the `mesg.yml` file.
+If you don't specify the path to the service folder, the method looks in the current folder for the `mesg.yml` file.
 
 The first time you publish the service, it will be publish as a new service and an unique service Id will be created. This Id will be saved in a `.mesg` file.
 
