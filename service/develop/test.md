@@ -8,7 +8,7 @@ To test that the Application is able to start your service and receive event fro
 mesg-cli service test ./PATH_TO_SERVICE_FOLDER
 ```
 
-If you don't specify the path to the service folder, the method looks in the **current folder** for the `mesg.yml` file.
+If you don't specify the path to the service folder, the method looks in the current folder for the `mesg.yml` file.
 
 This method starts your service \(the docker container of your service\), wait for your service to emit the `started` system event, and then logs any event the Application is receiving from your service.
 
