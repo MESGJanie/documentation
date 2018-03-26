@@ -5,13 +5,7 @@
 
 ## Account
 
-* [What is an account](./account/README.md)
-* [Create](./account/create.md)
-* [Delete](./account/delete.md)
-* [Export](./account/export.md)
-* [Import](./account/import.md)
-* [List](./account/list.md)
-* [Detail](account/detail.md)
+* [What is an account](./account.md)
 
 ## Workflow
 
