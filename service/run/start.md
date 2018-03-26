@@ -17,8 +17,3 @@ mesg-cli service start SERVICE_ID --stake "100 MESG" --duration "10 days"
 ```
 
 **TODO:** add unit description page
-
-**TODO:** add accountable system
-
-**TODO:** add confirmable system
-

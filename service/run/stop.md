@@ -13,8 +13,3 @@ This command will stop the docker container and unregister from the Network that
 It will also remove the local docker container from your disk to free space.
 
 You will **NOT** get your stake back immediately. You will get your remaining stake only after a delay. See [stake explanation](/service/run/README.md).
-
-**TODO:** add accountable system
-
-**TODO:** add confirmable system
-
