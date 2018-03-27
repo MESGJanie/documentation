@@ -48,7 +48,7 @@ secrets:
 
 ## Keep alive
 
-All previous commands stop your service on quit. If you wish to leave your service alive, you can add to any commands the flag `--keep-alive.`Example:
+All previous commands stop your service on quit. If you wish to leave your service alive, you can add to any commands the flag `--keep-alive`. Example:
 
 ```bash
 mesg-cli service test --task myServiceTaskName --keep-alive

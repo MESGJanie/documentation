@@ -1,5 +1,7 @@
 # Stop a service
 
+**TO DELETE**
+
 **WARNING: **If you stop a service with your stake duration still ongoing, you may lost your stake. See [stake explanation](/service/run/README.md).
 
 To stop a service, run the command:
