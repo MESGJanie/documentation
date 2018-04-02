@@ -10,9 +10,9 @@
 ## Workflow
 
 * [What is a workflow ?](./workflow/README.md)
+* [Use cases](./workflow/use-case.md)
 * [Source](./workflow/source.md)
 * [Task](./workflow/task.md)
-* [Use cases](./workflow/use-case.md)
 * [Workflow File](./workflow/workflow-file.md)
 * [Validate](./workflow/validate.md)
 * [Test](./workflow/test.md)
@@ -29,3 +29,4 @@
 * [Publish](./service/publish.md)
 * [Start](service/start.md)
 * [Stop](service/stop.md)
+

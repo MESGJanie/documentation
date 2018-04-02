@@ -5,11 +5,14 @@ Services, are a normalized bi-directional communication layer, meaning that any 
 **TODO: improve text. Add event explanation. Add task explanation. Add docker explanation. Etc..**
 
 
+
+## Why should I develop a service?
+
+
+
 ## Marketplace
 
-## Stake system
+## 
 
-### How much should I stake?
 
-### How can I get my stake back?
 
