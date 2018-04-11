@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [What is a Node ? test](what-is-a-node.md)
+* [What is a Node ?](what-is-a-node.md)
 * [Why should I run a Node ?](why-should-i-run-a-node.md)
 * [Run a Node](run-a-node.md)
 * [What is an account](what-is-an-account.md)

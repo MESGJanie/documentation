@@ -1,4 +1,4 @@
-# What is a Node ? test
+# What is a Node ?
 
 A Node is an application running and registered on the MESG Network. Nodes are important because MESG is a decentralized infrastructure and the processing is done by the different nodes of the network.
 
