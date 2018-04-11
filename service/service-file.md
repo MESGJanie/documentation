@@ -1,28 +1,30 @@
 # Service file
 
+## Service file
+
 To define a service, you need to create a specific folder with a `mesg.yml` file that describes its functionalities. This file should/may contains the following informations in a `YAML`syntax.
 
-## Name
+### Name
 
 A service has a name chosen by the developer. This name is for user to identify the service is a nice human way.
 
-## Identifiers
+### Identifiers
 
 Each service have 2 unique identifiers: service ID and version ID. Both are generated \(if needed\) during the deployment. The service ID stays the same for all the life of the service. The version ID is generated for every new deployment. Both IDs are unique across all services. The service ID can be use by users to manually choose a private service \(see Visibility\).
 
-## Computation requirements
+### Computation requirements
 
 Services can specify its cpu, memory and disk requirements. The Application will check if the requirements are compatible with the machine it is running on.
 
-## Visibility
+### Visibility
 
 A service defines who can see it by setting a visibility parameter. The possible values are: all, users, workers, none. If set to users, any user will be able to select the service in a task. If set to workers, any worker will be able to run the service. If set to all, any user and worker will be able to access it. If set to none, the service will be accessible by manually entering its service ID \(that will be creating when deploying the service\).
 
-## Publish
+### Publish
 
 A service defines what is published on the network when deploying by setting a publish parameter. The possible values are: all, source, container, none. If set to source, only the source code will be published \(the developer will have to execute the service itself\). If set to container, only the container will be published \(any worker will be able to run it\). If set to all, both the source code and the container will be published. If set to none, only the service config file will be published \(the developer will have to execute the service itself\).
 
-## Events
+### Events
 
 Services have to declare a list of events they can emit. Events are things that happen on the technology the service is connected to.  
 Each event is composed with:
@@ -37,7 +39,7 @@ Each event is composed with:
   * Description: An optional description for the data
   * Optional: A boolean to say if this data is optional or no
 
-## Tasks
+### Tasks
 
 Services declares a list of tasks they can execute. A task is an action that accept parameters as inputs, execute something on the technology the service is connected to, and returns one output from many with data.
 
@@ -83,7 +85,7 @@ List of the secrets needed for the service to run. Those secrets are stored dire
 
 If the task is verifiable, a verifiable function should be implemented in order to check that an output is correct according to the inputs. This is really useful in order to verify that a node has correctly executed a task by asking other nodes to verify it.
 
-## Transfers
+### Transfers
 
 A service can implement the network functionality of transfers \(see Transfers for more explanation\).  
 The implementation is composed of a require action and an optional verification event.
@@ -111,12 +113,12 @@ If the transaction on this technology is verifiable, the service emits a predefi
 * Success: Boolean, yes if success, false otherwise.
 * Message: Reason of failure or confirmation
 
-## Dependencies
+### Dependencies
 
 Services can specify internal dependencies like database, cache or blockchain client.  
 If docker is used we could use the docker-compose syntax.
 
-# Example of a service file
+## Example of a service file
 
-[include](./mesg.yml)
+[include](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/service/mesg.yml)
 

@@ -10,12 +10,12 @@ If you want to connect different services together even coming from different te
 
 Also if you are worried about data centralization and single points of failures, workflows are great because running in a secure decentralized architecture.
 
-You can find a list of potential use case [here](./use-case.md)
+You can find a list of potential use case [here](use-cases.md)
 
 ## Steps in a workflow
 
 There are 4 different steps in a workflow with 2 required and 2 optionals.
 
-1. [Source](./source.md): The event that will trigger this workflow. 
-2. [Task](./task.md): Task to trigger
+1. [Source](source.md): The event that will trigger this workflow. 
+2. [Task](task.md): Task to trigger
 

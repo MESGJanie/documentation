@@ -2,17 +2,17 @@
 
 In order to define your workflow, you can use a `YAML` formatted file that describes all your needs.
 
-This file needs to contain a [source event](../source.md) and one or multiple [tasks](../task.md)
+This file needs to contain a [source event](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/source.md) and one or multiple [tasks](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/task.md)
 
-[include](./example.yml)
+[include](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/workflow/example.yml)
 
-You can find the raw file example <a href="./example.yml" target="_blank">here</a>.
+You can find the raw file example [here](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/workflow/example.yml).
 
 ## Note on the parameters
 
 ### Parameter type
 
-Parameters needs to be send with the right type (Number, String, Object, Array, Boolean) according to the documentation of the service.
+Parameters needs to be send with the right type \(Number, String, Object, Array, Boolean\) according to the documentation of the service.
 
 ### Parameter binding
 
@@ -66,7 +66,7 @@ parameterX: ${env:PARAMETER_X, 42}
 
 ## Task processing
 
-If your workflow contains multiple tasks to execute, the {{ book.network }} will automatically optimise the workflow to parallelise the tasks. In order to parallelise the execution, a dependency graph will be generated with the source event as a root node and for parallelise all the child with the same depth.
+If your workflow contains multiple tasks to execute, the  will automatically optimise the workflow to parallelise the tasks. In order to parallelise the execution, a dependency graph will be generated with the source event as a root node and for parallelise all the child with the same depth.
 
 ### Instant tasks
 
@@ -74,8 +74,9 @@ If a task doesn't have a direct or indirect dependency to the event, this task w
 
 ### Concurrency
 
-Because of the parralelisation of the task it is not guarantee to have an task executed before another one if they don't have any dependencies. If you want to ensure that a task run after another one you need to create a [workflow variable](#workflow-variables) from this task.
+Because of the parralelisation of the task it is not guarantee to have an task executed before another one if they don't have any dependencies. If you want to ensure that a task run after another one you need to create a [workflow variable](workflow-file.md#workflow-variables) from this task.
 
 ### Cycles
 
-Because of the dependency generation your workflow cannot contain two task that depends to each others (even through different depths). If you have a cycle in your workflow, you will have an error while validating or deploying.
+Because of the dependency generation your workflow cannot contain two task that depends to each others \(even through different depths\). If you have a cycle in your workflow, you will have an error while validating or deploying.
+

@@ -1,4 +1,4 @@
-# Test {#testing}
+# Test
 
 Before deploying your service you want to test it to ensure that everything is working as expected.
 
@@ -38,7 +38,7 @@ mesg-cli service test --task myServiceTaskName --data ./PATH_TO_DATA_FILE.yml
 
 The file should be a `yaml`with a format like:
 
-```yml
+```text
 inputs:
     INPUT_NAME_1: INPUT_VALUE_1
     INPUT_NAME_2: INPUT_VALUE_2
@@ -53,6 +53,4 @@ All previous commands stop your service on quit. If you wish to leave your servi
 ```bash
 mesg-cli service test --task myServiceTaskName --keep-alive
 ```
-
-
 

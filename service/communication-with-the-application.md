@@ -11,12 +11,8 @@ The Service needs to receive command sent by the Application. Every time a comma
 The Service can send data to the Application. Those data are divided into three categories:
 
 * Result of a command: When the Application asks to start a command and expect a result from this command
-
 * Events from listener: When the Service emit a new event from its listener function. \(Eg: web server running and receiving a request or a blockchain technology that received a new transaction\)
-
 * System events: When the service is ready to be executed, notify the Application
 
 **TODO: a technical definition**
-
-
 

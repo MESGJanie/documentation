@@ -1,10 +1,10 @@
-# Task(s)
+# Task
 
 The task will be the action executed every time the selected event is triggerd. Every task will have different purpose and various parameters that you will need to fullfil.
 
 When you want to make complex workflow you might need to trigger multiple tasks. For every workflow you will be able to set a single task or a list of tasks that will be executed in the order you defined.
 
-###### Example
+#### Example
 
 Let's take the example of one task `taskX` with the parameters `key` and `value` and suppose that you have one event `eventX` that return the data `eventValue` and you want to `process` this data before send it to `taskX`. You might have a similar workflow :
 
@@ -16,19 +16,19 @@ Let's take the example of one task `taskX` with the parameters `key` and `value`
 
 ## Properties
 
-#### service
+### service
 
 > String required
 
-The type of the task to connect, this will be the id of the service to connect. This service will ran on some nodes in the network and will have different kind of tasks. You can find the list of services running on the MESG platform directly in {{ book.wallet }} or on {{ book.endpoints.services }}.
+The type of the task to connect, this will be the id of the service to connect. This service will ran on some nodes in the network and will have different kind of tasks. You can find the list of services running on the MESG platform directly in  or on .
 
-#### task
+### task
 
 > String required
 
-The task from the service that you want execute. This task will be executed by a selected node of the network and will need to receive some parameters that you can find on the description of the task in the service detail that you can find in {{ book.wallet }} or on {{ book.endpoints.services }}.
+The task from the service that you want execute. This task will be executed by a selected node of the network and will need to receive some parameters that you can find on the description of the task in the service detail that you can find in  or on .
 
-#### parameters
+### parameters
 
 > Object
 
@@ -36,20 +36,21 @@ Parameters needs to be set for the task accordingly to the parameters required f
 
 In many case you may want to bind the data from the event to the parameter of the task, in this case you will be able to use the data from the event. In case you have a workflow with multiple tasks you will also be able to connect every result from one of the previous task as parameter of the new one.
 
-#### filters
+### filters
 
 > Object
 
 List of filter to apply before the execution of the task. Only if all the filters are valid then the task will be executed. This let you customize your workflow and add some conditions on your processing. Every filters will be obfuscated based on the hashing of the value.
 
-#### whitelist
+### whitelist
 
-> String[] optional
+> String\[\] optional
 
-The whitelist parameter permits to accept some specific nodes only to execute this task. The value for the whitelist will be a list of node public keys. If this parameter is not set, any nodes of the network will have the possibility to run this service. In order to accept any node to execute this task you can also pass the `*` value. 
+The whitelist parameter permits to accept some specific nodes only to execute this task. The value for the whitelist will be a list of node public keys. If this parameter is not set, any nodes of the network will have the possibility to run this service. In order to accept any node to execute this task you can also pass the `*` value.
 
-#### blacklist
+### blacklist
 
-> String[] optional
+> String\[\] optional
 
 The blacklist parameter permits to reject some specific nodes from the network. The value for the blacklist will be a list of node public keys. If this parameter is not set, no nodes will be blacklisted and any node on the network will have the possibility to execute the task.
+

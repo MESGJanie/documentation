@@ -14,7 +14,7 @@ Using the `test` command, the source's service will run additionally to the task
 
 During the testing, no stake will be taken in order to start the services and the services you will be running will not participate to the network.
 
-#### Test a specific event
+### Test a specific event
 
 If you want to try your workflow with a specific event you can run the following command:
 
@@ -22,7 +22,7 @@ If you want to try your workflow with a specific event you can run the following
 mesg-cli workflow test --event ./PATH_TO_EVENT_DATA_FILE ./PATH_TO_WORKFLOW_FILE
 ```
 
-#### Test a live event
+### Test a live event
 
 When you want to test that your workflow is working fine with any events you are trying to connect to you can run the following command:
 

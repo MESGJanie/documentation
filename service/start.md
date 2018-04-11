@@ -1,4 +1,4 @@
-# Start a service
+# Start
 
 **TO DELETE**
 
@@ -19,3 +19,4 @@ mesg-cli service start SERVICE_ID --stake "100 MESG" --duration "10 days"
 ```
 
 **TODO:** add unit description page
+

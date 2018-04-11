@@ -4,15 +4,7 @@ Services, are a normalized bi-directional communication layer, meaning that any 
 
 **TODO: improve text. Add event explanation. Add task explanation. Add docker explanation. Etc..**
 
-
-
 ## Why should I develop a service?
 
-
-
 ## Marketplace
-
-## 
-
-
 

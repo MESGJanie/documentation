@@ -1,32 +1,32 @@
-# Summary
+# Table of contents
 
 * [Introduction](README.md)
-* [What is a Node ?](./node.md)
-* [Why should I run a Node ?](./why.md)
-* [Run a Node](./installation.md)
-* [What is an account](./account.md)
-* [Help us develop](./development.md)
+* [What is a Node ? test](what-is-a-node.md)
+* [Why should I run a Node ?](why-should-i-run-a-node.md)
+* [Run a Node](run-a-node.md)
+* [What is an account](what-is-an-account.md)
+* [Help us develop](help-us-develop.md)
 
 ## Workflow
 
-* [What is a workflow ?](./workflow/README.md)
-* [Use cases](./workflow/use-case.md)
-* [Source](./workflow/source.md)
-* [Task](./workflow/task.md)
-* [Workflow File](./workflow/workflow-file.md)
-* [Validate](./workflow/validate.md)
-* [Test](./workflow/test.md)
-* [Deploy](./workflow/deploy.md)
+* [What is a workflow ?](workflow/what-is-a-workflow.md)
+* [Use cases](workflow/use-cases.md)
+* [Source](workflow/source.md)
+* [Task](workflow/task.md)
+* [Workflow File](workflow/workflow-file.md)
+* [Validate](workflow/validate.md)
+* [Test](workflow/test.md)
+* [Deploy](workflow/deploy.md)
 
 ## Service
 
-* [What is a service?](./service/README.md)
+* [What is a service?](service/what-is-a-service.md)
 * [Communication with the Application](service/communication-with-the-application.md)
 * [Service folder](service/service-folder.md)
-* [Service file](./service/service-file.md)
+* [Service file](service/service-file.md)
 * [Test](service/test.md)
 * [Validate](service/validate.md)
-* [Publish](./service/publish.md)
+* [Publish](service/publish.md)
 * [Start](service/start.md)
 * [Stop](service/stop.md)
 
