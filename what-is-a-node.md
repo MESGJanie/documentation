@@ -16,9 +16,9 @@ As you can see, your node will have a big responsibility in the MESG Network, in
 
 The stake is a system that "punishes" bad actors in the Network. Every Node of the Network needs to deposit a certain number of GEMS to show their sincerity. If they behave appropriately, they'll be able to withdraw their deposit and recover 100% of it. Each time a bad actor misbehaves, a penalty will be applied and a part of their stake will be lost, and if there is too much bad behavior, the full stake could be taken.
 
-## Period of time
+## Timeframe
 
-In order to have the most stable network and know which Node is reliable, you need to set a period of time that you'll run the service. If the period of time is not respected, this will lead to a penalty based on the stake as described in the [stake part](what-is-a-node.md#stake)
+In order to have the most stable network and know which Node is reliable, you need to set a timeframe for how long you'll run the service. If the timeframe is not respected, this will lead to a penalty based on the stake as described in the [stake part](what-is-a-node.md#stake)
 
-The stake and the period of time will be important because the selection of the nodes is based on those parameters. So, it is recommended to have a high stake and a high period of time. Of course you can create a node anytime with no stake and no guarantee of time, but the probability of being selected will be low.
+The stake and the timeframe will be important because the selection of the nodes is based on those two parameters. So, it's recommended to have a high stake and a large timeframe. Of course you can create a node anytime with no stake and no guaranteed timeframe, but the probability of being selected will be lower.
 
