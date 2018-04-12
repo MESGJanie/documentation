@@ -1,11 +1,12 @@
 # Use cases
 
-// copy the one from the white paper \(ish\)
+Quick Examples:
 
 1. **When** I receive a payment on Ethereum blockchain, **then** send me a Slack notification
 2. **When** I call a specific webhook **then** trigger a payment in Bitcoin blockchain
 3. **When** I receive a payment on Stripe **then** save it in a spreadsheet
-4. ...
+
+
 
 ## Flight reservation / Insurance
 
@@ -46,7 +47,7 @@
 * **then** find a match between my picture and my friends faces 
 * **then** **when** there is a match, share the picture to the associated friend 
 
-## Foundation funding based on objectives
+## 
 
-## Dating app
+## 
 
