@@ -1,6 +1,6 @@
 # Source
 
-The source is the trigger for your workflow. Everytime the selected event occurs this will start your workflow. This event might come from any of the services running on the MESG infrastructure.
+The source is the trigger for your workflow. Every time the selected event occurs, your workflow will start. This event might come from any of the services running on the MESG infrastructure.
 
 ## Properties
 
@@ -8,7 +8,7 @@ The source is the trigger for your workflow. Everytime the selected event occurs
 
 > String required
 
-The type of the source to connect, this will be the id of the service to connect. This service will ran on some nodes in the network and will emit different kind of events. You can find the list of services running on the MESG platform directly in  or on .
+The type of the source to connect, this will be the ID of the service to connect. This service will run on some nodes in the network and will emit different kind of events. You can find the list of services running on the MESG platform directly in  or on .
 
 ### event
 
