@@ -10,7 +10,7 @@ You can find the raw file example [here](https://github.com/mesg-foundation/docu
 
 ### Parameter type
 
-Parameters needs to be sent with the right type \(Number, String, Object, Array, Boolean\) according to the service's documentation.
+Parameters need to be sent with the right type \(Number, String, Object, Array, Boolean\) according to the service's documentation.
 
 ### Parameter binding
 
