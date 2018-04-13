@@ -14,7 +14,7 @@ As you can see, your node will have a big responsibility in the MESG Network. In
 
 ## Stake
 
-The stake is a system that "punishes" bad actors in the Network. Every Node of the Network needs to deposit a certain number of GEMS to show their sincerity. If they behave appropriately, they'll be able to withdraw their deposit and recover 100% of it. Each time a bad actor misbehaves, a penalty will be applied and a part of their stake will be lost, and if there is too much bad behavior, the full stake could be taken.
+The stake is a system that "punishes" bad actors in the Network. Every Node of the Network needs to deposit a certain number of GEMS to show their sincerity. If they behave appropriately, they'll be able to withdraw their deposit and recover 100% of it. Each time a bad actor misbehaves, a penalty will be applied and a part of their stake will be lost. If there is too much bad behavior, the full stake could be taken.
 
 ## Timeframe
 
