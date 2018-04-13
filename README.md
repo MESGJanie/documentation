@@ -12,9 +12,9 @@ If you are a developer and want to create complex workflows you should check out
 
 ## A decentralized infrastructure
 
-MESG is a decentralized infrastructure based on Blockchain technology and this means your application is secure and is not controlled by anyone else than you \(and the people you want to give access to\). This also means that the infrastructure relies heavily on **YOU.**
+MESG is a decentralized infrastructure based on Blockchain technology, so your application is secure and is not controlled by anyone else than you \(and the people you want to give access to\). This also means that the infrastructure relies heavily on **YOU.**
 
 The MESG infrastructure will be running on every single user, and the more users participating in the network, the more secure workflows will be, so we highly encourage you to run the application and start some services.   
   
-You can find more details on how to run a node and run services [here](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/node/README.md).
+You can find more details on how to run a node and services [here](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/node/README.md).
 
