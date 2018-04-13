@@ -2,7 +2,7 @@
 
 Before deployment, the `mesg.yml` file is verified for syntax verification.
 
-You can also check it manually using the following command:
+You can also check it manually by using the following command:
 
 ```bash
 mesg-cli service validate ./PATH_TO_SERVICE_FOLDER
