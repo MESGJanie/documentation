@@ -16,7 +16,7 @@
 * [Workflow File](workflow/workflow-file.md)
 * [Validate](workflow/validate.md)
 * [Test](workflow/test.md)
-* [Deploy](workflow/deploy.md)
+* [Deployment](workflow/deploy.md)
 
 ## Service
 
