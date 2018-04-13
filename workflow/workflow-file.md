@@ -1,28 +1,26 @@
 # Workflow File
 
-In order to define your workflow, you can use a `YAML` formatted file that describes all your needs.
+In order to define your workflow, you can use a `YAML` formatted file that details all of your needs.
 
-This file needs to contain a [source event](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/source.md) and one or multiple [tasks](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/task.md)
-
-[include](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/workflow/example.yml)
+This file needs to contain a [source event](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/source.md) and one or multiple [tasks](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/task.md).
 
 You can find the raw file example [here](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/workflow/example.yml).
 
-## Note on the parameters
+## Notes on parameters
 
 ### Parameter type
 
-Parameters needs to be send with the right type \(Number, String, Object, Array, Boolean\) according to the documentation of the service.
+Parameters needs to be sent with the right type \(Number, String, Object, Array, Boolean\) according to the service's documentation.
 
 ### Parameter binding
 
-Every parameters can be binded to a dynamic value or from the workflow execution or the workflow deployment. Here are the following syntaxes to achieve this.
+Every parameter can be bound to a dynamic value, workflow execution or workflow deployment. Here are the syntaxes to achieve this:
 
 #### Workflow variables
 
-Your workflow will need to access variable from the event or some other steps from the workflow. In order to do that you can refer the result directly from your template. The value will be applied during the processing of the workflow.
+Your workflow will need to access the variables from the event and other steps from the workflow. In order to achieve this, you can refer to the result directly on your template. The value will be applied during the processing of the workflow.
 
-With the worfklow variables you can have access to the **inputs** of the workflow, the **source** event data or any **task** result.
+With workflow variables, you can have access to the **inputs** of the workflow, the **source** event data or any **task** result.
 
 ```yaml
 source:
@@ -45,7 +43,7 @@ inputs:
 
 #### Environment variables
 
-In many case you don't need to write some private data on the file, in case you want to use a versioning system, if you want to have different environments etc... In this case you can use environmental variables. The value will be replace when the workflow is deployed.
+In many cases, you won't need to write private data on the file. In case of wanting to use a versioning system, if you want to have different environments etc., you can use environmental variables. The value will be replaced when the workflow is deployed.
 
 ```yaml
 ...
@@ -58,7 +56,7 @@ tasks:
 
 #### Default value
 
-You might need to have some default value in case the variable are not present during the deployment or the processing. In order to do that you can give another argument to the template.
+You may need to have some default values in case the variable is not present during deployment or processing. In order to do this, you can add another argument to the template.
 
 ```yaml
 parameterX: ${env:PARAMETER_X, 42}
@@ -66,17 +64,17 @@ parameterX: ${env:PARAMETER_X, 42}
 
 ## Task processing
 
-If your workflow contains multiple tasks to execute, the  will automatically optimise the workflow to parallelise the tasks. In order to parallelise the execution, a dependency graph will be generated with the source event as a root node and for parallelise all the child with the same depth.
+If your workflow contains multiple tasks to execute, the  will automatically optimize the workflow to parallelize the tasks. In order to parallelize the execution, a dependency graph will be generated with the source event as a root node and to parallelize all children with the same depth.
 
 ### Instant tasks
 
-If a task doesn't have a direct or indirect dependency to the event, this task will be executed from your computer while deploying and will not be executed everytime the workflow starts but will use the value from the result during the deployment.
+If a task doesn't have a direct or indirect dependency on the event, this task will be executed from your computer while deploying, and will not be executed every time the workflow starts, but will use the value from the result during deployment.
 
 ### Concurrency
 
-Because of the parralelisation of the task it is not guarantee to have an task executed before another one if they don't have any dependencies. If you want to ensure that a task run after another one you need to create a [workflow variable](workflow-file.md#workflow-variables) from this task.
+Because of the parallelization of the task, it is no guarantee to have a task executed before another one if they don't have any dependencies. If you want to ensure that a task runs after another one you need to create a [workflow variable](workflow-file.md#workflow-variables) from this task.
 
 ### Cycles
 
-Because of the dependency generation your workflow cannot contain two task that depends to each others \(even through different depths\). If you have a cycle in your workflow, you will have an error while validating or deploying.
+Because of the dependency generation, your workflow cannot contain two tasks that depend on each other \(even if they are of different depths\). If you have a cycle in your workflow, you will have an error while validating or deploying.
 

@@ -1,6 +1,6 @@
 # Task
 
-The task is the action executed every time an event is triggered. Every task will have a different purpose and different parameters that you'll need to fulfill.
+The task is the action executed each time an event is triggered. Every task will have a different purpose and parameters that you'll need to fulfill.
 
 If you want to make a complex workflow, you may need to trigger multiple tasks. For every workflow, you'll be able to set a single task, or a list of tasks that will be executed in the order you've defined.
 
