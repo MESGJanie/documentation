@@ -4,7 +4,7 @@ A Node is an application running and registered on the MESG Network. Nodes are i
 
 By running the  you will be a node of the MESG Network but still not really participating in the Network. Participating to the Network might use some resources on your computer so this should be an action that only you can take.
 
-Every time you register as a node for a service, you might be selected for one of the following features:
+As a node, you agree to register as a candidate to be potentially selected as one of the following features:
 
 * **Submit an event to the MESG Network**: This is necessary in order to start workflows based on external events
 * **Process a task**: Every time a task in a workflow is triggered, you have a chance of being selected to process that task
