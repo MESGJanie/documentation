@@ -4,7 +4,7 @@ Since running a Node uses resources on your computer, and you'll need to stake  
 
 ## Earn 
 
-In MESG, every time your Node is selected, and it behaves correctly you'll receive a reward to thank you for helping the network, and to cover your participation fee.
+In MESG, every time your Node is selected, and executes the task as it should, you'll receive a reward to thank you for helping the network, and to cover your participation fee.
 
 There are 3 instances in which your node can be selected \(and can earn\):
 
