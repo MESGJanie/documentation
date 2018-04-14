@@ -6,7 +6,7 @@ Since running a Node uses resources on your computer, and you'll need to stake  
 
 In MESG, every time your Node is selected, and executes the task as it should, you'll receive a reward to thank you for helping the network, and to cover your participation fee.
 
-There are 3 instances in which your node can be selected \(and can earn\):
+Your node could be selected to fulfill the following functions:
 
 **As an emitter** your node could dispatch events from a specific service to the MESG Network and you'll earn based on the price per event, as defined in the service and in the number of other Nodes that dispatched the same event.
 
