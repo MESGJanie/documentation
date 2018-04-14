@@ -10,7 +10,7 @@ As a node, you register as a candidate to be potentially selected for one of the
 * **Process a task**: Every time a task in a workflow is triggered, you have a chance of being selected to process that task
 * **Validate a task**: Every time a node processes a task, other nodes will need to validate the result \(if possible\) and your node can be selected as a validator
 
-As you can see, your node will have a big responsibility in the MESG Network. In order to secure this, you will need to provide a **stake** and a **period of time** that you are willing to run your node.
+As you can see, your node will have a big responsibility in the MESG Network. In order to secure this, you will need to provide a **stake** and a **timeframe** that you are willing to run your node.
 
 ## Stake
 
