@@ -1,5 +1,6 @@
 # Introduction
 
+
 MESG is an infrastructure that allows you to create workflows in order to automatize anything you want.
 
 Every time an event occurs on one technology, you can attach it to a list of tasks to execute based on that event. This lets you connect any type of service, from a simple mail provider, to the most complex blockchain technology, or even the entire IoT \(Internet of Things\) simply by defining which event connects to which task.
