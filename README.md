@@ -6,17 +6,21 @@
   
 It provides infinite possibilities for developers and entrepreneurs to create, share or combine existing services to build new and better solutions.
 
-Every time an event occurs on one technology, you can attach it to a list of tasks to execute on an event. The MESG Network allows lets you connect any type of service, from a simple mail provider, to the most complex blockchain technology, or even the entire IoT \(Internet of Things\).
+All on and off-chain technologies can be connected to MESG, and connections can be shared on MESG Network either freely or at a marketplace where you can put your applications up for sale.  
+  
+Apps are no longer constrained by the complexities of the technologies they rely on. Connecting to complex technologies easily can be added, changed or updated.
 
-The goal of MESG is to help build applications that are not restricted by the complexity of the technologies you want to connect to.
+The days of manually connecting hundreds of services to achieve one workflow are over.
 
-MESG also provides a shared tool library that you can use to create different workflows, so you don't have to reinvent the wheel every time you create something new.
+Build with efficiency and ease. 2 of our favorite words.
 
-## A decentralized infrastructure
+MESG makes it possible for the entire internet to be a transparent, open-source, cheap, efficient, and decentralized place. 
 
-MESG is a decentralized infrastructure that utilizes blockchain technology, so your application is secure and is not controlled by anyone else than you \(and the people you want to give access to\). This also means that the infrastructure relies heavily on **YOU.**
+All technologies working together accelerates efficiencies and the discoveries of new solutions.
 
-The MESG infrastructure will be running on every single user, and the more users participating in the network, the more secure workflows will be, so we highly encourage you to run the application and start some services.
 
-You can find more details on how to run a node and services [here](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/node/README.md).
+
+## 
+
+
 
