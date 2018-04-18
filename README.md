@@ -6,7 +6,7 @@
   
 It provides infinite possibilities for developers and entrepreneurs to create, share or combine existing services to build new and better solutions.
 
-Every time an event occurs on one technology, you can attach it to a list of tasks to execute based on that event. This lets you connect any type of service, from a simple mail provider, to the most complex blockchain technology, or even the entire IoT \(Internet of Things\).
+Every time an event occurs on one technology, you can attach it to a list of tasks to execute on an event. The MESG Network allows lets you connect any type of service, from a simple mail provider, to the most complex blockchain technology, or even the entire IoT \(Internet of Things\).
 
 The goal of MESG is to help build applications that are not restricted by the complexity of the technologies you want to connect to.
 
