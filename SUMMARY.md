@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [What is a Node ?](what-is-a-node.md)
-* [Why run a Node ?](why-should-i-run-a-node.md)
+* [Why run a Node ?](why-run-a-node.md)
 * [Run a Node](run-a-node.md)
 * [What is an account](what-is-an-account.md)
 * [Help us develop](help-us-develop.md)
@@ -16,7 +16,7 @@
 * [Workflow File](workflow/workflow-file.md)
 * [Validate](workflow/validate.md)
 * [Test](workflow/test.md)
-* [Deployment](workflow/deploy.md)
+* [Deployment](workflow/deployment.md)
 
 ## Service
 
