@@ -2,7 +2,7 @@
 
 A workflow is the link between an event on one service to a command on another service.
 
-Workflows will let you connect anything from any technology to anything else you want.
+Workflows will let you connect anything connected to the internet, to anything else connected to the internet.
 
 ## When should I use workflows?
 
