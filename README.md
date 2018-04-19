@@ -14,7 +14,7 @@ The days of manually connecting hundreds of services to achieve one workflow are
 
 Build with efficiency and ease. 2 of our favorite words.
 
-We are proudly open-source, and encourage innovators and businesses to use their imaginations to harness the true potential of this technology.
+We are proudly open-source, and encourage innovators and businesses to use their imaginations to harness the true potential of MESG.
 
 All technologies working together accelerates efficiencies and the discoveries of new solutions.
 
