@@ -12,7 +12,7 @@ Apps are no longer constrained by the complexities of the technologies they rely
 
 Build with efficiency and ease. 2 of our favorite words.
 
-We are proudly open-source, and encourage innovators and businesses to use their imaginations to harness the true potential of MESG.
+We are proudly open-source, and encourage innovators to use their imaginations to harness the true potential of MESG.
 
 All technologies working together accelerates efficiencies and the discoveries of new solutions.
 
