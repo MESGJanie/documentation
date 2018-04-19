@@ -4,7 +4,7 @@
   
 **MESG’s existing connections to various technologies allow you to quickly connect services to an application, or design a series of tasks that will execute automatically.  
   
-It provides infinite possibilities for developers and entrepreneurs to create, share or combine existing services to build new and better solutions. We are proudly open-source. 
+It provides infinite possibilities for developers and entrepreneurs to create, share or combine existing services to build new and better solutions. 
 
 All on and off-chain technologies can be connected to MESG, and connections can be shared on MESG Network either freely, or at a marketplace where you can put your applications up for sale.  
   
@@ -13,6 +13,8 @@ Apps are no longer constrained by the complexities of the technologies they rely
 The days of manually connecting hundreds of services to achieve one workflow are over.
 
 Build with efficiency and ease. 2 of our favorite words.
+
+We are proudly open-source, and encourage innovators and businesses to use their imaginations to harness the true potential of this technology.
 
 All technologies working together accelerates efficiencies and the discoveries of new solutions.
 
