@@ -1,8 +1,6 @@
 # What is a Node ?
 
-A Node is an application running and registered on the MESG Network. Nodes are important because MESG is a decentralized infrastructure, and the processing is done by all of the different nodes in the network.
-
-By running the  you will be a node of the MESG Network but still not really participating in the Network. Participating to the Network might use some resources on your computer so this should be an action that only you can take.
+A Node is an application running and registered on the MESG Network. Nodes are important because MESG is a decentralized infrastructure, and all of the processing is done by the nodes in the network.
 
 As a node, you register as a candidate to be potentially selected for one of the following features:
 
