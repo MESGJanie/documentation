@@ -4,7 +4,7 @@
   
 Applications can be built quickly and easily because MESG gives developers access to a shared toolbox of Connections to any technology.   
   
-You can even design Workflows, which are a timed chain reaction to automate a series of tasks, or even an entire business.  
+You can design Workflows, which are a timed chain reaction to automate a series of tasks, or even an entire business.  
   
 Apps and businesses are no longer constrained by the complexities of the technologies they rely on. Connections to any technology can be easily added, changed and updated, without you needing to know their language. 
 
