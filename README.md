@@ -6,11 +6,9 @@ Applications can be built quickly and easily because MESG gives developers acces
   
 You can even design Workflows, which are a timed chain reaction to automate a series of tasks, or even an entire business.  
   
-Apps and businesses are no longer constrained by the complexities of the technologies they rely on. You can easily use a technology without needing to know the languages of the technologies you’re using. 
+Apps and businesses are no longer constrained by the complexities of the technologies they rely on. Connections to any technology can be easily added, changed and updated, without you needing to know their language. 
 
-Connections to any technology can be easily added, changed and updated. 
-
-MESG is open source, and we encourage developers and entrepreneurs to get innovative, to build businesses or solutions.
+MESG is open source, and we encourage developers and entrepreneurs to get innovative, to build businesses, solutions and increase productivity.
 
 All technologies working together accelerates efficiencies and the discoveries of new solutions.
 
