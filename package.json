@@ -1,7 +1,7 @@
 {
   "name": "documentation",
   "version": "1.0.0",
-  "description": "{% include \"./SUMMARY.md\" %}",
+  "description": "MESG documentation",
   "main": "index.js",
   "scripts": {
     "start": "gitbook serve",
@@ -20,10 +20,5 @@
   "homepage": "https://github.com/mesg-tech/documentation#readme",
   "devDependencies": {
     "gitbook-cli": "^2.3.2"
-  },
-  "dependencies": {
-    "gitbook-plugin-edit-link": "^2.0.2",
-    "gitbook-plugin-github": "^2.0.0",
-    "gitbook-plugin-prism": "^2.3.0"
   }
 }
