@@ -1,7 +1,3 @@
----
-description: test
----
-
 # Introduction
 
 **The MESG Network is a technology-agnostic infrastructure for decentralized app development. It’s for connecting technologies and bringing innovations together.**
