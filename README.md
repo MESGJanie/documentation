@@ -1,8 +1,8 @@
----
-description: Work in progress
----
-
 # Introduction
+
+{% hint style="info" %}
+Work in progress
+{% endhint %}
 
 **The MESG Network is a technology-agnostic infrastructure for decentralized app development. It’s for connecting technologies and bringing innovations together.**
 
