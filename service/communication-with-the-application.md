@@ -21,17 +21,41 @@ message EventReply {
     string event = 1;
     string data = 2;
 }
+
+
 ```
 
-{% tabs %}
-{% tab title="First Tab" %}
+{% api-method method="post" host="service." path="Emit" %}
+{% api-method-summary %}
+service.Emit
+{% endapi-method-summary %}
 
-{% endtab %}
+{% api-method-description %}
 
-{% tab title="Second Tab" %}
+{% endapi-method-description %}
 
-{% endtab %}
-{% endtabs %}
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="dwdwdw" type="string" required=false %}
+wdwdwd
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+string data = 2;
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 ## Receiving commands from the Core
 
