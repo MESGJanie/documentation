@@ -119,3 +119,4 @@ Services can specify internal dependencies like a database, cache or blockchain 
 If docker is used we can use the docker-compose syntax.
 
 ## [Example of a service file](https://github.com/mesg-foundation/documentation/blob/master/service/mesg.yml)
+

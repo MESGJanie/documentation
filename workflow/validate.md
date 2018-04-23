@@ -7,3 +7,4 @@ mesg-cli workflow validate ./PATH_TO_WORKFLOW_FILE
 ```
 
 This command will validate your file and let you know if there are any errors. All validations can be found in the [file](workflow-file.md) section.
+

@@ -64,7 +64,7 @@ parameterX: ${env:PARAMETER_X, 42}
 
 ## Task processing
 
-If your workflow contains multiple tasks to execute, the  will automatically optimize the workflow to parallelize the tasks. In order to parallelize the execution, a dependency graph will be generated with the source event as a root node and to parallelize all children with the same depth.
+If your workflow contains multiple tasks to execute, the will automatically optimize the workflow to parallelize the tasks. In order to parallelize the execution, a dependency graph will be generated with the source event as a root node and to parallelize all children with the same depth.
 
 ### Instant tasks
 
