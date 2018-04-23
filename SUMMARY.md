@@ -1,11 +1,12 @@
 ## Start here
 
 * [Introduction](README.md)
-* [What is a Node ?](what-is-a-node.md)
-* [Why run a Node ?](why-run-a-node.md)
-* [Run a Node](run-a-node.md)
-* [What is an account](what-is-an-account.md)
-* [Help us develop](help-us-develop.md)
+* [MESG Network](introduction/mesg-network.md)
+* [What is a Node ?](introduction/what-is-a-node.md)
+* [Why run a Node ?](introduction/why-run-a-node.md)
+* [Run a Node](introduction/run-a-node.md)
+* [What is an account](introduction/what-is-an-account.md)
+* [Help us develop](introduction/help-us-develop.md)
 
 ## Workflow
 
@@ -29,9 +30,3 @@
 * [Publish](service/publish.md)
 * [Start](service/start.md)
 * [Stop](service/stop.md)
-
-## Start Here
-
-* [Introduction](introduction/introduction.md)
-* [MESG Network](introduction/mesg-network.md)
-

@@ -1,20 +1,18 @@
 # Introduction
 
-**MESG is a decentralized application building platform for developers to easily make connections to any type of technology, both on and off the blockchain. **  
+**The MESG Network is a technology-agnostic infrastructure for decentralized app development. **It’s for connecting technologies and bringing innovations together.**  
   
-Applications can be built quickly and easily because MESG gives developers access to a shared toolbox of Connections to any technology.   
+**MESG’s existing connections to various technologies allow you to quickly connect services to an application, or design a series of tasks that will execute automatically.  
   
-You can design Workflows, which are a timed chain reaction to automate a series of tasks, or even an entire business.  
-  
-Apps and businesses are no longer constrained by the complexities of the technologies they rely on. Connections to any technology can be easily added, changed and updated, without you needing to know their language. 
+It provides infinite possibilities for developers and entrepreneurs to create, share or combine existing services to build new and better solutions. 
 
-MESG is open source, and we encourage developers and entrepreneurs to get innovative, to build businesses, solutions and increase productivity.
+All on and off-chain technologies can be connected to MESG, and connections can be shared on MESG Network either freely, or at a marketplace where you can put your applications up for sale.  
+  
+Apps are no longer constrained by the complexities of the technologies they rely on. You can easily update them without needing to know the languages of the technologies you’re using. 
+
+Connections to complex technologies can be easily added, changed and updated. Build with efficiency and ease. Two of our favorite words.
+
+We are proudly open-source, and encourage innovators to use their imaginations to harness the true potential of MESG.
 
 All technologies working together accelerates efficiencies and the discoveries of new solutions.
-
-
-
-## 
-
-
 
