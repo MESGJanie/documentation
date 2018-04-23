@@ -8,54 +8,79 @@ The Service can send data to the Application. The data is divided into three cat
 * Events from listener: When the Service emits a new event from its listener function. \(Eg: web server running and receiving a request or a blockchain technology that received a new transaction\)
 * System events: When the service is ready to be executed, notify the Application
 
-```java
-service Event {
-    rpc Emit (EmitEventRequest) returns (EventReply) {}
-}
-message EmitEventRequest {
-    ProtoService service = 1; 
-    string event = 2;
-    string data = 3;
-}
-message EventReply {
-    string event = 1;
-    string data = 2;
-}
+## Event.Emit
 
+[Proto definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go)
 
+{% tabs %}
+{% tab title="Request" %}
+```javascript
+{
+    "service": {...},
+    "event": "ethereum_newBlock",
+    "data": "{\"number\":2323232}"
+}
 ```
 
-{% api-method method="post" host="service." path="Emit" %}
-{% api-method-summary %}
-service.Emit
-{% endapi-method-summary %}
+#### Example
 
-{% api-method-description %}
+#### Parameters
 
-{% endapi-method-description %}
+| **Name** | **Type** | **Required** | **Description** |
+| --- | --- | --- | --- |
+| service | [Service](service-file.md) | Required | Object containing the service definition loaded from the yml service file. |
+| event | string | Required | The name of the event |
+| data | string | Required | The JSON Stringify of the event's data |
+{% endtab %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="dwdwdw" type="string" required=false %}
-wdwdwd
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% tab title="Reply" %}
+#### Example
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+```javascript
+{
+    "service": {...},
+    "event": "ethereum_newBlock",
+    "data": "{\"number\":2323232}"
+}
 ```
-string data = 2;
+
+#### Parameters
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| event | string |  |
+| data | string |  |
+{% endtab %}
+
+{% tab title="Example NodeJS" %}
+```javascript
+const grpc = require('grpc')
+const types = grpc.load(__dirname + '/types/api_event.proto').types
+const eventClient = new types.Event('localhost:50052', grpc.credentials.createInsecure())
+
+const service = "" //TODO: read service file
+const eventData = {} //TODO: add event data
+
+eventClient.Emit({
+  service: service,
+  event: "event_newBlock",
+  data: JSON.stringify(eventData)
+}, (err, reply) => {
+  if (err) {
+    console.error('err', err)
+    return
+  }
+  console.log('core reply', reply)
+})
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endtab %}
+{% endtabs %}
+
+
+
+
+
+
 
 ## Receiving commands from the Core
 
