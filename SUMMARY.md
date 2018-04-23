@@ -25,7 +25,7 @@
 ## Service
 
 * [What is a service?](service/what-is-a-service.md)
-* [Communication with the Core](service/communication-with-the-application.md)
+* [Communication with the Core](service/communication-with-the-core.md)
 * [Service folder](service/service-folder.md)
 * [Service file](service/service-file.md)
 * [Test](service/test.md)

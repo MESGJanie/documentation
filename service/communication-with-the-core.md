@@ -1,6 +1,6 @@
 # Communication with the Core
 
-Add service life cycle: wait for sync before listening for task. 
+Add service life cycle: wait for sync before listening for task.
 
 ## Send events to the Core
 
@@ -17,10 +17,10 @@ The Service can send data to the Core. The data is divided into three categories
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
 | service | [Service](service-file.md) | Required | Object containing the service definition loaded from the yml service file. |
-| event_id | string | Required | The event's id defined in the [service file](service/service-file.md) |
+| event\_id | string | Required | The event's id defined in the [service file](https://github.com/mesg-foundation/documentation/tree/c1028b6f9d709adf2ad46364ce7baaa37e27ff8e/service/service/service-file.md) |
 | data | string | Required | The event's data in JSON format |
 
-```json
+```javascript
 {
     "service": {
       ...
@@ -47,7 +47,7 @@ The Service can send data to the Core. The data is divided into three categories
 | event | string |  |
 | data | string |  |
 
-```json
+```javascript
 {
     "service": {...},
     "event": "ethereum_newBlock",
@@ -79,7 +79,6 @@ eventClient.Emit({
 ```
 {% endtab %}
 {% endtabs %}
-
 
 ## Receiving commands from the Core
 
