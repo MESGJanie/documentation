@@ -4,7 +4,6 @@
 
 ## Start here
 
-* [Introducation](https://docs.mesg.tech)
 * [MESG Network](start-here/mesg-network.md)
 * [What is a Node ?](start-here/what-is-a-node.md)
 * [Why run a Node ?](start-here/why-run-a-node.md)
