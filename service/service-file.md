@@ -118,7 +118,4 @@ If the transaction on this technology is verifiable, the service emits a predefi
 Services can specify internal dependencies like a database, cache or blockchain client.  
 If docker is used we can use the docker-compose syntax.
 
-## Example of a service file
-
-[include](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/service/mesg.yml)
-
+## [Example of a service file](https://github.com/mesg-foundation/documentation/blob/master/service/mesg.yml)

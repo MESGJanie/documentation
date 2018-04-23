@@ -1,6 +1,6 @@
 # Publish
 
-When you have finished creating your [service file](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/service/configuration.md), have [validated it](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/service/validation.md) and [tested it](test.md), you are ready to publish it.
+When you have finished creating your [service file](service-file.md), have [validated it](validate.md) and [tested it](test.md), you are ready to publish it.
 
 Each publication will cost you a small amount of tokens. Be aware this amount is **not refundable.** So please make sure you tested your service correctly.
 

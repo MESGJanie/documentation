@@ -1,6 +1,6 @@
 # Deployment
 
-When you've finished creating your [workflow file](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/workflow/file.md), [validating it](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/workflow/validation.md) and [testing it](https://github.com/mesg-foundation/documentation/tree/b3d92737e4dfd41f30e20d0ab1f2b8dbbf045a2d/workflow/testing.md), you're ready to deploy it.
+When you've finished creating your [workflow file](workflow-file.md), [validating it](validate.md) and [testing it](test.md), you're ready to deploy it.
 
 Each deployment will cost you a small amount of tokens. Please be aware that this amount is **not refundable** so make sure to test your workflow correctly.
 
