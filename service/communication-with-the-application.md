@@ -1,12 +1,12 @@
 # Communication with the Core
 
+Add service life cycle: wait for sync before listening for task. 
+
 ## Send events to the Core
 
-The Service can send data to the Application. The data is divided into three categories:
+The Service can send data to the Core. The data is divided into three categories:
 
-* Result of a command: When the Application asks to start a command and expects a result from this command
 * Events from listener: When the Service emits a new event from its listener function. \(Eg: web server running and receiving a request or a blockchain technology that received a new transaction\)
-* System events: When the service is ready to be executed, notify the Application
 
 ## Event.Emit
 
@@ -14,42 +14,46 @@ The Service can send data to the Application. The data is divided into three cat
 
 {% tabs %}
 {% tab title="Request" %}
-```javascript
-{
-    "service": {...},
-    "event": "ethereum_newBlock",
-    "data": "{\"number\":2323232}"
-}
-```
-
-#### Example
-
-#### Parameters
-
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
 | service | [Service](service-file.md) | Required | Object containing the service definition loaded from the yml service file. |
-| event | string | Required | The name of the event |
-| data | string | Required | The JSON Stringify of the event's data |
+| event_id | string | Required | The event's id defined in the [service file](service/service-file.md) |
+| data | string | Required | The event's data in JSON format |
+
+```json
+{
+    "service": {
+      ...
+      "events": {
+        "eventX": {
+          "data": {
+            "foo": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      ...
+    },
+    "event_id": "eventX",
+    "data": "{\"foo\":\"bar\"}"
+}
+```
 {% endtab %}
 
 {% tab title="Reply" %}
-#### Example
-
-```javascript
-{
-    "service": {...},
-    "event": "ethereum_newBlock",
-    "data": "{\"number\":2323232}"
-}
-```
-
-#### Parameters
-
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | event | string |  |
 | data | string |  |
+
+```json
+{
+    "service": {...},
+    "event": "ethereum_newBlock",
+    "data": "{\"number\":2323232}"
+}
+```
 {% endtab %}
 
 {% tab title="Example NodeJS" %}
@@ -77,14 +81,9 @@ eventClient.Emit({
 {% endtabs %}
 
 
-
-
-
-
-
 ## Receiving commands from the Core
 
-The Service needs to receive the command sent by the Application. Every time a command is received, it will make sure that the sender is the Application, then check that it can handle the command, and if so, execute it. Once executed, it will emit an event to the Application with the result of the command.
+The Service needs to receive the command sent by the Core. Every time a command is received, it will make sure that the sender is the Core, then check that it can handle the command, and if so, execute it. Once executed, it will reply to the Core with the result of the command.
 
 **TODO: a technical definition**
 
