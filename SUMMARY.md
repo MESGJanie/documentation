@@ -1,7 +1,6 @@
 ## Start here
 
-* [Introduction TEST](dwdw.md)
-* [Introduction TEST2](README.md)
+* [Introduction](README.md)
 * [What is a Node ?](what-is-a-node.md)
 * [Why run a Node ?](why-run-a-node.md)
 * [Run a Node](run-a-node.md)
