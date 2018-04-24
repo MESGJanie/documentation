@@ -1,6 +1,6 @@
-# MESG Network
+# MESG Infrastructure
 
-The MESG Network is made up of all users’ computers, connected to each other and all working together.
+The MESG Infrastructure is made up of all users’ computers, connected to each other and all running MESG Core
 
 Each individual computer on the network running MESG Core is called a Node. Nodes do all of the processing power in the network.
 
