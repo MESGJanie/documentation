@@ -1,12 +1,12 @@
-# Run a Node
+# Installation
 
-You can run a node with this simple command line:
+You can connect your computer with MESG Core with this simple command line:
 
 ```bash
 curl -sSL https://get.mesg.tech | bash
 ```
 
-This will download the [install script](https://get.mesg.tech), execute it on your computer and will take care of all dependencies.
+Once entered, it will download the [install script](https://get.mesg.tech), execute it on your computer, and take care of all dependencies.
 
 Note:
 

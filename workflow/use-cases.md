@@ -1,3 +1,9 @@
+---
+description: >-
+  The following are use cases of how applications that utilize MESG Core can be
+  used in the real world.
+---
+
 # Use cases
 
 Quick Examples:

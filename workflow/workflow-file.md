@@ -2,7 +2,7 @@
 
 In order to define your workflow, you can use a `YAML` formatted file that details all of your needs.
 
-This file needs to contain a [source event](source.md) and one or multiple [tasks](task.md).
+This file needs to contain a [source event]() and one or multiple [tasks](task.md).
 
 You can find the raw file example [here](https://github.com/mesg-foundation/documentation/blob/master/workflow/example.yml).
 
