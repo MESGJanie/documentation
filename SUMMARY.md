@@ -6,7 +6,6 @@
 
 * [What is MESG?](start-here/what-is-mesg.md)
 * [MESG Core](start-here/mesg-core.md)
-* [MESG Infrastructure](start-here/mesg-network.md)
 * [What is a Node ?](start-here/what-is-a-node.md)
 * [Why run a Node ?](start-here/why-run-a-node.md)
 * [Run a Node](start-here/run-a-node.md)
@@ -36,4 +35,5 @@
 * [Start](service/start.md)
 * [Stop](service/stop.md)
 * [FAQ](service/untitled.md)
+* MESG for Developers
 

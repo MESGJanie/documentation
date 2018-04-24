@@ -1,19 +1,16 @@
 # MESG Core
 
-MESG Core is an application that each of the Nodes run, making up the MESG Network.   
+MESG Core is an application that manages all communication with all technologies. Each Node running MESG Core makes up the MESG Network. 
+
+Rather than your application needing to connect to many APIs, your application needs only a single API, to connect to any technology, on or off the blockchain.
+
+MESG Core is not the foundation of your application, but rather a single external communication manager for your application.   
   
-MESG Core manages all communication with all technologies and services in the Network, instead of your application having to connect to each, and to manage the communication. Your application needs only to connect to MESG Core's API to access any technology.
+This way, when a technology is updated, your application will not need to also be updated. The only update necessary will be from a technology's API to MESG. Then, technologies will be automatically updated, because MESG's API will be unchanged. 
 
-Then, MESG Core facilitates the communication between all nodes, and all technologies connected to the MESG Network, allowing everything to work together. 
+In the first stage of MESG deployment, the MESG Core will be a web-based application to directly communicate with your application, then communicate with any other technology.   
+  
+The only difference in this first stage of deployment, is that users will need to use GitHub or other resources to share connections, rather than in our Network, and that your application will be temporarily centralized on your machine until the network is ready.
 
-MESG Core is not the foundation of your application, but rather an external self-regulating API that your application communicates with.
-
-MESG Core allows all nodes in the network to communicate with each other, and connect to any technology in any language with ease. 
-
-In the first stage of MESG deployment, the MESG Core will be used to directly communicate with your application, then communicate with any other technology. 
-
-In Q2 of 2018, once the network is deployed, MESG Core will take an alternative role as the receiver of tasks to deploy to the network.   
-
-
-
+In Q3 of 2018, once the MESG Network is deployed, MESG Core will take an alternative role as the receiver of tasks, and will harness the power of the decentralized network for the processing of the task, and hosting of data rather than your local computer.
 
