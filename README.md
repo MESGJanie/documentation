@@ -20,3 +20,5 @@ We are proudly open-source, and encourage innovators to use their imaginations t
 
 All technologies working together accelerates efficiencies and the discoveries of new solutions.
 
+To navigate to other sections, use the menu. 
+

@@ -5,7 +5,10 @@
 ## Start here
 
 * [What is MESG?](start-here/what-is-mesg.md)
+* [MESG for Developers](start-here/mesg-for-developers.md)
+* [MESG for Entrepreneurs](start-here/mesg-for-entrepreneurs.md)
 * [MESG Core](start-here/mesg-core.md)
+* [MESG Infrastructure](start-here/mesg-infrastructure.md)
 * [Installation](start-here/run-a-node.md)
 
 ## Your Application
@@ -28,6 +31,5 @@
 * [Validate](service/validate.md)
 * [Start](service/start.md)
 * [Stop](service/stop.md)
-* MESG for Developers
 * [Help us develop](help-us-develop.md)
 
