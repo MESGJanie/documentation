@@ -13,11 +13,6 @@
 
 * [Create Your Application](your-application/create-your-application.md)
 * [Use cases](your-application/use-cases.md)
-* [Task](your-application/task.md)
-* [Workflow File](your-application/workflow-file.md)
-* [Validate](your-application/validate.md)
-* [Test](your-application/test.md)
-* [Deployment](your-application/deployment.md)
 
 ## Service
 
