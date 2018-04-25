@@ -23,6 +23,6 @@ If you would rather work from the Docker image, you find more details on [Github
 
 
 
-**What's next? **  
+**What's next?**  
 You can start by creating your application [here](../your-application/create-your-application.md).
 
