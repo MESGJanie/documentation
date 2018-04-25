@@ -1,6 +1,6 @@
 # Installation
 
-You can connect your computer with MESG Core with this simple command line:
+You can connect your computer with Core with this simple command line:
 
 ```bash
 curl -sSL https://get.mesg.tech | bash
