@@ -15,7 +15,7 @@ The MESG Infrastructure utilizes blockchain technology in two ways:
 * It allows any external blockchain technology to be connected to Core
 * The processing of a task in the Network is be done off the blockchain, then the consensus-based result is submitted onto the blockchain.
 
-Want to learn more? Read about [MESG for Developers](mesg-for-developers.md) or [MESG for Entrepreneurs](mesg-for-entrepreneurs.md). Or skip straight to the [installation](run-a-node.md).   
+Want to learn more? Read about [MESG for Developers]() or [MESG for Entrepreneurs](). Or skip straight to the [installation](run-a-node.md).   
   
 
 

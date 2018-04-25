@@ -7,14 +7,13 @@
 * [What is MESG?](start-here/what-is-mesg.md)
 * [Core](start-here/mesg-core.md)
 * [MESG Infrastructure](start-here/mesg-infrastructure.md)
-* [MESG for Developers](start-here/mesg-for-developers.md)
-* [MESG for Entrepreneurs](start-here/mesg-for-entrepreneurs.md)
 * [Installation](start-here/run-a-node.md)
 
 ## Your Application
 
-* [Application](workflow/what-is-a-workflow.md)
+* [Create Your Application](workflow/what-is-a-workflow.md)
 * [Use cases](workflow/use-cases.md)
+* [Source](workflow/source.md)
 * [Task](workflow/task.md)
 * [Workflow File](workflow/workflow-file.md)
 * [Validate](workflow/validate.md)

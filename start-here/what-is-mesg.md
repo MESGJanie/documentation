@@ -4,7 +4,7 @@ description: Enhancing productivity for innovators and creators.
 
 # What is MESG?
 
-**MESG is a technology-agnostic infrastructure for decentralized app development. **It’s for advancing productivity, allowing users to connect any technology with ease.
+MESG \(pronounced ˈmesij/, or like **message**\) is a technology-agnostic **infrastructure** for decentralized app development. It’s for advancing productivity, allowing users to connect any technology with ease.
 
 MESG allows users to build applications quickly using existing connections, or design a series of tasks that will execute automatically.
 
@@ -16,5 +16,9 @@ This way, connections to complex technologies can be easily changed or updated, 
 
 We are focused on creating the best open-source infrastructure we can build, so we encourage innovators to use MESG to build businesses of all kinds, either catering to the MESG community, or to the world. 
 
-Continue here to learn about [Core](mesg-core.md).
+In Q3 2018, we are deploying the Network to complete the MESG Infrastructure. Our network makes it very easy for developers to share and reuse connections to technologies. Making back-end app building a breeze.
+
+Eager to get started building connections? Start[ here](https://docs.mesg.tech/~/edit/primary/start-here/run-a-node).  
+  
+Or if you want to learn more, click here to learn about [Core](mesg-core.md).
 
