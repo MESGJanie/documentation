@@ -7,7 +7,7 @@
 * [What is MESG?](start-here/what-is-mesg.md)
 * [Core](start-here/core.md)
 * [MESG Infrastructure](start-here/mesg-infrastructure.md)
-* [Installation](start-here/installation.md)
+* [Installing Core](start-here/installation.md)
 
 ## Your Application
 
