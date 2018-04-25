@@ -5,7 +5,7 @@
 To start a service, run the command:
 
 ```bash
-mesg-cli service start SERVICE_ID
+mesg-cli service start SERVICE_PATH
 ```
 
 This command will download the docker container of the service and deploy it on your local computer. Once the service is up and running, the Application will register on the Network you're running the service on.
