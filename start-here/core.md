@@ -14,4 +14,4 @@ Once the Network is deployed, Core will take an alternative role as the receiver
 
 See how this all works on [MESG Infrastructure](mesg-infrastructure.md). 
 
-Or, begin by installing Core [here](core.md).
+Or, begin by installing [Core](core.md).
