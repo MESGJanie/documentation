@@ -1,4 +1,4 @@
-# Installation
+# Installing Core
 
 Connect your computer with Core with the following command line:
 
