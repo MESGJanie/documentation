@@ -16,7 +16,7 @@ You can find a list of potential use cases [here](use-cases.md)
 
 There are 4 different steps to a basic application. 2 required and 2 optional.
 
-1. [Source](source.md): The event that triggers the workflow. 
+1. [Source](): The event that triggers the workflow. 
 2. [Task](task.md): The task to trigger
 
 

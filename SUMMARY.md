@@ -5,20 +5,19 @@
 ## Start here
 
 * [What is MESG?](start-here/what-is-mesg.md)
-* [Core](start-here/mesg-core.md)
+* [Core](start-here/core.md)
 * [MESG Infrastructure](start-here/mesg-infrastructure.md)
-* [Installation](start-here/run-a-node.md)
+* [Installation](start-here/installation.md)
 
 ## Your Application
 
-* [Create Your Application](workflow/what-is-a-workflow.md)
-* [Use cases](workflow/use-cases.md)
-<!-- * [Source](workflow/source.md)
-* [Task](workflow/task.md)
-* [Workflow File](workflow/workflow-file.md)
-* [Validate](workflow/validate.md)
-* [Test](workflow/test.md)
-* [Deployment](workflow/deployment.md) -->
+* [Create Your Application](your-application/create-your-application.md)
+* [Use cases](your-application/use-cases.md)
+* [Task](your-application/task.md)
+* [Workflow File](your-application/workflow-file.md)
+* [Validate](your-application/validate.md)
+* [Test](your-application/test.md)
+* [Deployment](your-application/deployment.md)
 
 ## Service
 
@@ -30,5 +29,5 @@
 * [Validate](service/validate.md)
 * [Start](service/start.md)
 * [Stop](service/stop.md)
-* [Help us develop](help-us-develop.md)
+* [Help us develop](service/help-us-develop.md)
 

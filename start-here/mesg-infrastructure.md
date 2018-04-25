@@ -1,6 +1,6 @@
 # MESG Infrastructure
 
-**Note: The MESG Infrastructure's full deployment is scheduled for Q3 2018. Until then, MESG can be used to connect technologies and build solutions **[**on your local computer**](run-a-node.md)**. This article is to describe what is currently being built.**  
+**Note: The MESG Infrastructure's full deployment is scheduled for Q3 2018. Until then, MESG can be used to connect technologies and build solutions **[**on your local computer**](installation.md)**. This article is to describe what is currently being built.**  
   
 The MESG Infrastructure is made up of a decentralized Network of all users computers running Core.   
   
@@ -15,7 +15,7 @@ The MESG Infrastructure utilizes blockchain technology in two ways:
 * It allows any external blockchain technology to be connected to Core
 * The processing of a task in the Network is be done off the blockchain, then the consensus-based result is submitted onto the blockchain.
 
-Want to learn more? Read about [MESG for Developers]() or [MESG for Entrepreneurs](). Or skip straight to the [installation](run-a-node.md).   
+Want to learn more? Read about [MESG for Developers]() or [MESG for Entrepreneurs](). Or skip straight to the [installation](installation.md).   
   
 
 
