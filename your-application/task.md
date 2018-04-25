@@ -6,7 +6,7 @@ If you want to make a complex workflow, you may need to trigger multiple tasks. 
 
 #### Example
 
-Let's use an example of one task `taskX` with the parameters `key` and `value` and suppose that you have one event `eventX` that returns the data `eventValue` and you want to `process` this data before sending it to `taskX`. You could have a  workflow similar to this :
+Let's use an example of one task `taskX` with the parameters `key` and `value` and suppose that you have one event `eventX` that returns the data `eventValue` and you want to `process` this data before sending it to `taskX`. You could have a  workflow similar to this:
 
 ```javascript
 └── eventX() // event that you need to connect
