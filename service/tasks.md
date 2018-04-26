@@ -2,7 +2,7 @@
 description: Receiving commands
 ---
 
-# Tasks
+# Listen for Tasks
 
 ## Communication from the Core
 

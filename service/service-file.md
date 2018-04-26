@@ -10,11 +10,11 @@ Each Service has a name chosen by the developer. The name is used to identify th
 
 ### Identifiers
 
-Each Service has two unique identifiers: a Service ID and Version ID. If necessary, both are generated during deployment. 
+Each Service has two unique identifiers: a Service ID and Version ID. If necessary, both will be generated during deployment. 
 
 The Service ID stays the same for the entire life of the Service. A Version ID is generated for each new deployment. 
 
-Both IDs are unique across all services. The Service ID can be used by users to manually choose a private service.
+Both IDs are unique across all services. The Service ID can be used to manually select a private service.
 
 ### Computational requirements
 
@@ -40,7 +40,8 @@ What is published on the network can be defined when deploying a Service by sett
 
 ### Events
 
-Services must declare a list of events they can emit. Events are things that happen on the technology the Service is connected to.  
+Services must declare a list of events they can emit. Events are actions that on the technology the Service is connected to.  
+  
 Each event is composed of the following:
 
 * **Identifier**: The unique identifier for this event.
@@ -97,34 +98,6 @@ A list of secrets is needed for a Service to run. Secrets are stored directly on
 #### Verify
 
 If the task is verifiable, a verifiable function should be implemented in order to ensure that an output is correct according to the inputs. This is useful to verify that a node has correctly executed a task by asking other nodes for verification.
-
-### Transfers
-
-A service can implement the network functionality of transfers.  
-The implementation is composed of a required action and an optional verification event.
-
-**Action**
-
-An action is required and has predefined parameters:
-
-* **Transfer ID**: the transfer ID of this transfer.
-* **Inputs**: a payload of parameters the service defines. These use the same structure as Task Inputs.
-* **Secrets**: a payload of secrets the service defines. These use the same structure as Task Secrets.
-
-The result is also required and predefined. It can be either:
-
-* **Success**
-  * Message
-* **Error**
-  * Message
-
-**Verification**
-
-If the transaction on this technology is verifiable, the service emits a predefined event that has a structure of:
-
-* **Transfer ID**: the transfer ID that was encoded in the transaction
-* **Success**: Boolean, yes if successful, and no otherwise.
-* **Message**: Reason of failure, or confirmation
 
 ### Dependencies
 

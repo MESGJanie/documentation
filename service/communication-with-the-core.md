@@ -2,15 +2,15 @@
 description: Sending commands
 ---
 
-# Event
+# Emit Event
 
 Event is the external event that occurs on the connected technology. It directs Core to listen for an event on a Service.
 
 ## Communication to the Core
 
-The Service can send Events to the Core. The data is divided into three categories:
+The Service can send Events to the Core.  When the Service emits a new event from its listener function. \(Eg: web server running and receiving a request or a blockchain technology that received a new transaction\)
 
-* Events from listener: When the Service emits a new event from its listener function. \(Eg: web server running and receiving a request or a blockchain technology that received a new transaction\)
+* Initial event from the technology
 
 ## Event.Emit
 

@@ -13,9 +13,8 @@
 
 * [What is a Service?](service/what-is-a-service.md)
 * [Service file](service/service-file.md)
-* [Event](service/communication-with-the-core.md)
-* [Tasks](service/tasks.md)
-* [Service folder](service/service-folder.md)
+* [Emit Event](service/communication-with-the-core.md)
+* [Listen for Tasks](service/tasks.md)
 * [Validate](service/validate.md)
 * [Test](service/test.md)
 * [Run Your Service](service/start.md)
@@ -24,7 +23,7 @@
 
 * [Create Your Application](your-application/create-your-application.md)
 * [Use cases](your-application/use-cases.md)
-* Listen
-* Execute Task
+* Listen for events
+* Execute task
 * [Help us develop](help-us-develop.md)
 

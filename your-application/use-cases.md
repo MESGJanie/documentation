@@ -11,7 +11,7 @@ Quick Examples:
 **When** I book a plane ticket:   
 
 
-* **then** I receive the payment confirmation by email and sms  
+* **then** I receive a payment confirmation by email and sms  
 * **then** **when** the flight is ready for check-in  
 * **then** I generate the boarding pass  
 * **then** I print my boarding pass  
