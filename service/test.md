@@ -1,16 +1,16 @@
 # Test
 
-Before deploying your service, you'll want to test it to ensure that everything is working as expected.
+Before deploying your Service, you'll want to test it to ensure that everything is working properly.
 
-To test that the Application is able to start your service and receive an event from it, execute the following method:
+To ensure that the Application is able to start your Service and receive an event from it, execute the following method:
 
 ```bash
 mesg-cli service test ./PATH_TO_SERVICE_FOLDER
 ```
 
-If you don't specify the path to the service folder, the method looks in the current folder for the `mesg.yml` file.
+If you don't specify the path to the service folder, the method searches in the current folder for the `mesg.yml` file.
 
-This method starts your service \(the docker container of your service\), wait for your service to emit the `started` system event, and then log any event the Application is receiving from your service.
+This method starts your service \(the Docker container of your service\), waits for your service to emit the `started` system event, and then logs any event the Application is receiving from your Service.
 
 ## Listen to an event
 
@@ -46,9 +46,9 @@ secrets:
     SECRET_NAME_1: SECRET_VALUE_1
 ```
 
-## Keep alive
+## Keep it alive
 
-All previous commands stop your service upon quitting. If you wish to leave your service alive, you can add to any commands the flag `--keep-alive`. Example:
+All previous commands stop your service upon quitting. If you wish to leave your service alive, you can add the following flag to any command: `--keep-alive`. For example:
 
 ```bash
 mesg-cli service test --task myServiceTaskName --keep-alive

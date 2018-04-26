@@ -1,10 +1,14 @@
-# Events
+---
+description: Sending commands
+---
 
-Add service life cycle: wait for sync before listening for task.
+# Event
 
-## Send events to the Core
+Event is the external event that occurs on the connected technology. It directs Core to listen for an event on a Service.
 
-The Service can send data to the Core. The data is divided into three categories:
+## Communication to the Core
+
+The Service can send Events to the Core. The data is divided into three categories:
 
 * Events from listener: When the Service emits a new event from its listener function. \(Eg: web server running and receiving a request or a blockchain technology that received a new transaction\)
 

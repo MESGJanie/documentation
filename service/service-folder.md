@@ -2,9 +2,9 @@
 
 A service must have its own folder.
 
-The only mandatory file is the `mesg.yml` that contains all the service definitions. See [service file](service-file.md) page.
+The only mandatory file is the `mesg.yml` that contains your Service definitions. See the [Service file](service-file.md) page for more information.
 
-Example of a folder of a service:
+Example of a folder for a Service:
 
 ```text
 |-- SERVICE_NAME
