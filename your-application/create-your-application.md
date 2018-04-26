@@ -6,12 +6,12 @@ Applications can be built on MESG by attaching an event on one service to a task
 
 A basic application is built of two main steps, listening for events, and the execution of tasks.
 
-1. **Source**
+1. **Event**
 2. **Task**
 
-## Source
+## Event
 
-Source is the external event that triggers the flow of tasks. It directs your application to listen for an event. We use the word "when" to describe how Source functions in our [use cases](use-cases.md).
+Event is the external event that triggers the flow of tasks. It directs your application to listen for an event. We use the word "when" to describe how Source functions in our [use cases](use-cases.md).
 
 event.listen → when
 
