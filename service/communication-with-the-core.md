@@ -4,13 +4,11 @@ description: Sending commands
 
 # Emit an Event
 
-Events are how Core listens to external technologies.
+Events are how a Service communicates to Core.
 
-## Communication to the Core
+## Why emit an Event? 
 
-A Service can send Events to the Core. New events are emitted to the Service from its listener function. \(e.g.: a web server running and receiving a request, or a blockchain technology that receives a new transaction\).
-
-* The initial event from the technology
+Events are emitted from a Service \(e.g.: a web server receiving a request, or a blockchain technology receiving a new transaction\). These events are emitted to achieve a desired effect, or to be used as a trigger to make another task happen. Each Service has different kinds of events you can send to the Core. 
 
 ## Event.Emit
 
