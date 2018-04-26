@@ -14,6 +14,7 @@
 * [Create Your Application](your-application/create-your-application.md)
 * [Use cases](your-application/use-cases.md)
 * Listen
+* Execute Task
 
 ## Service
 
@@ -26,5 +27,4 @@
 * [Start](service/start.md)
 * [Stop](service/stop.md)
 * [Help us develop](service/help-us-develop.md)
-* Execute Task
 
