@@ -8,10 +8,6 @@ curl -sSL https://get.mesg.tech | bash
 
 Once entered, it will automatically download the [install script](https://get.mesg.tech), execute it on your computer, and take care of all dependencies.
 
-```text
-
-```
-
 ## Docker CE
 
 To ensure compatibility with any technology, MESG also requires [Docker](https://www.docker.com/) to run on your machine.
