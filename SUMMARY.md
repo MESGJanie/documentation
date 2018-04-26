@@ -9,13 +9,6 @@
 * [MESG Infrastructure](start-here/mesg-infrastructure.md)
 * [Installing Core](start-here/installing-core.md)
 
-## Your Application
-
-* [Create Your Application](your-application/create-your-application.md)
-* [Use cases](your-application/use-cases.md)
-* Listen
-* Execute Task
-
 ## Service
 
 * [What is a service?](service/what-is-a-service.md)
@@ -28,3 +21,9 @@
 * [Stop](service/stop.md)
 * [Help us develop](service/help-us-develop.md)
 
+## Your Application
+
+* [Create Your Application](your-application/create-your-application.md)
+* [Use cases](your-application/use-cases.md)
+* Listen
+* Execute Task
