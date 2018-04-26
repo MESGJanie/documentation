@@ -4,7 +4,7 @@ Quick Examples:
 
 1. **When** I receive a payment on the Ethereum blockchain, **then** send me a Slack notification
 2. **When** I call a specific webhook **then** trigger a payment in Bitcoin blockchain
-3. **When** I receive a payment on Stripe **then** save it in a spreadsheet
+3. **When** I receive a payment on Stripe **then** save it in a Google Sheet
 
 ## Flight reservation / Insurance
 
@@ -15,7 +15,7 @@ Quick Examples:
 * **then** **when** the flight is ready for check-in  
 * **then** I generate the boarding pass  
 * **then** I print my boarding pass  
-* **then** **when** there is a delay on my flight  
+* **then** **when** my flight is delayed  
 * **then** I get a refund on a portion of my ticket  
 
 ## Automatic accounting
@@ -43,7 +43,7 @@ Quick Examples:
 * **then** if there are people in the picture 
 * **then** get a list of my friends on Facebook with their email addresses 
 * **then** find a match between my pictures and my friends' faces 
-* **then** **when** there is a match, share the picture to the associated friend 
+* **then** **when** there is a match, share the picture with the associated friend 
 
 ## 
 

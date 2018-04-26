@@ -23,7 +23,7 @@
 
 * [Create Your Application](your-application/create-your-application.md)
 * [Use cases](your-application/use-cases.md)
-* Listen for events
-* Execute a task
+* [Listen for events](your-application/listen.md)
+* [Execute a task](your-application/execute-task.md)
 * [Help us develop](help-us-develop.md)
 
