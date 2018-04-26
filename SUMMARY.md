@@ -11,7 +11,7 @@
 
 ## Service
 
-* [What is a service?](service/what-is-a-service.md)
+* [What is a Service?](service/what-is-a-service.md)
 * [Service file](service/service-file.md)
 * [Events](service/communication-with-the-core.md)
 * [Tasks](service/tasks.md)
