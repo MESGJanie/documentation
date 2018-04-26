@@ -4,10 +4,10 @@ Applications and solutions are built on MESG by attaching an event on one servic
 
 ## Steps in an Application
 
-A basic application is built of two main steps, listening for events, and the execution of tasks.
+A basic application is built of two main steps, listening for events, and execution of tasks.
 
-1. **Event**
-2. **Task**
+1. [**Event**](listen.md)
+2. [**Task**](execute-task.md)
 
 ## Event
 
