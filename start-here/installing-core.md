@@ -10,7 +10,7 @@ Once entered, it will automatically download the [install script](https://get.me
 
 ## Docker CE
 
-To ensure compatibility with any technology, MESG also requires [Docker](https://www.docker.com/) to run on your machine.
+To provide compatibility with any technology, MESG also requires [Docker](https://www.docker.com/) to run on your machine.
 
 If you don't have Docker installed on your machine yet, you can download it now from their official website:
 
