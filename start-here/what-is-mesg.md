@@ -18,3 +18,7 @@ Eager to get started building connections? Start[ here](https://docs.mesg.tech/~
   
 Or if you want to learn more, click here to learn about [Core](core.md).
 
+{% page-ref page="core.md" %}
+
+
+

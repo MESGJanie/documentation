@@ -22,5 +22,11 @@ If you don't have Docker installed on your machine yet, you can download it now 
 If you would rather work from the Docker image, you find more details on [Github](https://github.com/mesg-foundation/application).
 
 **What's next?**  
-You can start by [creating a Service](../service/what-is-a-service.md).
+You can start by [creating a Service](../service/what-is-a-service.md) or [create your application](../your-application/create-your-application.md).
+
+{% page-ref page="../service/what-is-a-service.md" %}
+
+{% page-ref page="../your-application/create-your-application.md" %}
+
+
 
