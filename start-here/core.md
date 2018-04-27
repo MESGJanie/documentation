@@ -14,9 +14,9 @@ Additionally, until Q3 2018, applications will be temporarily centralized on the
 
 Once the Network is deployed, Core will take an alternative role as the receiver of tasks, and will utilize the power of the decentralized Network for the processing and execution of tasks.
 
-See how this all works on [MESG Infrastructure](mesg-infrastructure.md).
-
-Or, begin by installing [Core](core.md).
+Begin by installing [Core](core.md).  
+  
+Or, see how this all works on MESG Infrastructure below.
 
 {% page-ref page="mesg-infrastructure.md" %}
 

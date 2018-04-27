@@ -26,7 +26,7 @@ All technologies working together accelerates efficiencies and the discoveries o
 
 Let's build.
 
-To navigate to other sections of this guide, use the Menu, or continue learning with [What is MESG? ](start-here/what-is-mesg.md)
+To navigate to other sections of this guide, use the Menu, or continue learning by clicking the link below:
 
 {% page-ref page="start-here/what-is-mesg.md" %}
 

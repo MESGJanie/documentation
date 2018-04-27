@@ -16,7 +16,7 @@ We are focused on creating the best open-source infrastructure we can build, so 
 
 Eager to get started building connections? Start[ here](https://docs.mesg.tech/~/edit/primary/start-here/run-a-node).  
   
-Or if you want to learn more, click here to learn about [Core](core.md).
+Or if you want to learn more, click below to learn about Core.
 
 {% page-ref page="core.md" %}
 

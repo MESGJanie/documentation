@@ -4,25 +4,25 @@
 
 To define a [Service](what-is-a-service.md), you will need to create a specific folder with a `mesg.yml` file that describes its functionalities. This file can contain the following information in a `YAML`syntax:
 
-You can create a default file using the CLI
+You can create a default file using the CLI by entering the command:
 
 ```text
 mesg-cli service init
 ```
 
-This will create a `mesg.yml` file in your current directory with the following attributes.
+This will create a `mesg.yml` file in your current directory with the following attributes:
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | **name** | `""` | `String` | Each Service has a name chosen by the developer. This name is used to identify the service in a nice humanlike way. |
 | **description** | `""` | `String` | A description that will be useful to explain the features of your service. |
 | **publish** | `ALL` | [`Publish`](service-file.md#publish) | What is published on the network can be defined when deploying a Service by setting a publish parameter. [more](service-file.md#publish) |
-| **visibility** | `ALL` | [`Visibility`](service-file.md#visibility) | A Service defines what entities can have access to the this service. [more](service-file.md#visibility) |
+| **visibility** | `ALL` | [`Visibility`](service-file.md#visibility) | A Service defines what entities can have access to the service. [more](service-file.md#visibility) |
 | **events** | `{}` | `map<id,`[`Event`](communication-with-the-core.md)`>` | Services must declare a list of events they can emit. Events are actions on a technology the Service is connected to. |
 | **tasks** | `{}` | `map<id,`[`Task`](tasks.md)`>` | Services declare a list of tasks they can execute. A task is an action that accepts parameters as inputs, executes something on the connected technology, and returns one output to Core, with data. |
 | **dependencies** | `{}` | `map<id,Dependency>` | Services can specify internal dependencies such as a database, cache or blockchain client. |
 
-You can find an exemple of `mesg.yml` file [here](https://github.com/mesg-foundation/service-ethereum/blob/master/mesg.yml)
+You can find an example of `mesg.yml` file [here](https://github.com/mesg-foundation/service-ethereum/blob/master/mesg.yml)
 
 ### Publish
 
