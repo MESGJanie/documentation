@@ -1,6 +1,6 @@
 # Create Your Application
 
-Applications and solutions are built on MESG by attaching an event on one service to a task on another service. These can be configured in any order, and you can create chain reactions or timed events.
+Applications or business solutions are built on MESG by attaching an event on one service to a task on another service. These can be configured in any order, and you can create chain reactions or timed events.
 
 ## Steps in an Application
 

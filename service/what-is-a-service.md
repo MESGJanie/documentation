@@ -8,7 +8,7 @@ Services allow information on any [Event](communication-with-the-core.md) to be 
 
 ## Steps in an Service
 
-A basic service is built of two main steps, listening for events, and execution of tasks.
+A basic service is built of two main steps, listening for events, and the execution of tasks.
 
 1. [**Event**](communication-with-the-core.md)
 2. [**Task**](tasks.md)

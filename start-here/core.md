@@ -1,6 +1,6 @@
 # Core
 
-Core is an application that manages all communication with all technologies.
+Core is an application that manages all communications with all technologies.
 
 Rather than your application needing to connect to many technologies' APIs, your application needs to connect to only one: Core's API, to connect to any other technology, on or off the blockchain.
 

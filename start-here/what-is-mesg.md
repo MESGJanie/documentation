@@ -12,7 +12,7 @@ This way, connections to complex technologies can be easily changed or updated, 
 
 We are focused on creating the best open-source infrastructure we can build, so we encourage innovators to use MESG to build businesses of all kinds, either catering to the MESG community, or to the world. 
 
-In Q3 2018, we are deploying the Network to unify the MESG Infrastructure. The Network makes it very easy for developers to harness the power of decentralization, and to share and reuse connections to technologies. Making back-end app building a breeze.
+**In Q3 2018**, we are deploying the Network to unify the MESG Infrastructure. The Network makes it easy for developers to harness the power of decentralization, and to share and reuse connections to technologies. Making back-end app building a breeze.
 
 Eager to get started building connections? Start[ here](https://docs.mesg.tech/~/edit/primary/start-here/run-a-node).  
   

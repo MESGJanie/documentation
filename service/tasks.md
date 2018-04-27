@@ -1,7 +1,3 @@
----
-description: Receiving commands from Core
----
-
 # Listen for Tasks
 
 ## Why listen for tasks?

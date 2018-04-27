@@ -6,13 +6,14 @@ To define a [Service](what-is-a-service.md), you will need to create a specific 
 
 ### Name
 
-Each Service has a name chosen by the developer. The name is used to identify the service in a nice humanlike way.
+Each Service has a name chosen by the developer. This name is used to identify the service in a nice humanlike way.
 
 ### Identifiers
 
 Each Service has two unique identifiers: a Service ID and Version ID. If necessary, both will be generated during deployment. 
 
-The Service ID stays the same for the entire life of the Service. A Version ID is generated for each new deployment. 
+* The Service ID stays the same for the entire life of the Service. 
+* A Version ID is generated for each new deployment. 
 
 Both IDs are unique across all services. The Service ID can be used to manually select a private service.
 
@@ -40,7 +41,7 @@ What is published on the network can be defined when deploying a Service by sett
 
 ### Events
 
-Services must declare a list of events they can emit. Events are actions that on the technology the Service is connected to.  
+Services must declare a list of events they can emit. Events are actions on a technology the Service is connected to.  
   
 Each event is composed of the following:
 
@@ -95,7 +96,7 @@ A list of secrets is needed for a Service to run. Secrets are stored directly on
 * **Description**: A description for the secret \(optional\)
 * **Type**: The type of secret
 
-#### Verify
+#### Verification
 
 If the task is verifiable, a verifiable function should be implemented in order to ensure that an output is correct according to the inputs. This is useful to verify that a node has correctly executed a task by asking other nodes for verification.
 
