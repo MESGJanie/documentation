@@ -22,10 +22,10 @@ First step to create your event is to update your [`mesg.yml`](service-file.md) 
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- | --- |
-| name | `id` | `String` | Name of your data |
-| description | `""` | `String` | Description of your data |
-| type | `String` | [`Type`](communication-with-the-core.md#type-of-your-data) | Type of data |
-| optional | `false` | `boolean` | Mark you data as optional |
+| **name** | `id` | `String` | Name of your data |
+| **description** | `""` | `String` | Description of your data |
+| **type** | `String` | [`Type`](communication-with-the-core.md#type-of-your-data) | Type of data |
+| **optional** | `false` | `boolean` | Mark you data as optional |
 
 ### Type of your data
 
