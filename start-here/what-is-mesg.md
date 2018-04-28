@@ -1,22 +1,22 @@
 # What is MESG?
 
-MESG \(pronounced ˈmesij/, or like **message**\) is a technology-agnostic **infrastructure** for decentralized app development. It’s for advancing productivity, allowing users to connect technologies with ease.
+MESG \(pronounced ˈmesij/, or like **message**\) is a technology-agnostic **infrastructure** for decentralized app development. It’s an advancement in productivity, enabling you to connect technologies with ease.
 
-MESG allows users to build applications quickly using existing connections to technologies, or design a series of tasks that execute automatically.
+Simply connect to Core’s API to allow Core to manage connections to all other technologies. This saves hundreds of hours of development connecting multiple APIs directly to your application to make it work. The time investment to connect to MESG’s API is roughly the same as connecting any ONE API to your application.
 
-Rather than connecting each technology's API directly to your application, users only need to connect to one, Core's API. Then, [Core](core.md) manages connections to all other technologies.
+Your application on MESG can be anything from a multinational dApp store to automating a simple workflow for a small business or paying your personal bills. The possibilities and use cases are endless.
 
-MESG acts as a filter and as the communication layer, compatible with any technology, on or off the blockchain. It intercepts, organizes and dispatches all information from all services and filters it down a single stream of information to your application.  
-  
-This way, connections to complex technologies can be easily changed or updated, without needing to update your application, because technologies aren't connected to your individual application, but rather to the [MESG Infrastructure](mesg-infrastructure.md). 
+MESG acts as a communication layer that’s compatible with any technology, on or off the blockchain. It organizes and dispatches information from all connected services and filters it down a single stream of real-time information to your application.
 
-We are focused on creating the best open-source infrastructure we can build, so we encourage innovators to use MESG to build businesses of all kinds, either catering to the MESG community, or to the world. 
+We are creating the best community driven open-source infrastructure to empower developers to use MESG to build innovations.
 
-**In Q3 2018**, we are deploying the Network to unify the MESG Infrastructure. The Network makes it easy for developers to harness the power of decentralization, and to share and reuse connections to technologies. Making back-end app building a breeze.
+**In Q3 2018**, we are deploying the Network to unify the MESG infrastructure. The Network makes it easy for developers to harness the power of decentralization, to share and reuse connections to technologies making back-end app building a breeze. Once a connection from a technology to Core is made, it can be shared for free or sold in a Marketplace, allowing developers to generate income each time their connection is used. We want to incentivize and value contributions.
+
+Start building connections -  Start here.
 
 Eager to get started building connections? Start[ here](https://docs.mesg.tech/~/edit/primary/start-here/run-a-node).  
   
-Or if you want to learn more, click below to learn about Core.
+Or if you want to learn about Core, use the button below.
 
 {% page-ref page="core.md" %}
 
