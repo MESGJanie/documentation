@@ -1,32 +1,34 @@
+---
+description: >-
+  MESG is a New Paradigm of technology development, where ideas and
+  implementation are both easy.
+---
+
 # Introduction
 
 {% hint style="info" %}
 Work in progress
 {% endhint %}
 
-MESG is fixing software development.
+MESG is an open-source decentralized architecture which makes all technologies, on or off the blockchain interoperable. It’s a building platform for developers.
 
-Our open-source architecture allows all technologies, on or off the blockchain, to be unified and consolidated through a single technology.
+Instead of making individual connections to each technology you want to use, you can now make a single connection to [Core](start-here/core.md), which will manage the connections to all other technologies. It manages the receiving and deployment of information and tasks, which means that maintaining apps is a breeze.  
 
-Rather than developers making individual connections to each technology they want to use, they can now make a single connection, to Core, and allow Core to manage the connections to all other technologies, on or off the blockchain.
+This technology-agnostic hub allows all technologies to play nicely together, ushering in a new era of productivity and possibilities.
 
-[Core](https://docs.mesg.tech/~/edit/primary/start-here/mesg-core), is a layer in-between your business and all technologies. It manages communication and the receiving and deployment of information and tasks.
+**Arriving Q3 2018:**
 
-This technology-agnostic hub allows all technologies to play nice together, ushering in a new era of productivity and solutions.
+Once a connection from a technology to Core is made, it can be shared for free or sold in a Marketplace, allowing developers to generate income each time their connection is used.
 
-**Arriving Q3 2018: **
+Take the best of what has already been created to build your custom solution. Our building platform allows you to connect technologies without needing to know the languages of the technologies you're using.
 
-Once a connection from a technology to Core is made, this connection can be shared or sold in a Marketplace.
+Get involved by writing code or creating viable products, all while benefiting from an incentive system designed to reward building.
 
-This provides infinite possibilities for developers and entrepreneurs to create, share or combine existing services to build new and better solutions.
+We’re excited to see what you come up with.  
 
-Simply take the best of what has already been created to build your custom solution. Sharing allows you to connect technologies without needing to know the languages of the technologies you're using.
 
-All technologies working together accelerates efficiencies and the discoveries of new solutions.
+To navigate to other sections of this guide, use the Menu, or continue learning by clicking the link below:  
 
-Let's build.
-
-To navigate to other sections of this guide, use the Menu, or continue learning by clicking the link below:
 
 {% page-ref page="start-here/what-is-mesg.md" %}
 
