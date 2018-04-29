@@ -126,13 +126,15 @@ Your service needs to listen tasks sent by the [core](../start-here/core.md). In
 
 {% tab title="Stream reply" %}
 | **Name** | **Type** | **Description** |
-| --- | --- | --- | --- |
-| **error** | `String` | A string that contains the error if error present  |
+| --- | --- | --- | --- | --- |
+| **taskID** | `String` | A unique ID for the task that allows to track the result in an asynchronous way |
+| **error** | `String` | A string that contains the error if an error is present |
 | **task** | `String` | Name of the task to execute |
 | **data** | `String` | Inputs of the task serialized in JSON |
 
 ```javascript
 {
+    "taskID": "xxxxxx",
     "error": "",
     "task": "taskX",
     "data": "{\"inputX\":\"Hello world!\",\"inputY\":true}"
@@ -191,4 +193,6 @@ func main() {
 {% endtabs %}
 
 ## Submit results of your execution
+
+Once your task finish its processing you will need to send the result back to the core
 
