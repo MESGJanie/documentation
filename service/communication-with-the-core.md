@@ -10,6 +10,8 @@ Events are emitted from a Service \(e.g.: a web server receiving a request, or a
 
 ## Create your Event
 
+{% tabs %}
+{% tab title="Detail" %}
 First step to create your event is to update your [`mesg.yml`](service-file.md) file and add an event indexed by it's key with the following attributes :
 
 | **Attribute** | **Default value** | **Type** | **Description** |
@@ -35,14 +37,15 @@ You can send different types of data. This type can be one of the following :
 * `Boolean`
 * `Number`
 * `Object`
+{% endtab %}
 
+{% tab title="Exemple" %}
 Here is an exemple of what your event might looks like in your [`mesg.yml`](service-file.md) file :
 
 {% code-tabs %}
 {% code-tabs-item title="mesg.yml" %}
 ```yaml
 ...
-
 events:
     eventX:
         name: "Event X"
@@ -62,6 +65,8 @@ events:
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Publish your event
 
