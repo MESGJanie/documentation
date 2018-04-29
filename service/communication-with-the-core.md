@@ -125,7 +125,7 @@ Your Service needs to publish the event to the core in order to propagate it. In
 {% endtab %}
 {% endtabs %}
 
-#### Exemples
+#### Examples
 
 {% tabs %}
 {% tab title="Node" %}
