@@ -57,13 +57,13 @@ tasks:
         name: "Task X"
         description: "This is the task X"
         inputs:
-            foo:
-                name: "Foo"
+            inputX:
+                name: "Input x"
                 description: "Foo is the first data"
                 type: String
                 optional: false
-            bar:
-                name: "Bar"
+            inputY:
+                name: "Input y"
                 description: "Bar is the second data"
                 type: Boolean
                 optional: true
@@ -95,7 +95,100 @@ tasks:
 
 ## Listen for task executions
 
+Your service needs to listen tasks sent by the [core](../start-here/core.md). In order to do that you need to use the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and [gRPC](https://grpc.io/) to listen for the execution. When you start listening, a stream will be open between your service and the core and you will receive new tasks from the core.
 
+### Task.Listen
+
+{% tabs %}
+{% tab title="Request" %}
+| **Attribute** | **Type** | **Required** | **Description** |
+| --- | --- |
+| **service** | [`Service`](service-file.md) | Required | Object containing the service definition loaded from the yml service file. |
+
+```javascript
+{
+    "service": {
+      ...
+      "tasks": {
+        "taskX": {
+          "inputs": {
+            "foo": { "type": "String" },
+            "bar": { "type": "Boolean" }
+          }
+          ...
+        }
+      },
+      ...
+    }
+}
+```
+{% endtab %}
+
+{% tab title="Stream reply" %}
+| **Name** | **Type** | **Description** |
+| --- | --- | --- | --- |
+| **error** | `String` | A string that contains the error if error present  |
+| **task** | `String` | Name of the task to execute |
+| **data** | `String` | Inputs of the task serialized in JSON |
+
+```javascript
+{
+    "error": "",
+    "task": "taskX",
+    "data": "{\"inputX\":\"Hello world!\",\"inputY\":true}"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+#### Exemple
+
+{% tabs %}
+{% tab title="Node" %}
+// TODO: add exemple in node
+{% endtab %}
+
+{% tab title="Go" %}
+{% code-tabs %}
+{% code-tabs-item title="main.go" %}
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"io/ioutil"
+	"os"
+
+	"github.com/mesg-foundation/core/types"
+	"google.golang.org/grpc"
+	yaml "gopkg.in/yaml.v2"
+)
+
+func main() {
+	content, _ := ioutil.ReadFile("./mesg.yml")
+	var service types.ProtoService
+	yaml.UnmarshalStrict(content, service)
+
+	connection, _ := grpc.Dial(os.Getenv("MESG_ENDPOINT"), grpc.WithInsecure())
+	cli := types.NewTaskClient(connection)
+
+	stream, _ := cli.Listen(context.Background(), &types.ListenTaskRequest{
+		Service: &service,
+	})
+
+	for {
+		res, _ := stream.Recv()
+		fmt.Println("receive task", res.Task, "with inputs", res.Data)
+	}
+}
+
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Submit results of your execution
 

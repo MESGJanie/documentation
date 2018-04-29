@@ -78,25 +78,25 @@ You service needs to publish the event to the core in order to propagate it. In 
 {% tab title="Request" %}
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
-| Service | [Service](service-file.md) | Required | Object containing the service definition loaded from the yml service file. |
-| Event | `String` | Required | The event's id defined in the [service file](https://github.com/mesg-foundation/documentation/tree/c1028b6f9d709adf2ad46364ce7baaa37e27ff8e/service/service/service-file.md) |
-| Data | `String` | Required | The event's data in JSON format |
+| **service** | [Service](service-file.md) | Required | Object containing the service definition loaded from the yml service file. |
+| **event** | `String` | Required | The event's id defined in the [service file](https://github.com/mesg-foundation/documentation/tree/c1028b6f9d709adf2ad46364ce7baaa37e27ff8e/service/service/service-file.md) |
+| **data** | `String` | Required | The event's data in JSON format |
 
 ```javascript
 {
-    "Service": {
+    "service": {
       ...
       "events": {
         "eventX": {
           "data": {
-            "foo": { "type": "string" }
+            "foo": { "type": "String" }
           }
         }
       },
       ...
     },
-    "Event": "eventX",
-    "Data": "{\"foo\":\"bar\"}"
+    "event": "eventX",
+    "data": "{\"foo\":\"hello\",\"bar\":false}"
 }
 ```
 {% endtab %}
@@ -104,15 +104,15 @@ You service needs to publish the event to the core in order to propagate it. In 
 {% tab title="Reply" %}
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| Error | `String` |  |
-| Event | `String` |  |
-| Data | `String` |  |
+| **error** | `String` | A string that contains the error if error present |
+| **event** | `String` | Name of the event triggered |
+| **data** | `String` | The event's data in JSON format |
 
 ```javascript
 {
     "error": "",
-    "event": "ethereum_newBlock",
-    "data": "{\"number\":2323232}"
+    "event": "eventX",
+    "data": "{\"foo\":\"hello\",\"bar\":false}"
 }
 ```
 {% endtab %}
