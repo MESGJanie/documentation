@@ -4,6 +4,14 @@
 
 The Service needs to receive the command sent by the Core in order to execute any desired task. Every time a command is received, it will ensure that the sender is the Core, then it will check if it can handle the command, and if so, it will execute it. Once executed, it will reply to the Core with the result of the command.
 
+### Steps to create a task
+
+In order to define your task you need to :
+
+* [ ] [Add your definition](tasks.md#create-your-task) in your [`mesg.yml`](service-file.md) file
+* [ ] [Listen for task execution](tasks.md) from the [core](../start-here/core.md)
+* [ ] [Submit the outputs](tasks.md#submit-outputs-of-your-execution) of your task
+
 ## Create your task
 
 {% tabs %}
@@ -192,7 +200,75 @@ func main() {
 {% endtab %}
 {% endtabs %}
 
-## Submit results of your execution
+## Submit outputs of your execution
 
-Once your task finish its processing you will need to send the result back to the core
+Once your task finish its processing you will need to send the outputs of the execution back to the [core](../start-here/core.md). You will still need to use the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and [gRPC](https://grpc.io/) to submit your results. Your task can only submit a single type of output per execution. Even if your task is declaring multiple kind of outputs only one should be submitted at the time. 
+
+{% tabs %}
+{% tab title="Request" %}
+| **Attribute** | **Type** | **Required** | **Description** |
+| --- | --- | --- | --- |
+| **taskID** | `String` | required | The `taskID` received from the [listen](tasks.md#listen-for-task-executions) stream. |
+| **output** | `String` | required | The id of the output as defined in the [declaration of your output](tasks.md#create-your-task). |
+| **data** | `String` | required | The data for the output you want to send encoded in JSON. The data should match the one you defined in the [declaration of your output](tasks.md#create-your-task). |
+
+```javascript
+{
+    "taskID": "xxxxxx",
+    "output": "outputX"
+    "data": "{\"outputDataX\":\"super result\",\"outputDataY\":42}"
+}
+```
+{% endtab %}
+
+{% tab title="Reply" %}
+| **Attribute** | **Type** | **Description** |
+| --- | --- |
+| **error** | `String` | Error when submitting the output of the task if an error happened. |
+
+```javascript
+{
+    "error": ""
+}
+```
+{% endtab %}
+{% endtabs %}
+
+#### Exemple
+
+{% tabs %}
+{% tab title="Node" %}
+
+{% endtab %}
+
+{% tab title="Go" %}
+{% code-tabs %}
+{% code-tabs-item title="main.go" %}
+```go
+type OutputX struct {
+	OutputDataX string `json:"outputDataX"`
+	OutputDataY int    `json:"outputDataY"`
+}
+// Job to listen event, see "Listen for task executions" part
+cli := types.NewResultClient(connection)
+...
+// do my processing
+outputX := OutputX{
+  OutputDataX: "...",
+  OutputDataY: 0,
+}
+...
+outputXResult, _ := json.Marshal(outputX)
+
+res, _ := cli.Submit(context.Background(), &types.SubmitResultRequest{
+    Data: outputXResult,
+    Output: "outputX",
+})
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
+
+
 

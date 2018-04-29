@@ -8,6 +8,13 @@ description: Sending commands
 
 Events are emitted from a Service \(e.g.: a web server receiving a request, or a blockchain technology receiving a new transaction\). These events are emitted to achieve a desired effect, or to be used as a trigger to make another task happen. Each Service has different kinds of events that you can send to the Core. 
 
+### Steps to follow
+
+In order to define your event you need to :
+
+* [ ] [Add the definition of your event](communication-with-the-core.md#create-your-event) in your [`mesg.yml`](service-file.md) file
+* [ ] [Publish your event](communication-with-the-core.md#publish-your-event) when they are happening in your service
+
 ## Create your Event
 
 {% tabs %}
