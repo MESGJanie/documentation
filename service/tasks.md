@@ -238,7 +238,7 @@ Once your task finish its processing you will need to send the outputs of the ex
 
 {% tabs %}
 {% tab title="Node" %}
-
+// TODO: add exemple in node
 {% endtab %}
 
 {% tab title="Go" %}
