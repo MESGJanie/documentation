@@ -76,60 +76,19 @@ Once your application can run on Docker you need to make sure that MESG [core](.
 {% code-tabs %}
 {% code-tabs-item title="mesg.yml" %}
 ```yaml
-name: function
-description: execute a function
-visibility: ALL
-publish: ALL
+name: serviceX
 tasks: {}
-events: 
-  eventX:
-    name: "Event X"
-    data:
-      foo:
-        name: "Foo"
-        type: String
-      bar:
-        name: "Bar"
-        type: Boolean
-tasks:
-  taskX:
-    name: "Task X"
-    description: "This is the task X"
-    inputs:
-      foo:
-        name: "Foo"
-        description: "Foo is the first data"
-        type: String
-        optional: false
-      bar:
-        name: "Bar"
-        description: "Bar is the second data"
-        type: Boolean
-        optional: true
-    outputs:
-      outputX:
-        name: "OutputX"
-        description: "Output X"
-        data:
-          outputDataX:
-            name: "Output data x"
-            description: "Description about output data x"
-            type: String
-          outputDataY:
-            name: "Output data y"
-            description: "Description about output data y"
-            type: Number
-    secrets:
-      SECRET_X:
-        name: "SecretX"
-        type: String
+events: {}
 dependencies:
-  function:
-    image: mesg/function
-    volumes: []
-    ports: []
-    command: ""
-
+  service:
+    image: "serviceXImage"
+    command: "node start"
+  serviceToConnectWith:
+    image: "..."
+    volumes:
+      - "/tmp"
+    ports:
+      - "1234"
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
