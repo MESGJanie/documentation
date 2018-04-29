@@ -13,7 +13,7 @@ Events are emitted from a Service \(e.g.: a web server receiving a request, or a
 In order to define your event you need to :
 
 * [ ] [Add the definition of your event](communication-with-the-core.md#create-your-event) in your [`mesg.yml`](service-file.md) file
-* [ ] [Publish your event](communication-with-the-core.md#publish-your-event) when they are happening in your service
+* [ ] [Publish your event](communication-with-the-core.md#publish-your-event) when it's happening in your service
 
 ## Create your Event
 
@@ -46,8 +46,8 @@ You can send different types of data. This type can be one of the following :
 * `Object`
 {% endtab %}
 
-{% tab title="Exemple" %}
-Here is an exemple of what your event might looks like in your [`mesg.yml`](service-file.md) file :
+{% tab title="Example" %}
+Here is an example of what your event might looks like in your [`mesg.yml`](service-file.md) file :
 
 {% code-tabs %}
 {% code-tabs-item title="mesg.yml" %}
@@ -77,7 +77,7 @@ events:
 
 ## Publish your event
 
-You service needs to publish the event to the core in order to propagate it. In order to do that you have to use the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and [gRPC](https://grpc.io/) to send the data.
+Your Service needs to publish the event to the core in order to propagate it. In order to do that you have to use the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and [gRPC](https://grpc.io/) to send the data.
 
 ### Event.Emit
 
