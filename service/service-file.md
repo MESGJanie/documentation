@@ -20,7 +20,7 @@ This will create a `mesg.yml` file in your current directory with the following 
 | **visibility** | `ALL` | [`Visibility`](service-file.md#visibility) | A Service defines what entities can have access to the service. [more](service-file.md#visibility) |
 | **events** | `{}` | `map<id,`[`Event`](communication-with-the-core.md)`>` | Services must declare a list of events they can emit. Events are actions on a technology the Service is connected to. |
 | **tasks** | `{}` | `map<id,`[`Task`](tasks.md)`>` | Services declare a list of tasks they can execute. A task is an action that accepts parameters as inputs, executes something on the connected technology, and returns one output to Core, with data. |
-| **dependencies** | `{}` | `map<id,Dependency>` | Services can specify internal dependencies such as a database, cache or blockchain client. |
+| **dependencies** | `{}` | `map<id,`[`Dependency`](dockerize-your-service.md#add-your-dependencies)`>` | Services can specify internal dependencies such as a database, cache or blockchain client. |
 
 You can find an example of `mesg.yml` file [here](https://github.com/mesg-foundation/service-ethereum/blob/master/mesg.yml)
 
@@ -28,10 +28,10 @@ You can find an example of `mesg.yml` file [here](https://github.com/mesg-founda
 
 What is published on the network can be defined when deploying a Service by setting a publish parameter. The possible values are: `ALL`, `SOURCE`, `CONTAINER`, or `NONE`.
 
-* `SOURCE` : only the source code will be published \(the developer will have to execute the Service themselves\).
+* `SOURCE` : only the source code will be published \(the developer will have to execute the service themselves\).
 * `CONTAINER` : only the container will be published \(any worker will be able to run it\).
 * `ALL` : both the source code and the container will be published.
-* `NONE` : only the Service config file will be published \(the developer will have to execute the Service itself\).
+* `NONE` : only the service config file will be published \(the developer will have to execute the service itself\).
 
 ### Visibility
 
