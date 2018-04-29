@@ -13,10 +13,6 @@ You can find more details on how to create your `Dockerfile` [here](https://docs
 Here are some exemples of `Dockerfile` that you might use for your application.
 
 {% tabs %}
-{% tab title="" %}
-
-{% endtab %}
-
 {% tab title="Node" %}
 {% code-tabs %}
 {% code-tabs-item title="Dockerfile" %}
@@ -28,12 +24,6 @@ RUN npm install
 COPY . .
 EXPOSE 8080
 CMD [ "npm", "start" ]
-```
-{% endcode-tabs-item %}
-
-{% code-tabs-item title="" %}
-```
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
