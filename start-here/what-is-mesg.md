@@ -16,9 +16,5 @@ Start building connections -  Start here.
 
 Eager to get started building connections? Start[ here](https://docs.mesg.tech/~/edit/primary/start-here/run-a-node).  
   
-Or if you want to learn about Core, use the button below.
-
-{% page-ref page="core.md" %}
-
 
 

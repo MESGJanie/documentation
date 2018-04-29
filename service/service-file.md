@@ -42,9 +42,5 @@ A Service defines who can see it by setting a visibility parameter. The possible
 * `ALL` : any user and worker will be able to run the service.
 * `NONE` : the service will only be accessible by manually entering its service ID \(which is created when deploying a service\).
 
-{% page-ref page="communication-with-the-core.md" %}
-
-{% page-ref page="tasks.md" %}
-
 
 

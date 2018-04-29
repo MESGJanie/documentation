@@ -21,12 +21,5 @@ If you don't have Docker installed on your machine yet, you can download it now 
 **Note:**  
 If you would rather work from the Docker image, you find more details on [Github](https://github.com/mesg-foundation/application).
 
-**What's next?**  
-Choose the links below to continue.
-
-{% page-ref page="../service/what-is-a-service.md" %}
-
-{% page-ref page="../your-application/create-your-application.md" %}
-
 
 

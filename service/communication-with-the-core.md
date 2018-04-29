@@ -196,7 +196,5 @@ func main() {
 {% endtab %}
 {% endtabs %}
 
-{% page-ref page="tasks.md" %}
-
 
 

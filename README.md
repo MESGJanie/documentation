@@ -30,7 +30,3 @@ We’re excited to see what you come up with.
 To navigate to other sections of this guide, use the Menu, or continue learning by clicking the link below:  
 
 
-{% page-ref page="start-here/what-is-mesg.md" %}
-
-
-
