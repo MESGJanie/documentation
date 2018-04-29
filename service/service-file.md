@@ -28,10 +28,10 @@ You can find an example of `mesg.yml` file [here](https://github.com/mesg-founda
 
 What is published on the network can be defined when deploying a Service by setting a publish parameter. The possible values are: `ALL`, `SOURCE`, `CONTAINER`, or `NONE`.
 
-* `SOURCE` : only the source code will be published \(the developer will have to execute the service themselves\).
+* `SOURCE` : only the source code will be published \(the developer will have to execute the Service themselves\).
 * `CONTAINER` : only the container will be published \(any worker will be able to run it\).
 * `ALL` : both the source code and the container will be published.
-* `NONE` : only the service config file will be published \(the developer will have to execute the service itself\).
+* `NONE` : only the Service config file will be published \(the developer will have to execute the Service itself\).
 
 ### Visibility
 
