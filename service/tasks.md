@@ -9,7 +9,7 @@ The Service needs to receive the command sent by the Core in order to execute an
 In order to define your task you need to :
 
 * [ ] [Add your definition](tasks.md#create-your-task) in your [`mesg.yml`](service-file.md) file
-* [ ] [Listen for task execution](tasks.md) from the [core](../start-here/core.md)
+* [ ] [Listen for task execution](tasks.md) from the [Core](../start-here/core.md)
 * [ ] [Submit the outputs](tasks.md#submit-outputs-of-your-execution) of your task
 
 ## Create your task
@@ -24,7 +24,7 @@ The first step is to declare the tasks that you service will be able to execute 
 | **description** | `""` | `String` | Description of your task, what the task is doing and why it is useful |
 | **inputs** | `{}` | `map<id,`[`Input`](tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of inputs that your task needs in order to be executed |
 | **outputs** | `{}` | `map<id,`[`Outputs`](tasks.md#outputs-data)`>` | Map of outputs that your task will emit. Your task can declare multiple outputs but can only submit one output per execution. |
-| **secrets** | `{}` | `map<id,`[`Secret`](tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of secrets that your task may needs. Secrets are environmental variables that are set directly by the node. |
+| **secrets** | `{}` | `map<id,`[`Secret`](tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of secrets that your task may need. Secrets are environmental variables that are set directly by the node. |
 
 ### Outputs data
 
@@ -53,8 +53,8 @@ You can send different types of data. This type can be one of the following :
 * `Object`
 {% endtab %}
 
-{% tab title="Exemple" %}
-Here is an exemple of what your event might looks like in your [`mesg.yml`](https://docs.mesg.tech/service/service-file) file :
+{% tab title="Example" %}
+Here is an example of what your event might look like in your [`mesg.yml`](https://docs.mesg.tech/service/service-file) file :
 
 {% code-tabs %}
 {% code-tabs-item title="mesg.yml" %}
