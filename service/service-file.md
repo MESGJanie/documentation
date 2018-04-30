@@ -6,8 +6,8 @@ To define a [Service](what-is-a-service.md), you will need to create a specific 
 
 You can create a default file using the CLI by entering the command:
 
-```text
-mesg-cli service init
+```bash
+mesg-core service init
 ```
 
 This will create a `mesg.yml` file in your current directory with the following attributes:
@@ -26,6 +26,10 @@ You can find an example of `mesg.yml` file [here](https://github.com/mesg-founda
 
 ### Publish
 
+{% hint style="info" %}
+This feature is not yet implemented and will be implement when the network will be ready. 
+{% endhint %}
+
 What is published on the network can be defined when deploying a Service by setting a publish parameter. The possible values are: `ALL`, `SOURCE`, `CONTAINER`, or `NONE`.
 
 * `SOURCE` : only the source code will be published \(the developer will have to execute the service themselves\).
@@ -34,6 +38,10 @@ What is published on the network can be defined when deploying a Service by sett
 * `NONE` : only the service config file will be published \(the developer will have to execute the service itself\).
 
 ### Visibility
+
+{% hint style="info" %}
+This feature is not yet implemented and will be implement when the network will be ready.
+{% endhint %}
 
 A Service defines who can see it by setting a visibility parameter. The possible values are: `ALL`, `USERS`, `WORKERS`, or `NONE`.
 
