@@ -10,7 +10,7 @@ description: >-
 Work in progress
 {% endhint %}
 
-MESG is an open-source decentralized architecture which makes all technologies, on or off the blockchain interoperable. It’s a building platform for developers.
+MESG is an open-source decentralized infrastructure which makes all technologies, on or off the blockchain interoperable. It’s a building platform for developers.
 
 Instead of making individual connections to each technology you want to use, you can now make a single connection to [Core](start-here/core.md), which will manage the connections to all other technologies. It manages the receiving and deployment of information and tasks, which means that maintaining apps is a breeze.  
 
