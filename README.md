@@ -1,7 +1,7 @@
 ---
 description: >-
-  MESG is a New Paradigm of technology development, where ideas and
-  implementation are both easy.
+  MESG is a New Paradigm of technology development, where the implementation of
+  ideas is easy.
 ---
 
 # Introduction
