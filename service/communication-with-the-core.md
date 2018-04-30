@@ -79,6 +79,10 @@ events:
 
 Your Service needs to publish the event to the core in order to propagate it. In order to do that you have to use the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and [gRPC](https://grpc.io/) to send the data.
 
+{% hint style="info" %}
+Consider emitting event when your service is ready. If your service needs to synchronise some data first, you should wait for this synchronisation before emitting the event.
+{% endhint %}
+
 ### Event.Emit
 
 {% tabs %}

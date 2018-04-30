@@ -105,6 +105,10 @@ tasks:
 
 Your service needs to listen tasks sent by the [core](../start-here/core.md). In order to do that you need to use the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and [gRPC](https://grpc.io/) to listen for the execution. When you start listening, a stream will be open between your service and the core and you will receive new tasks from the core.
 
+{% hint style="info" %}
+Consider listening for task when your service is ready. If your service needs to synchronise some data first, you should wait for this synchronisation before listening for tasks.
+{% endhint %}
+
 ### Task.Listen
 
 {% tabs %}
