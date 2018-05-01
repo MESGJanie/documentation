@@ -4,11 +4,13 @@
   
 The MESG Infrastructure is made up of a decentralized Network of all users computers running Core.   
   
-Like many decentralized networks, when a Service is deployed, it will be shared among the nodes in the network. All of the nodes using the Service will re-seed this connection to share with others.   
+Like many decentralized networks, when a [Service](../service/what-is-a-service.md) is deployed, it will be shared among the nodes in the network. All of the nodes using the Service will re-seed this connection to share with others.   
   
 MESG fairly and automatically rewards contributors who either help produce an initial connection, or help process a task. 
 
-Developers and entrepreneurs making initial connections to technologies can choose the price of which others will pay to use their contribution, and they will get automatically rewarded with MESG Tokens when others use their work. 
+The creators of connections, workflows or applications choose their price, and dictate what each actor in the transaction, including the creator, is rewarded in MESG Tokens when others use their work. This allows for a totally free market of connection-making, efficiencies and automation.
+
+All of this in a pay-per-transaction model, allowing users to accomplish great feats while paying very little, redefining scalability.
 
 The MESG Infrastructure utilizes blockchain technology in two ways: 
 
