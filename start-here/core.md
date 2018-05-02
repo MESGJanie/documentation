@@ -6,11 +6,11 @@ Rather than your application needing to connect to many technologies' APIs, your
 
 Core is not the foundation of your application, but rather an external communication manager for your application, providing infinite compatibility.
 
-In the current stage of MESG deployment, Core is an application used to directly communicate with your application, then manage communications with any other technology.
+In the current stage of MESG deployment, Core is simply your application's external communications manager, allowing it to be interoperable with any other technology on the internet.
 
-Once our Network is deployed, Core will take an alternative role as the receiver of a list of tasks, and will utilize the power of the decentralized Network for the processing and execution of those tasks.
+Once our Network is deployed, Core will take an alternative role as the receiver of a list of tasks, and will utilize the power of the decentralized Network for the processing and execution of tasks.
 
-The network will be deployed in **Q3 of 2018.** At that time, users will be able to share or sell connections to technologies in our Marketplace, making assembly easy. Until then, users can utilize GitHub's repositories or other resources to share connections.   
+The network will be deployed **in Q3 of 2018.** At that time, users will be able to share or sell connections to technologies in our Marketplace, making assembly easy. Until then, users can utilize GitHub's repositories or other resources to share connections.   
   
 Until Q3 2018, applications will be temporarily centralized on the user's machine until the decentralized network is ready for deployment.
 
