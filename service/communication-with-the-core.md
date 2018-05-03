@@ -106,8 +106,8 @@ Consider emitting event when your service is ready. If your service needs to syn
       },
       ...
     },
-    "event": "eventX",
-    "data": "{\"foo\":\"hello\",\"bar\":false}"
+    "eventKey": "eventX",
+    "eventData": "{\"foo\":\"hello\",\"bar\":false}"
 }
 ```
 {% endtab %}
@@ -116,14 +116,10 @@ Consider emitting event when your service is ready. If your service needs to syn
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | **error** | `String` | A string that contains the error if error present |
-| **event** | `String` | Name of the event triggered |
-| **data** | `String` | The event's data in JSON format |
 
 ```javascript
 {
-    "error": "",
-    "event": "eventX",
-    "data": "{\"foo\":\"hello\",\"bar\":false}"
+    "error": ""
 }
 ```
 {% endtab %}
@@ -140,16 +136,16 @@ const grpc = require('grpc')
 
 const yaml = require('js-yaml')
 const fs = require('fs')
-const types = grpc.load(__dirname + '/types/api_event.proto').types
-const eventClient = new types.Event(
+const api = grpc.load(__dirname + '/api/service/api.proto').types
+const eventClient = new apu.Service(
   process.env.MESG_ENDPOINT,
   grpc.credentials.createInsecure()
 )
 
-eventClient.Emit({
+eventClient.EmitEvent({
   service: yaml.safeLoad(fs.readFileSync("./mesg.yml")),
-  event: "eventX",
-  data: JSON.stringify({
+  eventKey: "eventX",
+  eventData: JSON.stringify({
     foo: "hello",
     bar: false
   })
@@ -175,7 +171,8 @@ import (
 	"os"
 
 
-	"github.com/mesg-foundation/core/types"
+	api "github.com/mesg-foundation/core/api/service"
+	"github.com/mesg-foundation/core/service"
 	"google.golang.org/grpc"
 	yaml "gopkg.in/yaml.v2"
 )
@@ -187,21 +184,21 @@ type EventX struct {
 
 func main() {
 	content, _ := ioutil.ReadFile("./mesg.yml")
-	var service types.ProtoService
+	var service service.Service
 	yaml.UnmarshalStrict(content, service)
 
 	connection, _ := grpc.Dial(os.Getenv("MESG_ENDPOINT"), grpc.WithInsecure())
-	cli := types.NewEventClient(connection)
+	cli := api.NewServiceClient(connection)
 
 	eventX, _ := json.Marshal(EventX{
 		Foo: "hello",
 		Bar: false,
 	})
 
-	reply, _ := cli.Emit(context.Background(), &types.EmitEventRequest{
-		Service: &service,
-		Event:   "eventX",
-		Data:    string(eventX),
+	reply, _ := cli.EmitEvent(context.Background(), &api.EmitEventRequest{
+		Service:   &service,
+		EventKey:  "eventX",
+		EventData: string(eventX),
 	})
 	log.Println(reply)
 }
