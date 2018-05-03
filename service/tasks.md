@@ -28,7 +28,7 @@ The first step is to declare the tasks that you service will be able to execute 
 
 ### Outputs data
 
-| Attribute | Default value | Type | Description |
+| **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- |
 | name | `id` | `String` | Name of your output, default is the id you defined |
 | description | `""` | `String` | A description of your output, what kind of output, what and how is it useful |
@@ -141,15 +141,15 @@ Consider listening for task when your service is ready. If your service needs to
 | --- | --- | --- | --- | --- |
 | **executionID** | `String` | A unique ID for the task that allows to track the result in an asynchronous way |
 | **error** | `String` | A string that contains the error if an error is present |
-| **task** | `String` | Name of the task to execute |
-| **data** | `String` | Inputs of the task serialized in JSON |
+| **taskKey** | `String` | Key of the task to execute \(as in your `mesg.yml` file\) |
+| **inputData** | `String` | Inputs of the task serialized in JSON |
 
 ```javascript
 {
     "executionID": "xxxxxx",
     "error": "",
-    "task": "taskX",
-    "data": "{\"inputX\":\"Hello world!\",\"inputY\":true}"
+    "taskKey": "taskX",
+    "inputData": "{\"inputX\":\"Hello world!\",\"inputY\":true}"
 }
 ```
 {% endtab %}
@@ -174,26 +174,27 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/mesg-foundation/core/types"
+	api "github.com/mesg-foundation/core/api/service"
+	"github.com/mesg-foundation/core/service"
 	"google.golang.org/grpc"
 	yaml "gopkg.in/yaml.v2"
 )
 
 func main() {
 	content, _ := ioutil.ReadFile("./mesg.yml")
-	var service types.ProtoService
+	var service service.Service
 	yaml.UnmarshalStrict(content, service)
 
 	connection, _ := grpc.Dial(os.Getenv("MESG_ENDPOINT"), grpc.WithInsecure())
-	cli := types.NewTaskClient(connection)
+	cli := api.NewServiceClient(connection)
 
-	stream, _ := cli.Listen(context.Background(), &types.ListenTaskRequest{
+	stream, _ := cli.ListenTask(context.Background(), &api.ListenTaskRequest{
 		Service: &service,
 	})
 
 	for {
 		res, _ := stream.Recv()
-		fmt.Println("receive task", res.Task, "with inputs", res.Data)
+		fmt.Println("receive task", res.TaskKey, "with inputs", res.InputData)
 	}
 }
 
@@ -213,26 +214,28 @@ Once your task finish its processing you will need to send the outputs of the ex
 | **Attribute** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
 | **executionID** | `String` | required | The `executionID` received from the [listen](tasks.md#listen-for-task-executions) stream. |
-| **output** | `String` | required | The id of the output as defined in the [declaration of your output](tasks.md#create-your-task). |
-| **data** | `String` | required | The data for the output you want to send encoded in JSON. The data should match the one you defined in the [declaration of your output](tasks.md#create-your-task). |
+| **outputKey** | `String` | required | The id of the output as defined in the [declaration of your output](tasks.md#create-your-task). |
+| **outputData** | `String` | required | The data for the output you want to send encoded in JSON. The data should match the one you defined in the [declaration of your output](tasks.md#create-your-task). |
 
 ```javascript
 {
     "executionID": "xxxxxx",
-    "output": "outputX"
-    "data": "{\"outputDataX\":\"super result\",\"outputDataY\":42}"
+    "outputKey": "outputX"
+    "outputData": "{\"outputDataX\":\"super result\",\"outputDataY\":42}"
 }
 ```
 {% endtab %}
 
 {% tab title="Reply" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- |
+| --- | --- | --- |
 | **error** | `String` | Error when submitting the output of the task if an error happened. |
+| **executionID** | `String` | The id of the execution. |
 
 ```javascript
 {
     "error": ""
+    "executionID": "xxxxxx"
 }
 ```
 {% endtab %}
