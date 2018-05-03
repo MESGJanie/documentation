@@ -185,7 +185,7 @@ type EventX struct {
 func main() {
 	content, _ := ioutil.ReadFile("./mesg.yml")
 	var service service.Service
-	yaml.UnmarshalStrict(content, service)
+	yaml.UnmarshalStrict(content, &service)
 
 	connection, _ := grpc.Dial(os.Getenv("MESG_ENDPOINT"), grpc.WithInsecure())
 	cli := api.NewServiceClient(connection)
