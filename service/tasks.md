@@ -4,19 +4,19 @@
 
 The Service needs to receive the command sent by the Core in order to execute any desired task. Every time a command is received, it will ensure that the sender is the Core, then it will check if it can handle the command, and if so, it will execute it. Once executed, it will reply to the Core with the result of the command.
 
-### Steps to create a task
+### Steps to follow
 
-In order to define your task you need to :
+To implement tasks in your Service, you need to :
 
-* [ ] [Add your definition](tasks.md#create-your-task) in your [`mesg.yml`](service-file.md) file
+* [ ] [Add the task definition](tasks.md#create-your-task) in the Service's [`mesg.yml`](service-file.md) file
 * [ ] [Listen for task execution](tasks.md) from the [Core](../start-here/core.md)
-* [ ] [Submit the outputs](tasks.md#submit-outputs-of-your-execution) of your task
+* [ ] [Submit the outputs](tasks.md#submit-outputs-of-your-execution) of the task
 
-## Create your task
+## Create a Task
 
 {% tabs %}
 {% tab title="Detail" %}
-The first step is to declare the tasks that you service will be able to execute in your [`mesg.yml`](service-file.md) file. The events should be indexed by their id and should describe the following attributes :
+The first step is to declare the tasks that the service will be able to execute in the service's [`mesg.yml`](service-file.md) file. The events should be indexed by their id and should describe the following attributes :
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- | --- | --- |
@@ -43,7 +43,7 @@ The first step is to declare the tasks that you service will be able to execute 
 | **type** | `String` | [`Type`](tasks.md#type-of-your-data) | Type of your parameter |
 | **optional** | `false` | `Boolean` | If true, this parameter is considered as optional and might be empty  |
 
-### Type of your data {#type-of-your-data}
+### Type of the data {#type-of-your-data}
 
 You can send different types of data. This type can be one of the following :
 

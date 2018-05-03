@@ -22,7 +22,7 @@ This will create a `mesg.yml` file in your current directory with the following 
 | **tasks** | `{}` | `map<id,`[`Task`](tasks.md)`>` | Services declare a list of tasks they can execute. A task is an action that accepts parameters as inputs, executes something on the connected technology, and returns one output to Core, with data. |
 | **dependencies** | `{}` | `map<id,`[`Dependency`](dockerize-your-service.md#add-your-dependencies)`>` | Services can specify internal dependencies such as a database, cache or blockchain client. |
 
-You can find an example of `mesg.yml` file [here](https://github.com/mesg-foundation/service-ethereum/blob/master/mesg.yml)
+You can find an example of `mesg.yml` file [here](https://github.com/mesg-foundation/service-ethereum/blob/master/mesg.yml).
 
 ### Publish
 
@@ -30,7 +30,7 @@ You can find an example of `mesg.yml` file [here](https://github.com/mesg-founda
 This feature is not yet implemented and will be implement when the network will be ready. 
 {% endhint %}
 
-What is published on the network can be defined when deploying a Service by setting a publish parameter. The possible values are: `ALL`, `SOURCE`, `CONTAINER`, or `NONE`.
+What is published on the network can be defined by setting a publish parameter. The possible values are: `ALL`, `SOURCE`, `CONTAINER`, or `NONE`.
 
 * `SOURCE` : only the source code will be published \(the developer will have to execute the service themselves\).
 * `CONTAINER` : only the container will be published \(any worker will be able to run it\).

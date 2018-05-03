@@ -10,35 +10,35 @@ Events are emitted from a Service \(e.g.: a web server receiving a request, or a
 
 ### Steps to follow
 
-In order to define your event you need to :
+To emit events from your Service, you need to :
 
-* [ ] [Add the definition of your event](communication-with-the-core.md#create-your-event) in your [`mesg.yml`](service-file.md) file
-* [ ] [Publish your event](communication-with-the-core.md#publish-your-event) when it's happening in your service
+* [ ] [Add the definition of the event](communication-with-the-core.md#create-your-event) in the Service's [`mesg.yml`](service-file.md) file
+* [ ] [Emit the event](communication-with-the-core.md#publish-your-event) when it's happening in the service
 
-## Create your Event
+## Create an Event
 
 {% tabs %}
 {% tab title="Detail" %}
-First step to create your event is to update your [`mesg.yml`](service-file.md) file and add an event indexed by it's key with the following attributes :
+First step to create the event is to update the Service's [`mesg.yml`](service-file.md) file and add an event indexed by it's key with the following attributes :
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- |
-| **name** | `id` | `String` | Name of your event, if not set the name will be the same as the id you choose for the event. |
-| **description** | `""` | `String` | Describe your event, what's it's purpose and why users might want to connect to it |
-| **data** | `{}` | `map<id,`[`Data`](communication-with-the-core.md#data-of-your-event)`>` | The data that your event will contains |
+| **name** | `id` | `String` | Name of the event, if not set the name will be the same as the id you choose for the event. |
+| **description** | `""` | `String` | Describe the event, what's its purpose and why users might want to use it. |
+| **data** | `{}` | `map<id,`[`Data`](communication-with-the-core.md#data-of-your-event)`>` | The structure of the event's data. |
 
-### Data of your event
+### Event's data
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- | --- |
-| **name** | `id` | `String` | Name of your data |
-| **description** | `""` | `String` | Description of your data |
+| **name** | `id` | `String` | Name of the data |
+| **description** | `""` | `String` | Description of the data |
 | **type** | `String` | [`Type`](communication-with-the-core.md#type-of-your-data) | Type of data |
-| **optional** | `false` | `boolean` | Mark you data as optional |
+| **optional** | `false` | `boolean` | Mark the data as optional |
 
-### Type of your data
+### Data's type
 
-You can send different types of data. This type can be one of the following :
+The data's type can be one of the following:
 
 * `String`
 * `Boolean`
@@ -47,7 +47,7 @@ You can send different types of data. This type can be one of the following :
 {% endtab %}
 
 {% tab title="Example" %}
-Here is an example of what your event might looks like in your [`mesg.yml`](service-file.md) file :
+Example of an event definition in a [`mesg.yml`](service-file.md) file:
 
 {% code-tabs %}
 {% code-tabs-item title="mesg.yml" %}
@@ -75,12 +75,12 @@ events:
 {% endtab %}
 {% endtabs %}
 
-## Publish your event
+## Emit an Event
 
-Your Service needs to publish the event to the core in order to propagate it. In order to do that you have to use the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and [gRPC](https://grpc.io/) to send the data.
+To emit events from the Service to the Core, the Service have to follow the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and use [gRPC](https://grpc.io/).
 
 {% hint style="info" %}
-Consider emitting event when your service is ready. If your service needs to synchronise some data first, you should wait for this synchronisation before emitting the event.
+Consider emitting event when the service is ready. If the service needs to synchronise data first, it should wait for the synchronisation to finish before emitting events.
 {% endhint %}
 
 ### Event.Emit
@@ -115,7 +115,7 @@ Consider emitting event when your service is ready. If your service needs to syn
 {% tab title="Reply" %}
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| **error** | `String` | A string that contains the error if error present |
+| **error** | `String` | A string that contains the error if any |
 
 ```javascript
 {

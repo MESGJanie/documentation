@@ -1,6 +1,6 @@
 # What is MESG?
 
-MESG \(pronounced ˈmesij/, or like **message**\) is a technology-agnostic **infrastructure** for decentralized app development. It’s an advancement in productivity, enabling you to connect technologies with ease.
+MESG \(pronounced ˈmesij/, or **message**\) is a technology-agnostic **infrastructure** for decentralized app development. It’s an advancement in productivity, enabling you to connect technologies with ease.
 
 Simply connect your application to Core’s API to allow Core to manage connections to all other technologies. This saves hundreds of hours of development bridging multiple APIs directly to your application to make it work. The time investment to connect to MESG’s API is roughly the same as connecting any ONE API to your application.
 

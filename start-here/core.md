@@ -1,8 +1,8 @@
 # Core
 
-Core is an application that manages all communications with all technologies.
+MESG Core is an application that manages all communications with all technologies.
 
-Rather than your application needing to connect to many technologies' APIs, your application needs to connect to only one: Core's API, to connect to any other technology, on or off the blockchain.
+Rather than your application needing to connect to many technologies' APIs, your application needs to connect to only one: the Core's API, to connect to any other technology, on or off the blockchain.
 
 Core is not the foundation of your application, but rather an external communication manager for your application, providing infinite compatibility.
 
