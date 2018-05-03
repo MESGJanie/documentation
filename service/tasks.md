@@ -257,7 +257,7 @@ type OutputX struct {
 	OutputDataY int    `json:"outputDataY"`
 }
 // Job to listen event, see "Listen for task executions" part
-cli := types.NewResultClient(connection)
+cli := types.NewServiceClient(connection)
 ...
 // do my processing
 outputX := OutputX{
@@ -269,8 +269,8 @@ outputXResult, _ := json.Marshal(outputX)
 
 res, _ := cli.Submit(context.Background(), &types.SubmitResultRequest{
     ExecutionId: "...",
-    Data: outputXResult,
-    Output: "outputX",
+    OutputKey: "outputX",
+    OutputData: outputXResult,
 })
 ```
 {% endcode-tabs-item %}
