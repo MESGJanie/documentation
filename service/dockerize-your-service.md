@@ -2,7 +2,7 @@
 
 ## Why do I need Docker ?
 
-In MESG all the services run in Docker to provide a sandbox for your service to run without any problems and side effects that might happen in a local machine like your service not compatible on Windows or Linux or this kind of  things that can be really complicated to achieve and also make sure that you can have all the time the exact same environment for your service to run.
+In MESG all the services run in Docker to provide a sandbox for your service to run without any problems and side effects that might happen in a local machine, such as your service not being compatible with Windows or Linux or other things that can be really complicated to achieve. It maintains the exact same environment for your service to run, so you don't have to.
 
 ### Steps to be compatible with Docker
 
@@ -56,10 +56,10 @@ CMD ["/app/main"]
 
 ## Add your dependencies
 
-Once your application can run on Docker you need to make sure that MESG [core](../start-here/core.md) will be able to start it for you. In order to do that you need to update your [`mesg.yml`](service-file.md) file with all the dependencies that you need for your service to run efficiently.
+Once your application can run on Docker, you need to make sure that MESG [Core](../start-here/core.md) will be able to start it for you. In order to do that, you need to update your [`mesg.yml`](service-file.md) file with all the dependencies you need for your service to run efficiently.
 
 {% hint style="info" %}
-**Note:** You always need to put your service as a dependency otherwise your service cannot run.
+**Note:** You always need to use your service as a dependency, otherwise your service cannot run.
 {% endhint %}
 
 {% tabs %}

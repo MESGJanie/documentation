@@ -2,11 +2,13 @@
 
 ## Why listen for events?
 
-Your Application listens for events so that it is connected in real time to something happening on a technology. Events are emitted to the Core from its listener function. 
+Your Application needs to listen for events so that it's connected in real time to something happening on a technology. It needs to listen to be able to receive commands. 
 
-## Listening for events from services
+Events are emitted to Core from your application's listener function. 
 
-In order to listen for events from your services you need to connect to the core through [gRPC](https://grpc.io/) and using the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go).
+## Listening for events from Services
+
+In order to listen for events from your Services you need to connect to Core through [gRPC](https://grpc.io/) using the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go).
 
 {% tabs %}
 {% tab title="Request" %}
@@ -48,7 +50,7 @@ In order to listen for events from your services you need to connect to the core
 {% endtab %}
 {% endtabs %}
 
-#### Exemple
+#### Example:
 
 {% tabs %}
 {% tab title="Node" %}
@@ -74,10 +76,10 @@ In order to listen for events from your services you need to connect to the core
 
 ## Listen for execution outputs
 
-When you execute a task you might want to listen for it's outputs too. Because tasks can take a long time depending on the action they are doing, outputs are send asynchronously and you need to listen for outputs as a separate process. In order to listen for events you need to connect to the core through [gRPC](https://grpc.io/) and using the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go). 
+When you execute a task you might want to listen for it's outputs too. Because tasks can take a long time depending on the action they're completing, outputs are sent asynchronously and you need to listen for outputs as a separate process. In order to listen for events you need to connect to Core through [gRPC](https://grpc.io/)  using the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go). 
 
 {% hint style="info" %}
-Outputs are send asynchronously. Make sure that you listen for outputs before you try to execute a task otherwise you might miss the output of this task execution.
+Outputs are send asynchronously. Make sure that you listen for outputs before you try to execute a task, otherwise you might miss the output of this task execution.
 {% endhint %}
 
 {% tabs %}

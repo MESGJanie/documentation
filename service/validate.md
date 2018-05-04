@@ -1,6 +1,8 @@
 # Validate
 
-Once you've done all this great job you need to verify that you didn't made mistakes while writing your service. In order to do that you can use the `service validate` command.
+Once you've done all this, great job!  
+  
+You'll need to verify that you didn't make any mistakes while writing your service. In order to do that you can use the `service validate` command:
 
 ```bash
 mesg-core service validate ./PATH_TO_SERVICE_FOLDER
