@@ -2,26 +2,30 @@
 
 Applications or business solutions are built on MESG by attaching an event on one service to a task on another service. These can be configured in any order, and you can create chain reactions or timed events.
 
-## Steps in an Application
+If you want your application to easily migrate to the future release with no code needed to create your application you should start thinking your application with Event Driven Architecture.
 
-A basic application is built of two main steps, listening for events, and execution of tasks.
+In order to create a maintainable and evolutive application you should try only to react to event. Every task that your application have to do should react to an event. Example: When my user signup then send an email.
 
-1. [**Event**](listen.md)
-2. [**Task**](execute-task.md)
+By creating your application that way, you embrace the philosophy of MESG and create an application become really easy.
 
-## Event
+### Source of events
 
-Event is the external action that triggers the flow of tasks. It directs your application to listen for an event. We use the word "when" to describe how events function in our [use cases](use-cases.md).
+{% hint style="info" %}
+The event is the **when** for your application
+{% endhint %}
 
-```text
-  event.listen
-```
+Your source of event can come from two different part of your services :
 
-## Task
+* [Events from services](listen.md)
+* [Outputs from the tasks of the services](execute-task.md)
 
-Task is action that the applicaiton will execute after it is triggered. We use the word "then" to describe how Task functions in our [use cases](use-cases.md).
+### Task to execute
 
-```text
-  task.execute
-```
+{% hint style="info" %}
+The task is the **then **for your application
+{% endhint %}
+
+When one event is coming then the only thing to do is to [execute a task](execute-task.md) of the service that you wants.
+
+You can find some example in the [use cases](use-cases.md) page.
 
