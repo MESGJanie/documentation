@@ -113,7 +113,7 @@ Consider listening for task when your service is ready. If your service needs to
 
 {% tabs %}
 {% tab title="Request" %}
-| **Attribute** | **Type** | **Required** | **Description** |
+| **Name** | **Type** | **Required** | **Description** |
 | --- | --- |
 | **service** | [`Service`](service-file.md) | Required | Object containing the service definition loaded from the yml service file. |
 
@@ -211,7 +211,7 @@ Once your task finish its processing you will need to send the outputs of the ex
 
 {% tabs %}
 {% tab title="Request" %}
-| **Attribute** | **Type** | **Required** | **Description** |
+| **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
 | **executionID** | `String` | required | The `executionID` received from the [listen](tasks.md#listen-for-task-executions) stream. |
 | **outputKey** | `String` | required | The id of the output as defined in the [declaration of your output](tasks.md#create-your-task). |
@@ -227,7 +227,7 @@ Once your task finish its processing you will need to send the outputs of the ex
 {% endtab %}
 
 {% tab title="Reply" %}
-| **Attribute** | **Type** | **Description** |
+| **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | **error** | `String` | Error when submitting the output of the task if an error happened. |
 | **executionID** | `String` | The id of the execution. |
