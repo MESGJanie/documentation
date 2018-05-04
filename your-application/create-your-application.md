@@ -2,11 +2,17 @@
 
 Applications or business solutions are built on MESG by attaching an event on one service to a task on another service. These can be configured in any order, and you can create chain reactions or timed events.
 
-If you want your application to easily migrate to the future release with no code needed to create your application you should start thinking your application with Event Driven Architecture.
+Future versions of MESG will not require users to code. Instead, you'll send a simple text configuration file, which is like an order slip, listing all of the events and corresponding tasks you'd like the MESG Network to execute for you.   
+  
+As long as the [Services](../service/what-is-a-service.md) \(technologies\) you want to use in your solution have been connected to the MESG Infrastructure already, you can list it in the configuration file. If it hasn't been connected yet, you can connect it yourself, with some coding.
 
-In order to create a maintainable and evolutive application you should try only to react to event. Every task that your application have to do should react to an event. Example: When my user signup then send an email.
+The concept of events and corresponding tasks is called Event Driven Architecture. This is how the configuration file \(order slip with no code needed\) in future releases of MESG will function, so if you want your application to be compatible with future releases of MESG, start building your application based on Event Driven Architecture while we finish completing the MESG Infrastructure. 
 
-By creating your application that way, you embrace the philosophy of MESG and create an application become really easy.
+In order to create a an application that's maintainable and compatible with future releases of MESG, build applications that react to events. \(e.g. receiving an email, a new deposit, a full battery, the first of the month, a delayed flight etc.\)
+
+Tasks in your application are reactions to events. \(send an email, notify me on my watch, put the car into standby, issue refunds, transfer funds, open a new account, turn on the lights etc.\)
+
+By creating your application in this way, you embrace the philosophy of MESG and make an application becomes really easy.
 
 ### Source of events
 
