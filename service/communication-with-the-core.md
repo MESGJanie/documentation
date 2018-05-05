@@ -133,16 +133,15 @@ Consider emitting event when the service is ready. If the service needs to synch
 {% code-tabs-item title="index.js" %}
 ```javascript
 const grpc = require('grpc')
-
 const yaml = require('js-yaml')
 const fs = require('fs')
-const api = grpc.load(__dirname + '/api/service/api.proto').types
-const eventClient = new apu.Service(
+const api = grpc.load(__dirname + '/api/service/api.proto').service
+const client = new api.Service(
   process.env.MESG_ENDPOINT,
   grpc.credentials.createInsecure()
 )
 
-eventClient.EmitEvent({
+client.EmitEvent({
   service: yaml.safeLoad(fs.readFileSync("./mesg.yml")),
   eventKey: "eventX",
   eventData: JSON.stringify({

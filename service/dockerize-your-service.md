@@ -6,8 +6,8 @@ Services run in Docker to provide sandbox and normalized environment to remove s
 
 ## Steps to be compatible with Docker
 
-* [ ] [Create the Dockerfile](dockerize-your-service.md#create-your-dockerfile) to be compatible with Docker
-* [ ] [Add dependencies](dockerize-your-service.md#add-your-dependencies) in your [`mesg.yml`](service-file.md) file
+* [ ] [Create the Dockerfile](dockerize-your-service.md#create-your-dockerfile)
+* [ ] [Add dependencies](dockerize-your-service.md#add-dependencies) in your [`mesg.yml`](service-file.md) file
 
 ## Create the Dockerfile
 
@@ -38,18 +38,12 @@ CMD [ "npm", "start" ]
 {% code-tabs %}
 {% code-tabs-item title="Dockerfile" %}
 ```bash
-FROM golang:latest 
-RUN mkdir /app 
-ADD . /app/ 
-WORKDIR /app 
-RUN go build -o main . 
+FROM golang:latest
+RUN mkdir /app
+ADD . /app/
+WORKDIR /app
+RUN go build -o main .
 CMD ["/app/main"]
-```
-{% endcode-tabs-item %}
-
-{% code-tabs-item title=undefined %}
-```
-Dockerfile
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -58,22 +52,22 @@ Dockerfile
 {% endtab %}
 {% endtabs %}
 
-## Add your dependencies
+## Add dependencies
 
-Once your application can run on Docker, you need to make sure that MESG [Core](../start-here/core.md) will be able to start it for you. In order to do that, you need to update your [`mesg.yml`](service-file.md) file with all the dependencies you need for your service to run efficiently.
+Once the service can run on Docker, the [Core](../start-here/core.md) should be able to start it automatically. Update the [`mesg.yml`](service-file.md) file with the dependencies the service needs.
 
-{% hint style="info" %}
-**Note:** You always need to use your service as a dependency, otherwise your service cannot run.
+{% hint style="warning" %}
+The service always needs to be declared as a dependency.
 {% endhint %}
 
 {% tabs %}
 {% tab title="Detail" %}
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- | --- | --- |
-| **image** | `String` | The docker image of your service |
-| **volumes** | `array[string]` | A list of [volumes](https://docs.docker.com/storage/volumes/) that will be mounted in your service |
-| **ports** | `array[string]` | A list of ports that your service needs to listen |
-| **command** | `String` | The command to run when your service starts if not defined in your [Dockerfile](dockerize-your-service.md#create-your-dockerfile) |
+| **image** | `String` | The docker image of the service. |
+| **volumes** | `array[string]` | A list of [volumes](https://docs.docker.com/storage/volumes/) that will be mounted in the service. |
+| **ports** | `array[string]` | A list of ports that the service needs to expose. |
+| **command** | `String` | The command to run when the service starts if not defined in your [Dockerfile](dockerize-your-service.md#create-your-dockerfile). |
 {% endtab %}
 
 {% tab title="Example" %}

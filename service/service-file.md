@@ -26,7 +26,7 @@ You can find an example of `mesg.yml` file [here](https://github.com/mesg-founda
 
 ### Publish
 
-{% hint style="info" %}
+{% hint style="danger" %}
 This feature is not yet implemented and will be implement when the network will be ready. 
 {% endhint %}
 
@@ -39,7 +39,7 @@ What is published on the network can be defined by setting a publish parameter. 
 
 ### Visibility
 
-{% hint style="info" %}
+{% hint style="danger" %}
 This feature is not yet implemented and will be implement when the network will be ready.
 {% endhint %}
 

@@ -19,7 +19,7 @@ mesg-core
 {% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
+{% hint style="danger" %}
 The following easy installer is not available yet. Please follow the previous paragraph.
 {% endhint %}
 

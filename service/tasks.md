@@ -159,7 +159,34 @@ Consider listening for task when your service is ready. If your service needs to
 
 {% tabs %}
 {% tab title="Node" %}
-// TODO: add example in node
+{% code-tabs %}
+{% code-tabs-item title="index.js" %}
+```javascript
+const grpc = require('grpc')
+const yaml = require('js-yaml')
+const fs = require('fs')
+const api = grpc.load(__dirname + '/api/service/api.proto').service
+const client = new api.Service(
+  process.env.MESG_ENDPOINT,
+  grpc.credentials.createInsecure()
+)
+
+const listenTaskStream = client.ListenTask({
+  service: yaml.safeLoad(fs.readFileSync("./mesg.yml")),
+})
+listenTaskStream.on('error', function(error) {
+  // An error has occurred and the stream has been closed.
+})
+listenTaskStream.on('data', function(data) {
+  console.log('receive', data)
+})
+listenTaskStream.on('status', function(status) {
+  // process status
+})
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 {% endtab %}
 
 {% tab title="Go" %}
@@ -247,7 +274,31 @@ Once the task execution is finished, the service have to send the outputs of the
 
 {% tabs %}
 {% tab title="Node" %}
-// TODO: add example in node
+{% code-tabs %}
+{% code-tabs-item title="index.js" %}
+```javascript
+const grpc = require('grpc')
+const yaml = require('js-yaml')
+const fs = require('fs')
+const api = grpc.load(__dirname + '/api/service/api.proto').service
+const client = new api.Service(
+  process.env.MESG_ENDPOINT,
+  grpc.credentials.createInsecure()
+)
+
+client.SubmitResult({
+  executionID: "xxxx",
+  outputKey: "outputX",
+  outputData: JSON.stringify({
+    foo: "hello",
+    bar: false
+  })
+}, (err, reply) => {
+  // handle response if needed
+})
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 {% endtab %}
 
 {% tab title="Go" %}

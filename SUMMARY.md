@@ -18,13 +18,13 @@
 * [Dockerize the service](service/dockerize-your-service.md)
 * [Validate](service/validate.md)
 * [Test](service/test.md)
-* [Run Your Service](service/start.md)
+* [Run the Service](service/start.md)
 
-## Your Application
+## Application
 
-* [Create Your Application](your-application/create-your-application.md)
-* [Use cases](your-application/use-cases.md)
-* [Listen for events](your-application/listen.md)
-* [Execute a task](your-application/execute-task.md)
+* [Create an Application](application/create-your-application.md)
+* [Use cases](application/use-cases.md)
+* [Listen for events](application/listen.md)
+* [Execute task](application/execute-task.md)
 * [Help us develop](help-us-develop.md)
 

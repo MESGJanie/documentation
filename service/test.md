@@ -1,6 +1,6 @@
 # Test
 
-Before deploying your Service, you'll want to test it to ensure that everything is working properly.
+Before deploying the service, you'll want to test it to ensure that everything is working properly.
 
 To ensure that the Application is able to start your Service and receive an event from it, execute the following method:
 
