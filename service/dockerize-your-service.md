@@ -1,21 +1,19 @@
-# Dockerize your service
+# Dockerize the service
 
 ## Why do I need Docker ?
 
-In MESG all the services run in Docker to provide a sandbox for your service to run without any problems and side effects that might happen in a local machine, such as your service not being compatible with Windows or Linux or other things that can be really complicated to achieve. It maintains the exact same environment for your service to run, so you don't have to.
+Services run in Docker to provide sandbox and normalized environment to remove side effects that happen when running on many different machines. See more information on the [Docker website](https://www.docker.com/).
 
-### Steps to be compatible with Docker
+## Steps to be compatible with Docker
 
-* [ ] [Create a Dockerfile](dockerize-your-service.md#create-your-dockerfile) to be compatible with Docker
-* [ ] [Add your dependencies](dockerize-your-service.md#add-your-dependencies) in your [`mesg.yml`](service-file.md) file
+* [ ] [Create the Dockerfile](dockerize-your-service.md#create-your-dockerfile) to be compatible with Docker
+* [ ] [Add dependencies](dockerize-your-service.md#add-your-dependencies) in your [`mesg.yml`](service-file.md) file
 
-## Create your Dockerfile ?
+## Create the Dockerfile
 
-In order to be compatible with [Docker](https://www.docker.com/) you need in the folder of your application to create a `Dockerfile` file which is a file that creates all the environment for your [Docker container](https://www.docker.com/what-container).
+In order to be compatible with [Docker](https://www.docker.com/), a `Dockerfile` needs to be created in the folder of the service. See the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
 
-You can find more details on how to create your `Dockerfile` [here](https://docs.docker.com/engine/reference/builder/).
-
-Here are some exemples of `Dockerfile` that you might use for your application.
+### Examples
 
 {% tabs %}
 {% tab title="Node" %}
@@ -46,6 +44,12 @@ ADD . /app/
 WORKDIR /app 
 RUN go build -o main . 
 CMD ["/app/main"]
+```
+{% endcode-tabs-item %}
+
+{% code-tabs-item title=undefined %}
+```
+Dockerfile
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}

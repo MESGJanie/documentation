@@ -15,7 +15,7 @@
 * [Service file](service/service-file.md)
 * [Emit an Event](service/communication-with-the-core.md)
 * [Listen for Tasks](service/tasks.md)
-* [Dockerize your service](service/dockerize-your-service.md)
+* [Dockerize the service](service/dockerize-your-service.md)
 * [Validate](service/validate.md)
 * [Test](service/test.md)
 * [Run Your Service](service/start.md)

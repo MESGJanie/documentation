@@ -8,18 +8,18 @@ description: Sending commands
 
 Events are emitted from a Service \(e.g.: a web server receiving a request, or a blockchain technology receiving a new transaction\). These events are emitted to achieve a desired effect, or to be used as a trigger to make another task happen. Each Service has different kinds of events that you can send to the Core. 
 
-### Steps to follow
+## Steps to follow
 
 To emit events from your Service, you need to :
 
 * [ ] [Add the definition of the event](communication-with-the-core.md#create-your-event) in the Service's [`mesg.yml`](service-file.md) file
 * [ ] [Emit the event](communication-with-the-core.md#publish-your-event) when it's happening in the service
 
-## Create an Event
+## Event definition
 
 {% tabs %}
-{% tab title="Detail" %}
-First step to create the event is to update the Service's [`mesg.yml`](service-file.md) file and add an event indexed by it's key with the following attributes :
+{% tab title="Definition" %}
+The first step to create the event is to update the Service's [`mesg.yml`](service-file.md) file and add an event indexed by it's key with the following attributes :
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- |
@@ -83,10 +83,10 @@ To emit events from the Service to the Core, the Service have to follow the [Pro
 Consider emitting event when the service is ready. If the service needs to synchronise data first, it should wait for the synchronisation to finish before emitting events.
 {% endhint %}
 
-### Event.Emit
-
 {% tabs %}
 {% tab title="Request" %}
+### Service.EmitEvent
+
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
 | **service** | [Service](service-file.md) | Required | Object containing the service definition loaded from the yml service file. |
@@ -125,7 +125,7 @@ Consider emitting event when the service is ready. If the service needs to synch
 {% endtab %}
 {% endtabs %}
 
-#### Examples
+### Examples
 
 {% tabs %}
 {% tab title="Node" %}

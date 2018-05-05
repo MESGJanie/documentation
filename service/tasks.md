@@ -4,7 +4,7 @@
 
 The Service needs to receive the command sent by the Core in order to execute any desired task. Every time a command is received, it will ensure that the sender is the Core, then it will check if it can handle the command, and if so, it will execute it. Once executed, it will reply to the Core with the result of the command.
 
-### Steps to follow
+## Steps to follow
 
 To implement tasks in your Service, you need to :
 
@@ -20,32 +20,32 @@ The first step is to declare the tasks that the service will be able to execute 
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- | --- | --- |
-| **name** | `id` | `String` | Name of your event, if not set, the name will be the id selected for the task |
-| **description** | `""` | `String` | Description of your task, what the task is doing and why it is useful |
-| **inputs** | `{}` | `map<id,`[`Input`](tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of inputs that your task needs in order to be executed |
-| **outputs** | `{}` | `map<id,`[`Outputs`](tasks.md#outputs-data)`>` | Map of outputs that your task will emit. Your task can declare multiple outputs but can only submit one output per execution. |
-| **secrets** | `{}` | `map<id,`[`Secret`](tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of secrets that your task may need. Secrets are environmental variables that are set directly by the node. |
+| **name** | `id` | `String` | Name of the task, if not set, the name will be the id of the task. |
+| **description** | `""` | `String` | Description of the task, what the task is doing and why it is useful. |
+| **inputs** | `{}` | `map<id,`[`Input`](tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of inputs that the task needs in order to be executed. |
+| **outputs** | `{}` | `map<id,`[`Outputs`](tasks.md#outputs-data)`>` | Map of outputs that the task will emit. The task can declare multiple outputs but can only submit one output per execution. |
+| **secrets** | `{}` | `map<id,`[`Secret`](tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of secrets that the task may need. Secrets are environmental variables that are set directly by the user. |
 
-### Outputs data
+### Outputs
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- |
-| name | `id` | `String` | Name of your output, default is the id you defined |
-| description | `""` | `String` | A description of your output, what kind of output, what and how is it useful |
-| data | `{}` | `map<id,`[`Output`](tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of data that your output will return |
+| **name** | `id` | `String` | Name of the output, default is the id. |
+| **description** | `""` | `String` | A description of the output, what kind of output, what and how is it useful. |
+| **data** | `{}` | `map<id,`[`Output`](tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of data that the output will return. |
 
-### Data of your parameter \(Input/Output/Secret\)
+### Input, Output and Secret parameter
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- | --- |
-| **name** | `id` | `String` | Name or your parameter, default: the id that you defined |
-| **description** | `""` | `String` | Description of your parameter |
-| **type** | `String` | [`Type`](tasks.md#type-of-your-data) | Type of your parameter |
-| **optional** | `false` | `Boolean` | If true, this parameter is considered as optional and might be empty  |
+| **name** | `id` | `String` | Name or the parameter, default: the id. |
+| **description** | `""` | `String` | Description of the parameter. |
+| **type** | `String` | [`Type`](tasks.md#type-of-your-data) | Type of the parameter. |
+| **optional** | `false` | `Boolean` | If true, this parameter is considered as optional and might be empty. |
 
-### Type of the data {#type-of-your-data}
+### Type of parameter {#type-of-your-data}
 
-You can send different types of data. This type can be one of the following :
+The parameter can be one of the following:
 
 * `String`
 * `Boolean`
@@ -54,7 +54,7 @@ You can send different types of data. This type can be one of the following :
 {% endtab %}
 
 {% tab title="Example" %}
-Here is an example of what your event might look like in your [`mesg.yml`](https://docs.mesg.tech/service/service-file) file :
+Example of a task definition in a [`mesg.yml`](https://docs.mesg.tech/service/service-file) file :
 
 {% code-tabs %}
 {% code-tabs-item title="mesg.yml" %}
@@ -103,16 +103,16 @@ tasks:
 
 ## Listen for task executions
 
-Your service needs to listen tasks sent by the [core](../start-here/core.md). In order to do that you need to use the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and [gRPC](https://grpc.io/) to listen for the execution. When you start listening, a stream will be open between your service and the core and you will receive new tasks from the core.
+To listen for task to execute, the service needs to open a stream with the core using the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and [gRPC](https://grpc.io/). Every task received on the stream need to be executed by the service and the output [submitted](tasks.md#submit-outputs-of-your-execution) back to the core.
 
 {% hint style="info" %}
-Consider listening for task when your service is ready. If your service needs to synchronise some data first, you should wait for this synchronisation before listening for tasks.
+Consider listening for task when your service is ready. If your service needs to synchronize some data first, you should wait for this synchronization before listening for tasks.
 {% endhint %}
-
-### Task.Listen
 
 {% tabs %}
 {% tab title="Request" %}
+### Service.ListenTask
+
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- |
 | **service** | [`Service`](service-file.md) | Required | Object containing the service definition loaded from the yml service file. |
@@ -155,11 +155,11 @@ Consider listening for task when your service is ready. If your service needs to
 {% endtab %}
 {% endtabs %}
 
-#### Exemple
+### Examples
 
 {% tabs %}
 {% tab title="Node" %}
-// TODO: add exemple in node
+// TODO: add example in node
 {% endtab %}
 
 {% tab title="Go" %}
@@ -205,17 +205,19 @@ func main() {
 {% endtab %}
 {% endtabs %}
 
-## Submit outputs of your execution
+## Submit outputs of task executions
 
-Once your task finish its processing you will need to send the outputs of the execution back to the [core](../start-here/core.md). You will still need to use the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and [gRPC](https://grpc.io/) to submit your results. Your task can only submit a single type of output per execution. Even if your task is declaring multiple kind of outputs only one should be submitted at the time. 
+Once the task execution is finished, the service have to send the outputs of the execution back to the [core](../start-here/core.md) using the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and [gRPC](https://grpc.io/). Only one output can be submitted per execution even if the task declared multiple outputs.
 
 {% tabs %}
 {% tab title="Request" %}
+### Service.SubmitResult
+
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
 | **executionID** | `String` | required | The `executionID` received from the [listen](tasks.md#listen-for-task-executions) stream. |
-| **outputKey** | `String` | required | The id of the output as defined in the [declaration of your output](tasks.md#create-your-task). |
-| **outputData** | `String` | required | The data for the output you want to send encoded in JSON. The data should match the one you defined in the [declaration of your output](tasks.md#create-your-task). |
+| **outputKey** | `String` | required | The id of the output as defined in the [output's declaration](tasks.md#create-your-task). |
+| **outputData** | `String` | required | The output's data encoded in JSON. The data should match the one defined in the [output's declaration](tasks.md#create-your-task). |
 
 ```javascript
 {
@@ -229,8 +231,8 @@ Once your task finish its processing you will need to send the outputs of the ex
 {% tab title="Reply" %}
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| **error** | `String` | Error when submitting the output of the task if an error happened. |
-| **executionID** | `String` | The id of the execution. |
+| **error** | `String` | Error during submission of the execution's output. |
+| **executionID** | `String` | The execution's id. |
 
 ```javascript
 {
@@ -241,11 +243,11 @@ Once your task finish its processing you will need to send the outputs of the ex
 {% endtab %}
 {% endtabs %}
 
-#### Exemple
+### Examples
 
 {% tabs %}
 {% tab title="Node" %}
-// TODO: add exemple in node
+// TODO: add example in node
 {% endtab %}
 
 {% tab title="Go" %}
