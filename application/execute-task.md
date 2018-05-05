@@ -10,7 +10,7 @@ To execute a task, applications need to connect to the core through [gRPC](https
 
 {% tabs %}
 {% tab title="Request" %}
-### Client.ExecuteTask
+### `Client.ExecuteTask`
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ Outputs are send asynchronously. Make sure that the application listens for outp
 
 {% tabs %}
 {% tab title="Request" %}
-### Client.ListenResult
+### `Client.ListenResult`
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- |

@@ -10,7 +10,7 @@ To listen for events, the application needs to open a stream with the core with 
 
 {% tabs %}
 {% tab title="Request" %}
-### Client.ListenEvent
+### `Client.ListenEvent`
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- |

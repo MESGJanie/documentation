@@ -111,7 +111,7 @@ Consider listening for task when your service is ready. If your service needs to
 
 {% tabs %}
 {% tab title="Request" %}
-### Service.ListenTask
+### `Service.ListenTask`
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- |
@@ -238,7 +238,7 @@ Once the task execution is finished, the service have to send the outputs of the
 
 {% tabs %}
 {% tab title="Request" %}
-### Service.SubmitResult
+### `Service.SubmitResult`
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |

@@ -85,7 +85,7 @@ Consider emitting event when the service is ready. If the service needs to synch
 
 {% tabs %}
 {% tab title="Request" %}
-### Service.EmitEvent
+### `Service.EmitEvent`
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
