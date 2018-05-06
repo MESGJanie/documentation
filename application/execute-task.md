@@ -137,7 +137,7 @@ Outputs are send asynchronously. Make sure that the application listens for outp
 {% endtab %}
 
 {% tab title="Stream reply" %}
-| Name | Type | Description |
+| **Name** | **Type** | **Description** |
 | --- | --- | --- | --- | --- | --- |
 | **executionID** | `String` | The execution ID of this output. |
 | **error** | `String` | A string that contains the error if an error is present. |
