@@ -13,8 +13,8 @@
 
 * [What is a Service?](service/what-is-a-service.md)
 * [Service file](service/service-file.md)
-* [Emit an Event](service/communication-with-the-core.md)
-* [Listen for Tasks](service/tasks.md)
+* [Emit an Event](service/emit-an-event.md)
+* [Listen for Tasks](service/listen-tasks.md)
 * [Dockerize the service](service/dockerize-your-service.md)
 * [Validate](service/validate.md)
 * [Test](service/test.md)
@@ -24,7 +24,7 @@
 
 * [Create an Application](application/create-your-application.md)
 * [Use cases](application/use-cases.md)
-* [Listen for events](application/listen.md)
+* [Listen for events](application/listen-events.md)
 * [Execute task](application/execute-task.md)
 * [Help us develop](help-us-develop.md)
 
