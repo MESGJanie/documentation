@@ -7,7 +7,7 @@ Each deployment will cost you a small amount of tokens. Please be aware that thi
 You can deploy your workflow using the command:
 
 ```bash
-mesg-cli workflow deploy ./PATH_TO_WORKFLOW_FILE
+mesg-core workflow deploy ./PATH_TO_WORKFLOW_FILE
 ```
 
 If your workflow is valid, it will be deployed through the Network and will be ready for execution.

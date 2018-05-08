@@ -7,7 +7,7 @@ Each publication will cost you a small amount of tokens. Be aware this amount is
 To publish a service, run the command:
 
 ```bash
-mesg-cli service publish
+mesg-core service publish
 ```
 
 If you don't set the path to the service folder, the method looks in the current folder for the `mesg.yml` file.

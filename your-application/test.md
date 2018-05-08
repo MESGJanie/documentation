@@ -19,7 +19,7 @@ During testing, no stake will be taken in order to start the services, and the s
 If you want to try your workflow with a specific event you can run the following command:
 
 ```bash
-mesg-cli workflow test --event ./PATH_TO_EVENT_DATA_FILE ./PATH_TO_WORKFLOW_FILE
+mesg-core workflow test --event ./PATH_TO_EVENT_DATA_FILE ./PATH_TO_WORKFLOW_FILE
 ```
 
 ### Test a live event
@@ -27,7 +27,7 @@ mesg-cli workflow test --event ./PATH_TO_EVENT_DATA_FILE ./PATH_TO_WORKFLOW_FILE
 When you want to test that your workflow is working fine with any events you are trying to connect to you can run the following command:
 
 ```bash
-mesg-cli workflow test --live ./PATH_TO_WORKFLOW_FILE
+mesg-core workflow test --live ./PATH_TO_WORKFLOW_FILE
 ```
 
 **Note**: Every live event will be stored as a file and can be re-used as an event flag
