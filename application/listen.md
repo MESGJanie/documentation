@@ -60,13 +60,13 @@ To listen for events, the application needs to open a stream with Core with [gRP
 const grpc = require('grpc')
 const yaml = require('js-yaml')
 const fs = require('fs')
-const api = grpc.load(__dirname + '/api/client/api.proto').client
-const client = new api.Client(
+const api = grpc.load(__dirname + '/api/core/api.proto').api
+const core = new api.Core(
   process.env.MESG_ENDPOINT,
   grpc.credentials.createInsecure()
 )
 
-const listenEventStream = client.ListenEvent({
+const listenEventStream = core.ListenEvent({
   service: yaml.safeLoad(fs.readFileSync("./mesg.yml")),
 })
 listenEventStream.on('error', function(error) {

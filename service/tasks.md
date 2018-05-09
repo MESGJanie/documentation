@@ -165,13 +165,13 @@ Consider listening for tasks when your service is ready. If your service needs t
 const grpc = require('grpc')
 const yaml = require('js-yaml')
 const fs = require('fs')
-const api = grpc.load(__dirname + '/api/service/api.proto').service
-const client = new api.Service(
+const api = grpc.load(__dirname + '/api/service/api.proto').api
+const service = new api.Service(
   process.env.MESG_ENDPOINT,
   grpc.credentials.createInsecure()
 )
 
-const listenTaskStream = client.ListenTask({
+const listenTaskStream = service.ListenTask({
   service: yaml.safeLoad(fs.readFileSync("./mesg.yml")),
 })
 listenTaskStream.on('error', function(error) {
@@ -280,13 +280,13 @@ Once the task execution is finished, the Service has to send the outputs of the 
 const grpc = require('grpc')
 const yaml = require('js-yaml')
 const fs = require('fs')
-const api = grpc.load(__dirname + '/api/service/api.proto').service
-const client = new api.Service(
+const api = grpc.load(__dirname + '/api/service/api.proto').api
+const service = new api.Service(
   process.env.MESG_ENDPOINT,
   grpc.credentials.createInsecure()
 )
 
-client.SubmitResult({
+service.SubmitResult({
   executionID: "xxxx",
   outputKey: "outputX",
   outputData: JSON.stringify({

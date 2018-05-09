@@ -69,13 +69,13 @@ To execute a task, applications need to connect to Core through [gRPC](https://g
 const grpc = require('grpc')
 const yaml = require('js-yaml')
 const fs = require('fs')
-const api = grpc.load(__dirname + '/api/client/api.proto').client
-const client = new api.Client(
+const api = grpc.load(__dirname + '/api/client/api.proto').api
+const core = new api.Core(
   process.env.MESG_ENDPOINT,
   grpc.credentials.createInsecure()
 )
 ​
-client.ExecuteTask({
+core.ExecuteTask({
   service: yaml.safeLoad(fs.readFileSync("./mesg.yml")),
   taskKey: "eventX",
   taskData: JSON.stringify({
@@ -167,13 +167,13 @@ Outputs are sent asynchronously. Make sure that the application listens for outp
 const grpc = require('grpc')
 const yaml = require('js-yaml')
 const fs = require('fs')
-const api = grpc.load(__dirname + '/api/client/api.proto').client
-const client = new api.Client(
+const api = grpc.load(__dirname + '/api/client/api.proto').api
+const core = new api.Core(
   process.env.MESG_ENDPOINT,
   grpc.credentials.createInsecure()
 )
 
-const listenResultStream = client.ListenResult({
+const listenResultStream = core.ListenResult({
   service: yaml.safeLoad(fs.readFileSync("./mesg.yml")),
 })
 listenResultStream.on('error', function(error) {

@@ -135,13 +135,13 @@ Consider emitting event when the service is ready. If the service needs to synch
 const grpc = require('grpc')
 const yaml = require('js-yaml')
 const fs = require('fs')
-const api = grpc.load(__dirname + '/api/service/api.proto').service
-const client = new api.Service(
+const api = grpc.load(__dirname + '/api/service/api.proto').api
+const service = new api.Service(
   process.env.MESG_ENDPOINT,
   grpc.credentials.createInsecure()
 )
 
-client.EmitEvent({
+service.EmitEvent({
   service: yaml.safeLoad(fs.readFileSync("./mesg.yml")),
   eventKey: "eventX",
   eventData: JSON.stringify({
