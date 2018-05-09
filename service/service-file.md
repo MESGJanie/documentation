@@ -27,7 +27,7 @@ You can find an example of `mesg.yml` file [here](https://github.com/mesg-founda
 ### Publish
 
 {% hint style="danger" %}
-This feature is not yet implemented and will be implement when the network will be ready. 
+This feature will not be implemented until the Network is ready for deployment. 
 {% endhint %}
 
 What is published on the network can be defined by setting a publish parameter. The possible values are: `ALL`, `SOURCE`, `CONTAINER`, or `NONE`.
@@ -40,7 +40,7 @@ What is published on the network can be defined by setting a publish parameter. 
 ### Visibility
 
 {% hint style="danger" %}
-This feature is not yet implemented and will be implement when the network will be ready.
+This feature will not be implemented until the Network is ready for deployment.
 {% endhint %}
 
 A Service defines who can see it by setting a visibility parameter. The possible values are: `ALL`, `USERS`, `WORKERS`, or `NONE`.

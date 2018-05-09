@@ -10,7 +10,7 @@ MESG fairly and automatically rewards contributors who either help produce an in
 
 The creators of connections, workflows or applications choose their price, and dictate what each actor in the transaction, including the creator, is rewarded in MESG Tokens when others use their work. This allows for a totally free market of connection-making, efficiencies and automation.
 
-All of this in a pay-per-transaction model, allowing users to accomplish great feats while paying very little, redefining scalability.
+All of this in a pay-per-transaction model, allowing users to accomplish great feats while paying very little. MESG is redefining scalability.
 
 The MESG Infrastructure utilizes blockchain technology in two ways: 
 

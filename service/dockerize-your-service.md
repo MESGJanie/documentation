@@ -1,8 +1,8 @@
-# Dockerize the service
+# Dockerize the Service
 
 ## Why do I need Docker ?
 
-Services run in Docker to provide sandbox and normalized environment to remove side effects that happen when running on many different machines. See more information on the [Docker website](https://www.docker.com/).
+Services run in Docker to provide a sandbox and a normalized environment to remove any side effects that may occur when running on many different machines. See more information on the [Docker website](https://www.docker.com/).
 
 ## Steps to be compatible with Docker
 
@@ -54,20 +54,20 @@ CMD ["/app/main"]
 
 ## Add dependencies
 
-Once the service can run on Docker, the [Core](../start-here/core.md) should be able to start it automatically. Update the [`mesg.yml`](service-file.md) file with the dependencies the service needs.
+Once the Service can run on Docker, [Core](../start-here/core.md) should be able to start it automatically. Update the [`mesg.yml`](service-file.md) file with the dependencies the service needs.
 
 {% hint style="warning" %}
-The service always needs to be declared as a dependency.
+The Service always needs to be declared as a dependency.
 {% endhint %}
 
 {% tabs %}
 {% tab title="Detail" %}
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- | --- | --- |
-| **image** | `String` | The docker image of the service. |
-| **volumes** | `array[string]` | A list of [volumes](https://docs.docker.com/storage/volumes/) that will be mounted in the service. |
-| **ports** | `array[string]` | A list of ports that the service needs to expose. |
-| **command** | `String` | The command to run when the service starts if not defined in your [Dockerfile](dockerize-your-service.md#create-your-dockerfile). |
+| **image** | `String` | The docker image of the Service. |
+| **volumes** | `array[string]` | A list of [volumes](https://docs.docker.com/storage/volumes/) that will be mounted in the Service. |
+| **ports** | `array[string]` | A list of ports that the Service needs to expose. |
+| **command** | `String` | The command to run when the Service starts if not defined in your [Dockerfile](dockerize-your-service.md#create-your-dockerfile). |
 {% endtab %}
 
 {% tab title="Example" %}

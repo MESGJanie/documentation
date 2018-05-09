@@ -1,6 +1,6 @@
 # Installing Core
 
-First, [download the Core from our GitHub](https://github.com/mesg-foundation/core/releases). Choose the right version according to your OS.
+First, [download Core from GitHub](https://github.com/mesg-foundation/core/releases). Be sure to choose the appropriate version, based on your OS.
 
 Once downloaded, you need to add the execution permission and move it to your local bin folder:
 
@@ -11,7 +11,7 @@ chmod +x cli-darwin-10.6-amd64
 mv cli-darwin-10.6-amd64 ~/.local/bin/mesg-core
 ```
 
-To start the core, execute:
+To start Core, execute:
 
 ```bash
 mesg-core
@@ -20,7 +20,7 @@ mesg-core
 {% endtabs %}
 
 {% hint style="danger" %}
-The following easy installer is not available yet. Please follow the previous paragraph.
+The following easy installer is not yet available. Please follow the instructions in the previous section to set up Core.
 {% endhint %}
 
 Connect your computer with Core with the following command line:
