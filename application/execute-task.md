@@ -93,8 +93,28 @@ core.ExecuteTask({
 {% tab title="Go" %}
 {% code-tabs %}
 {% code-tabs-item title="main.go" %}
-```text
-// TODO
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+
+	"github.com/mesg-foundation/core/api/core"
+	"github.com/mesg-foundation/core/service"
+	"google.golang.org/grpc"
+)
+
+func main() {
+	connection, _ := grpc.Dial(":50052", grpc.WithInsecure())
+	cli := core.NewCoreClient(connection)
+	res, _ := cli.ExecuteTask(context.Background(), &core.ExecuteTaskRequest{
+		Service:  &service.Service{},
+		TaskKey:  "xxxx",
+		TaskData: "{\"foo\":\"bar\"}",
+	})
+	fmt.Println(res.ExecutionID)
+}
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -196,7 +216,30 @@ listenResultStream.on('status', function(status) {
 {% code-tabs %}
 {% code-tabs-item title="main.go" %}
 ```go
-// TODO
+package main
+
+import (
+	"context"
+	"fmt"
+
+	"github.com/mesg-foundation/core/api/core"
+	"github.com/mesg-foundation/core/service"
+	"google.golang.org/grpc"
+)
+
+func main() {
+	connection, _ := grpc.Dial(":50052", grpc.WithInsecure())
+	cli := core.NewCoreClient(connection)
+	stream, _ := cli.ListenResult(context.Background(), &core.ListenResultRequest{
+		Service: &service.Service{},
+	})
+	for {
+		result, _ := stream.Recv()
+		fmt.Println(result.ExecutionID, result.OutputKey, result.OutputData)
+		// TODO process result
+	}
+}
+
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}

@@ -67,7 +67,7 @@ const core = new api.Core(
 )
 
 const listenEventStream = core.ListenEvent({
-  service: yaml.safeLoad(fs.readFileSync("./mesg.yml")),
+  service: yaml.safeLoad(fs.readFileSync("./serviceX/mesg.yml")),
 })
 listenEventStream.on('error', function(error) {
   // An error has occurred and the stream has been closed.
@@ -87,8 +87,31 @@ listenEventStream.on('status', function(status) {
 {% tab title="Go" %}
 {% code-tabs %}
 {% code-tabs-item title="main.go" %}
-```text
-// TODO
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+
+	"github.com/mesg-foundation/core/api/core"
+	"github.com/mesg-foundation/core/service"
+	"google.golang.org/grpc"
+)
+
+func main() {
+	connection, _ := grpc.Dial(":50052", grpc.WithInsecure())
+	cli := core.NewCoreClient(connection)
+	stream, _ := cli.ListenEvent(context.Background(), &core.ListenEventRequest{
+		Service: &service.Service{},
+	})
+	for {
+		event, _ := stream.Recv()
+		fmt.Println(event.EventKey, event.EventData)
+		// TODO process event
+	}
+}
+
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
