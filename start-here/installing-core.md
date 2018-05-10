@@ -2,7 +2,7 @@
 
 First, [download Core from GitHub](https://github.com/mesg-foundation/core/releases). Be sure to choose the appropriate version, based on your OS.
 
-Once downloaded, you need to add the execution permission and move it to your local bin folder:
+Once downloaded, you'll need to add the execution permission and move it to your local bin folder:
 
 {% tabs %}
 {% tab title="MacOS" %}
@@ -20,7 +20,7 @@ mesg-core
 {% endtabs %}
 
 {% hint style="danger" %}
-The following easy installer is not yet available. Please follow the instructions in the previous section to set up Core.
+The following simple installer is not yet available. Please follow the instructions in the previous section to set up Core.
 {% endhint %}
 
 Connect your computer with Core with the following command line:
