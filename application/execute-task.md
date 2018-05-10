@@ -76,7 +76,7 @@ const core = new api.Core(
 )
 ​
 core.ExecuteTask({
-  service: yaml.safeLoad(fs.readFileSync("./mesg.yml")),
+  service: yaml.safeLoad(fs.readFileSync("./serviceX/mesg.yml")),
   taskKey: "eventX",
   taskData: JSON.stringify({
     foo: "hello",
@@ -194,7 +194,7 @@ const core = new api.Core(
 )
 
 const listenResultStream = core.ListenResult({
-  service: yaml.safeLoad(fs.readFileSync("./mesg.yml")),
+  service: yaml.safeLoad(fs.readFileSync("./serviceX/mesg.yml")),
 })
 listenResultStream.on('error', function(error) {
   // An error has occurred and the stream has been closed.
