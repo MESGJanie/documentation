@@ -6,7 +6,7 @@ Applications can execute a service's task allowing you to reuse the maximum numb
 
 ## Execute a service's task
 
-To execute a task, applications need to connect to Core through [gRPC](https://grpc.io/) and use the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go). Core will reply with an `executionID`that identifies the task's execution. To get the output of the task's execution, the application has to listen for an [execution output.](execute-task.md#listen-for-execution-outputs)
+To execute a task, applications need to connect to Core through [gRPC](https://grpc.io/) and use the [Protobuffer definition](https://github.com/mesg-foundation/core/blob/dev/api/core/api.proto). Core will reply with an `executionID`that identifies the task's execution. To get the output of the task's execution, the application has to listen for an [execution output.](execute-task.md#listen-for-execution-outputs)
 
 {% tabs %}
 {% tab title="Request" %}
@@ -125,7 +125,7 @@ func main() {
 
 ## Listen for task execution outputs
 
-The execution of tasks can take a long time to finish depending on the action they are completing, so outputs are sent back asynchronously. To listen for task execution's outputs, applications need to open a stream with the Core through [gRPC](https://grpc.io/) and use the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go).
+The execution of tasks can take a long time to finish depending on the action they are completing, so outputs are sent back asynchronously. To listen for task execution's outputs, applications need to open a stream with the Core through [gRPC](https://grpc.io/) and use the [Protobuffer definition](https://github.com/mesg-foundation/core/blob/dev/api/core/api.proto).
 
 {% hint style="info" %}
 Outputs are sent asynchronously. Make sure that the application listens for outputs before it executes a task, otherwise it will miss the outputs.

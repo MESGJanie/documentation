@@ -6,7 +6,7 @@ Applications listen for events in real time to execute actions or tasks when som
 
 ## Listening for events from services
 
-To listen for events, the application needs to open a stream with Core with [gRPC](https://grpc.io/) using the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go). When opening the stream, the application listens to the service. It can listen to many service as the same time.
+To listen for events, the application needs to open a stream with Core with [gRPC](https://grpc.io/) using the [Protobuffer definition](https://github.com/mesg-foundation/core/blob/dev/api/core/api.proto). When opening the stream, the application listens to the service. It can listen to many service as the same time.
 
 {% tabs %}
 {% tab title="Request" %}

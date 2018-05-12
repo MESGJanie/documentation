@@ -103,7 +103,7 @@ tasks:
 
 ## Listen for task executions
 
-To listen for task to execute, the Service needs to open a stream with Core using the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and [gRPC](https://grpc.io/). Every task received on the stream needs to be executed by the Service and the output [submitted](tasks.md#submit-outputs-of-your-execution) back to Core.
+To listen for task to execute, the Service needs to open a stream with Core using the [Protobuffer definition](https://github.com/mesg-foundation/core/blob/dev/api/service/api.proto) and [gRPC](https://grpc.io/). Every task received on the stream needs to be executed by the Service and the output [submitted](tasks.md#submit-outputs-of-your-execution) back to Core.
 
 {% hint style="info" %}
 Consider listening for tasks when your service is ready. If your service needs to synchronize some data first, you should wait for this synchronization before listening for tasks.
@@ -234,7 +234,7 @@ func main() {
 
 ## Submit outputs of task executions
 
-Once the task execution is finished, the Service has to send the outputs of the execution back to [Core](../start-here/core.md) using the [Protobuffer definition](https://github.com/mesg-foundation/application/blob/dev/types/api_event.go) and [gRPC](https://grpc.io/). Only one output can be submitted per execution even if the task has declared multiple outputs.
+Once the task execution is finished, the Service has to send the outputs of the execution back to [Core](../start-here/core.md) using the [Protobuffer definition](https://github.com/mesg-foundation/core/blob/dev/api/service/api.proto) and [gRPC](https://grpc.io/). Only one output can be submitted per execution even if the task has declared multiple outputs.
 
 {% tabs %}
 {% tab title="Request" %}
