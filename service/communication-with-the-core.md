@@ -6,7 +6,7 @@ description: Sending commands
 
 ## Why emit an Event? 
 
-Events are emitted from a Service \(e.g.: a web server receiving a request, or a blockchain technology receiving a new transaction\). These events are emitted to achieve a desired effect, or to be used as a trigger to make another task happen. Each Service has different kinds of events that you can send to the Core. 
+Events are emitted from a Service \(e.g.: a web server receiving a request, or a blockchain technology receiving a new transaction\). These events are emitted to achieve a desired effect or to be used as a trigger to make another task happen. Each Service has different kinds of events that you can send to Core. 
 
 ## Steps to follow
 

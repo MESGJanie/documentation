@@ -2,7 +2,7 @@
 
 ## Why execute a service's task?
 
-Applications can execute a service's task allowing you to reuse the maximum number of already-built logic, and enjoy the MESG ecosystem.
+Applications can execute a service's task allowing you to reuse the maximum number of already-built logic and enjoy the MESG ecosystem.
 
 ## Execute a service's task
 

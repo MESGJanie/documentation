@@ -2,7 +2,7 @@
 
 ## Why listen for tasks?
 
-The Service needs to receive a command sent by Core in order to execute any desired task. Every time a command is received, it will ensure that the sender is  Core, then it will check if it can handle the command, and if so, it will execute it. Once executed, it will reply to Core with the result of the command.
+The Service needs to receive a command sent by Core in order to execute any desired task. Every time a command is received, it will ensure that the sender is Core, then it will check if it can handle the command, and if so, it will execute it. Once executed, it will reply to Core with the result of the command.
 
 ## Steps to follow
 
