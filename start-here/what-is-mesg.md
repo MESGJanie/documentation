@@ -16,7 +16,7 @@ MESG allows decentralized applications to deliver the same outstanding user expe
 
 We are creating the best community-driven open-source infrastructure, empowering developers to use MESG to build innovations.
 
-**In Q4 2018**, we are deploying the Network to unify the MESG infrastructure. The Network makes it easy for developers to harness the benefits of decentralization, to share and reuse connections to technologies making back-end app building a breeze. Once a connection from a technology to Core is made, it can be shared for free or sold in a Marketplace, allowing developers to receive income each time their connection is used. We value and incentivize contributions.
+**In Q4 2018**, we are deploying the Network to unify the MESG infrastructure. The Network makes it easy for developers to harness the benefits of decentralization, and to share and reuse connections to technologies, making back-end app building a breeze. Once a connection from a technology to Core is made, it can be shared for free or sold in a Marketplace, allowing developers to receive income each time their connection is used. We value and incentivize contributions.
 
 Eager to get started building connections? Start[ here](https://docs.mesg.tech/~/edit/primary/start-here/run-a-node).  
   

@@ -2,9 +2,9 @@
 
 Applications and business solutions are built on MESG by attaching an event on one service to a task on another service. These can be configured in any order, and you can easily create chain reactions or synchronicities of any kind .
 
-Future versions of MESG will not require users to code. Instead, you'll send a configuration file, which is like an order slip, listing all of the events and corresponding tasks you'd like the MESG Network to execute for you.   
+Future versions of MESG will not require users to code. Instead, you'll send a configuration file to Core, which is like an order slip, listing all of the events and corresponding tasks you'd like the MESG Network to execute for you.   
   
-As long as the [Services](../service/what-is-a-service.md) \(technologies\) you want to use in your solution have been connected to the MESG Infrastructure already, you will be able to list them within the configuration file. If they haven't been connected to MESG yet, you can connect Services yourself with some coding.
+As long as the [Services](../service/what-is-a-service.md) you want to use in your solution have been connected to the MESG Infrastructure already, you will be able to list them within the configuration file. If they haven't been connected to MESG yet, you can connect Services yourself with some coding.
 
 Our software architecture is modeled on Event-Driven Architecture \(EDA\). This will be used in future releases of MESG software. EDA is a software architecture pattern promoting the production, detection, consumption of, and reaction to events.
 
@@ -12,9 +12,9 @@ Events are any new occurrences on a technology. \(e.g. receiving an email, a new
   
 We recommend you build applications to react to events in order to create an application that's quite simple to build, easily-maintainable and compatible with future releases of Core. 
 
-Tasks in your application are reactions to events. \(send an email, notify me on my watch, put the car into standby, issue a refund, transfer funds, open a new account, turn on the lights, etc.\)
+Tasks in your application are reactions to events \(send an email, notify me on my watch, put the car into standby, issue a refund, transfer funds, open a new account, turn on the lights, etc.\).
 
-This is how the configuration file \(like an order slip\) in future releases of MESG is laid out, with events and corresponding tasks. So if you want your application to be compatible with future releases of MESG, we recommend you start building your application based on Event Driven Architecture while we finish completing the Infrastructure. 
+This is how the configuration file \(like an order slip\) in future releases of MESG is laid out, with events and corresponding tasks. So if you want your application to be compatible with future releases of MESG, we recommend you build your application based on Event Driven Architecture while we finish completing the Infrastructure. 
 
 By creating an application based in Event-Driven Architecture, you embrace the philosophy of MESG and make an application that becomes really easy.
 
