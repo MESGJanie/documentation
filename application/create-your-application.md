@@ -32,7 +32,7 @@ The source of an event can come from two different parts of your service :
 ### Task to execute
 
 {% hint style="info" %}
-The task is the **then **for your application
+The task is the **then** for your application
 {% endhint %}
 
 When one event is coming then the only thing to do is to [execute a task](execute-task.md) of the service that you want.

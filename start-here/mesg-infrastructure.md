@@ -1,6 +1,6 @@
 # MESG Infrastructure
 
-**Note: The MESG Infrastructure's full deployment is scheduled for Q3 2018. Until then, MESG can be used to connect technologies and build solutions **[**on your local computer**](installing-core.md)**. This article is to describe what is currently being built.**  
+**Note: The MESG Infrastructure's full deployment is scheduled for Q3 2018. Until then, MESG can be used to connect technologies and build solutions** [**on your local computer**](installing-core.md)**. This article is to describe what is currently being built.**  
   
 The MESG Infrastructure is made up of a decentralized Network of all users computers running Core.   
   
