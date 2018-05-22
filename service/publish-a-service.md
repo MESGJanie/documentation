@@ -1,6 +1,6 @@
 # Publish a service
 
-Once you finish developing your service and testing it, you can publish it. A unique ID will be generated when you publish a service. This ID is based on the mesg.yml file and will change every time you add any modifications to this service.
+Once you finish developing your service and testing it, you can publish it. A unique ID will be generated when you publish a service. This ID is based on the [`mesg.yml`](service-file.md) file and will change every time you add any modifications to this service.
 
 To publish the service you can run the command:
 
@@ -8,7 +8,7 @@ To publish the service you can run the command:
 mesg-core service publish PATH_OF_THE_SERVICE
 ```
 
-This will generate an ID that looks similar to v1\_fe25be776e1e256400c77067a1cb7666. You can reuse this ID when you want to use the service.
+This will generate an ID that looks similar to `v1_fe25be776e1e256400c77067a1cb7666`. You can reuse this ID when you want to use the service.
 
 ### List published services
 
