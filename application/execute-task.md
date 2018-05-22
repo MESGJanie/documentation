@@ -14,30 +14,13 @@ To execute a task, applications need to connect to Core through [gRPC](https://g
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
-| **service** | [`Service`](../service/service-file.md) | Required | An object containing the service definition loaded from the yml [service file](../service/service-file.md). |
+| **serviceId** | `String` | Required | ID of the service. |
 | **taskKey** | `String` | Required | The task's key defined in the [service file](../service/service-file.md). |
 | **taskData** | `String` | Required | The task's inputs in JSON format. |
 
 ```javascript
 {
-  "service": {
-    ...
-    "tasks": {
-      "taskX": {
-        "inputs": {
-          "inputX": { "type": "String" }
-        },
-        "outputs": {
-          "outputX": {
-            "data": {
-              "outputValX": { "type": "String" }
-            }
-          }
-        }
-      }
-    },
-    ...
-  },
+  "serviceID": "v1_fe25be776e1e256400c77067a1cb7666",
   "taskKey": "taskX",
   "taskData": "{\"inputX\":\"input value\"}"
 }
@@ -67,8 +50,6 @@ To execute a task, applications need to connect to Core through [gRPC](https://g
 {% code-tabs-item title="index.js" %}
 ```javascript
 const grpc = require('grpc')
-const yaml = require('js-yaml')
-const fs = require('fs')
 const api = grpc.load(__dirname + '/api/client/api.proto').api
 const core = new api.Core(
   process.env.MESG_ENDPOINT,
@@ -76,11 +57,10 @@ const core = new api.Core(
 )
 ​
 core.ExecuteTask({
-  service: yaml.safeLoad(fs.readFileSync("./serviceX/mesg.yml")),
-  taskKey: "eventX",
+  serviceID: "v1_fe25be776e1e256400c77067a1cb7666",
+  taskKey: "taskX",
   taskData: JSON.stringify({
-    foo: "hello",
-    bar: false
+    inputX: "input value"
   })
 }, (err, reply) => {
   // handle response if needed
@@ -109,9 +89,9 @@ func main() {
 	connection, _ := grpc.Dial(":50052", grpc.WithInsecure())
 	cli := core.NewCoreClient(connection)
 	res, _ := cli.ExecuteTask(context.Background(), &core.ExecuteTaskRequest{
-		Service:  &service.Service{},
-		TaskKey:  "xxxx",
-		TaskData: "{\"foo\":\"bar\"}",
+		ServiceID:  "v1_fe25be776e1e256400c77067a1cb7666",
+		TaskKey:  "taskX",
+		TaskData: "{\"inputX\":\"input value\"}",
 	})
 	fmt.Println(res.ExecutionID)
 }
@@ -137,21 +117,11 @@ Outputs are sent asynchronously. Make sure that the application listens for outp
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- |
-| **service** | [`Service`](../service/service-file.md) | Required | Object that contains the service definition loaded from the yml [service file](../service/service-file.md). |
+| **serviceID** | `String` | Required | ID of the service. |
 
 ```javascript
 {
-  "service": {
-    ...
-    "tasks": {
-      "taskX": {
-        "outputs": {
-          "outputX": { "type": "String" }
-        }
-      }
-    }
-    ...
-  }
+  "serviceID": "v1_fe25be776e1e256400c77067a1cb7666"
 }
 ```
 {% endtab %}
@@ -185,8 +155,6 @@ Outputs are sent asynchronously. Make sure that the application listens for outp
 {% code-tabs-item title="index.js" %}
 ```javascript
 const grpc = require('grpc')
-const yaml = require('js-yaml')
-const fs = require('fs')
 const api = grpc.load(__dirname + '/api/client/api.proto').api
 const core = new api.Core(
   process.env.MESG_ENDPOINT,
@@ -194,7 +162,7 @@ const core = new api.Core(
 )
 
 const listenResultStream = core.ListenResult({
-  service: yaml.safeLoad(fs.readFileSync("./serviceX/mesg.yml")),
+  serviceID: "v1_31341hj33189yr13iugr13",
 })
 listenResultStream.on('error', function(error) {
   // An error has occurred and the stream has been closed.
@@ -231,7 +199,7 @@ func main() {
 	connection, _ := grpc.Dial(":50052", grpc.WithInsecure())
 	cli := core.NewCoreClient(connection)
 	stream, _ := cli.ListenResult(context.Background(), &core.ListenResultRequest{
-		Service: &service.Service{},
+		ServiceID: "v1_fe25be776e1e256400c77067a1cb7666",
 	})
 	for {
 		result, _ := stream.Recv()

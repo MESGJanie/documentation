@@ -18,6 +18,7 @@
 * [Dockerize the Service](service/dockerize-your-service.md)
 * [Validate](service/validate.md)
 * [Test](service/test.md)
+* [Publish a service](service/publish-a-service.md)
 * [Run the Service](service/start.md)
 
 ## Application

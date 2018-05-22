@@ -14,21 +14,11 @@ To listen for events, the application needs to open a stream with Core with [gRP
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- |
-| **service** | `Service` | Required | Object that contains the service definition loaded from the yml [service file](../service/service-file.md). |
+| **serviceID** | `String` | Required | ID of the service that you want to listen. |
 
 ```javascript
 {
-  "service": {
-    ...
-    "events": {
-      "eventX": {
-        "data": {
-          "dataX": { "type": "String" }
-        }
-      }
-    }
-    ...
-  }
+  "serviceID": "v1_fe25be776e1e256400c77067a1cb7666",
 }
 ```
 {% endtab %}
@@ -58,8 +48,6 @@ To listen for events, the application needs to open a stream with Core with [gRP
 {% code-tabs-item title="index.js" %}
 ```javascript
 const grpc = require('grpc')
-const yaml = require('js-yaml')
-const fs = require('fs')
 const api = grpc.load(__dirname + '/api/core/api.proto').api
 const core = new api.Core(
   process.env.MESG_ENDPOINT,
@@ -67,7 +55,7 @@ const core = new api.Core(
 )
 
 const listenEventStream = core.ListenEvent({
-  service: yaml.safeLoad(fs.readFileSync("./serviceX/mesg.yml")),
+  serviceId: "v1_fe25be776e1e256400c77067a1cb7666",
 })
 listenEventStream.on('error', function(error) {
   // An error has occurred and the stream has been closed.
@@ -103,7 +91,7 @@ func main() {
 	connection, _ := grpc.Dial(":50052", grpc.WithInsecure())
 	cli := core.NewCoreClient(connection)
 	stream, _ := cli.ListenEvent(context.Background(), &core.ListenEventRequest{
-		Service: &service.Service{},
+		ServiceID: "v1_fe25be776e1e256400c77067a1cb7666",
 	})
 	for {
 		event, _ := stream.Recv()

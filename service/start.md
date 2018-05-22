@@ -5,10 +5,10 @@
 To start a Service, run the command:
 
 ```bash
-mesg-core service start SERVICE_PATH
+mesg-core service start SERVICE_ID
 ```
 
-The command will validate that your Service is valid, then start the Docker container\(s\) needed to run your service.
+The command will start the Docker container\(s\) needed to run your service.
 
 ## Stop
 
