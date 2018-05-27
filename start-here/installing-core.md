@@ -18,8 +18,8 @@ chmod +x ~/.local/bin/mesg-core
 {% code-tabs %}
 {% code-tabs-item title="install.sh" %}
 ```bash
-curl https://github.com/mesg-foundation/core/releases/download/release-dev/mesg-core-linux-amd64 --progress-bar -L -o ~/usr/local/bin/mesg-core
-chmod +x /usr/local/bin/mesg-core
+sudo curl https://github.com/mesg-foundation/core/releases/download/release-dev/mesg-core-linux-amd64 --progress-bar -L -o /usr/local/bin/mesg-core
+sudo chmod +x /usr/local/bin/mesg-core
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
