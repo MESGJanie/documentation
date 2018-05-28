@@ -8,9 +8,9 @@ The Service needs to receive a command sent by Core in order to execute any desi
 
 To implement tasks in your Service, you need to :
 
-* [ ] [Add the task definition](tasks.md#create-your-task) in the Service's [`mesg.yml`](service-file.md) file
-* [ ] [Listen for task execution](tasks.md) from the [Core](../start-here/core.md)
-* [ ] [Submit the outputs](tasks.md#submit-outputs-of-your-execution) of the task
+* [ ] [Add the task definition](listen-for-tasks.md#create-your-task) in the Service's [`mesg.yml`](service-file.md) file
+* [ ] [Listen for task execution](listen-for-tasks.md) from the [Core](../start-here/core.md)
+* [ ] [Submit the outputs](listen-for-tasks.md#submit-outputs-of-your-execution) of the task
 
 ## Create a Task
 
@@ -22,9 +22,9 @@ The first step is to declare the tasks that the service will be able to execute 
 | --- | --- | --- | --- | --- | --- |
 | **name** | `id` | `String` | Name of the task, if not set, the name will be the ID of the task. |
 | **description** | `""` | `String` | Description of the task, what the task is doing and why it is useful. |
-| **inputs** | `{}` | `map<id,`[`Input`](tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of inputs that the task needs in order to be executed. |
-| **outputs** | `{}` | `map<id,`[`Outputs`](tasks.md#outputs-data)`>` | Map of outputs that the task will emit. The task can declare multiple outputs but can only submit one output per execution. |
-| **secrets** | `{}` | `map<id,`[`Secret`](tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of secrets that the task may need. Secrets are environmental variables that are set directly by the user. |
+| **inputs** | `{}` | `map<id,`[`Input`](listen-for-tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of inputs that the task needs in order to be executed. |
+| **outputs** | `{}` | `map<id,`[`Outputs`](listen-for-tasks.md#outputs-data)`>` | Map of outputs that the task will emit. The task can declare multiple outputs but can only submit one output per execution. |
+| **secrets** | `{}` | `map<id,`[`Secret`](listen-for-tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of secrets that the task may need. Secrets are environmental variables that are set directly by the user. |
 
 ### Outputs
 
@@ -32,7 +32,7 @@ The first step is to declare the tasks that the service will be able to execute 
 | --- | --- | --- | --- |
 | **name** | `id` | `String` | Name of the output, the default is the ID. |
 | **description** | `""` | `String` | A description of the output, what kind of output, and how is it useful. |
-| **data** | `{}` | `map<id,`[`Output`](tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of the data  the output will return. |
+| **data** | `{}` | `map<id,`[`Output`](listen-for-tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of the data  the output will return. |
 
 ### Input, Output and Secret parameter
 
@@ -40,7 +40,7 @@ The first step is to declare the tasks that the service will be able to execute 
 | --- | --- | --- | --- | --- |
 | **name** | `id` | `String` | Name or the parameter, default: the ID. |
 | **description** | `""` | `String` | Description of the parameter. |
-| **type** | `String` | [`Type`](tasks.md#type-of-your-data) | Type of the parameter. |
+| **type** | `String` | [`Type`](listen-for-tasks.md#type-of-your-data) | Type of the parameter. |
 | **optional** | `false` | `Boolean` | If true, this parameter is considered as optional and might be empty. |
 
 ### Type of parameter {#type-of-your-data}
@@ -103,7 +103,7 @@ tasks:
 
 ## Listen for task executions
 
-To listen for task to execute, the Service needs to open a stream with Core using the [Protobuffer definition](https://github.com/mesg-foundation/core/blob/dev/api/service/api.proto) and [gRPC](https://grpc.io/). Every task received on the stream needs to be executed by the Service and the output [submitted](tasks.md#submit-outputs-of-your-execution) back to Core.
+To listen for task to execute, the Service needs to open a stream with Core using the [Protobuffer definition](https://github.com/mesg-foundation/core/blob/dev/api/service/api.proto) and [gRPC](https://grpc.io/). Every task received on the stream needs to be executed by the Service and the output [submitted](listen-for-tasks.md#submit-outputs-of-your-execution) back to Core.
 
 {% hint style="info" %}
 Consider listening for tasks when your service is ready. If your service needs to synchronize some data first, you should wait for this synchronization before listening for tasks.
@@ -242,9 +242,9 @@ Once the task execution is finished, the Service has to send the outputs of the 
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
-| **executionID** | `String` | required | The `executionID` received from the [listen](tasks.md#listen-for-task-executions) stream. |
-| **outputKey** | `String` | required | The ID of the output as defined in the [output's declaration](tasks.md#create-your-task). |
-| **outputData** | `String` | required | The output's data encoded in JSON. The data should match the one defined in the [output's declaration](tasks.md#create-your-task). |
+| **executionID** | `String` | required | The `executionID` received from the [listen](listen-for-tasks.md#listen-for-task-executions) stream. |
+| **outputKey** | `String` | required | The ID of the output as defined in the [output's declaration](listen-for-tasks.md#create-your-task). |
+| **outputData** | `String` | required | The output's data encoded in JSON. The data should match the one defined in the [output's declaration](listen-for-tasks.md#create-your-task). |
 
 ```javascript
 {

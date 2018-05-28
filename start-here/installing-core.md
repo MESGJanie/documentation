@@ -26,14 +26,14 @@ sudo chmod +x /usr/local/bin/mesg-core
 {% endtab %}
 {% endtabs %}
 
-Then, to start Core, execute in a terminal:
+Then, to start Core, execute the following in a terminal:
 
 ```bash
 mesg-core
 ```
 
 {% hint style="warning" %}
-If your system is not listed in the block before, please go to our [GitHub release page](https://github.com/mesg-foundation/core/releases) and download the right one.
+If your system is not listed in the block before, please go to our [GitHub release page](https://github.com/mesg-foundation/core/releases) and download the correct one.
 {% endhint %}
 
 ## Docker CE

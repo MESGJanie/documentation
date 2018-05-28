@@ -18,9 +18,9 @@ This will create a `mesg.yml` file in your current directory with the following 
 | **description** | `""` | `String` | A description that will be useful to explain the features of your service. |
 | **publish** | `ALL` | [`Publish`](service-file.md#publish) | What is published on the network can be defined when deploying a Service by setting a publish parameter. [more](service-file.md#publish) |
 | **visibility** | `ALL` | [`Visibility`](service-file.md#visibility) | A Service defines what entities can have access to the service. [more](service-file.md#visibility) |
-| **events** | `{}` | `map<id,`[`Event`](communication-with-the-core.md)`>` | Services must declare a list of events they can emit. Events are actions on a technology the Service is connected to. |
-| **tasks** | `{}` | `map<id,`[`Task`](tasks.md)`>` | Services declare a list of tasks they can execute. A task is an action that accepts parameters as inputs, executes something on the connected technology, and returns one output to Core, with data. |
-| **dependencies** | `{}` | `map<id,`[`Dependency`](dockerize-your-service.md#add-your-dependencies)`>` | Services can specify internal dependencies such as a database, cache or blockchain client. |
+| **events** | `{}` | `map<id,`[`Event`](emit-an-event.md)`>` | Services must declare a list of events they can emit. Events are actions on a technology the Service is connected to. |
+| **tasks** | `{}` | `map<id,`[`Task`](listen-for-tasks.md)`>` | Services declare a list of tasks they can execute. A task is an action that accepts parameters as inputs, executes something on the connected technology, and returns one output to Core, with data. |
+| **dependencies** | `{}` | `map<id,`[`Dependency`](dockerize-the-service.md#add-your-dependencies)`>` | Services can specify internal dependencies such as a database, cache or blockchain client. |
 
 You can find an example of `mesg.yml` file [here](https://github.com/mesg-foundation/service-ethereum/blob/master/mesg.yml).
 

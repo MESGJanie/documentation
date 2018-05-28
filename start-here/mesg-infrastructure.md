@@ -4,7 +4,7 @@
   
 The MESG Infrastructure is made up of a decentralized Network of all users computers running Core.   
   
-Like many decentralized networks, when a [Service](../service/what-is-a-service.md) is deployed, it will be shared among the nodes in the network. All of the nodes using the Service will re-seed this connection to share with others.   
+Like many decentralized networks, when a [Service](../service/what-is-a-service.md) is deployed, it will be shared among the nodes in the network. All nodes using a Service will re-seed the data to share with others.   
   
 MESG fairly and automatically rewards contributors who either help produce an initial connection, or help process a task. 
 
@@ -15,7 +15,7 @@ All of this in a pay-per-transaction model, allowing users to accomplish great f
 The MESG Infrastructure utilizes blockchain technology in two ways: 
 
 * It allows any external blockchain technology to be connected to Core
-* Within the network, the processing of a task is done off the blockchain, then the consensus-based result is submitted onto the blockchain.
+* Generally, within the network, the processing of a task is done off the blockchain, then the consensus-based result is submitted onto the blockchain. However, it is up to each developer to dictate how and when a blockchain is used within each application. 
 
 
 

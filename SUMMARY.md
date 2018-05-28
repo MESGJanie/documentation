@@ -13,19 +13,19 @@
 
 * [What is a Service?](service/what-is-a-service.md)
 * [Service file](service/service-file.md)
-* [Emit an Event](service/communication-with-the-core.md)
-* [Listen for Tasks](service/tasks.md)
-* [Dockerize the Service](service/dockerize-your-service.md)
+* [Emit an Event](service/emit-an-event.md)
+* [Listen for Tasks](service/listen-for-tasks.md)
+* [Dockerize the Service](service/dockerize-the-service.md)
 * [Validate](service/validate.md)
 * [Test](service/test.md)
 * [Publish a service](service/publish-a-service.md)
-* [Run the Service](service/start.md)
+* [Run the Service](service/run-the-service.md)
 
 ## Application
 
-* [Create an Application](application/create-your-application.md)
+* [Create an Application](application/create-an-application.md)
 * [Use cases](application/use-cases.md)
-* [Listen for events](application/listen.md)
-* [Execute a task](application/execute-task.md)
-* [Help us develop](help-us-develop.md)
+* [Listen for events](application/listen-for-events.md)
+* [Execute a task](application/execute-a-task.md)
+* [Help us develop](application/help-us-develop.md)
 

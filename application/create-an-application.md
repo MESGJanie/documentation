@@ -1,6 +1,6 @@
 # Create an Application
 
-Applications and business solutions are built on MESG by attaching an event on one service to a task on another service. These can be configured in any order, and you can easily create chain reactions or synchronicities of any kind .
+Applications and business solutions are built on MESG by attaching an event on one service to a task on another service. These can be configured in any order, and you can easily create chain reactions or synchronicities of any kind.
 
 Future versions of MESG will not require users to code. Instead, you'll send a configuration file to Core, which is like an order slip, listing all of the events and corresponding tasks you'd like the MESG Network to execute for you.   
   
@@ -26,8 +26,8 @@ The event is the **when** for your application
 
 The source of an event can come from two different parts of your service :
 
-* [Events from services](listen.md)
-* [Outputs from the tasks of services](execute-task.md)
+* [Events from services](listen-for-events.md)
+* [Outputs from the tasks of services](execute-a-task.md)
 
 ### Task to execute
 
@@ -35,7 +35,7 @@ The source of an event can come from two different parts of your service :
 The task is the **then** for your application
 {% endhint %}
 
-When one event is coming then the only thing to do is to [execute a task](execute-task.md) of the service that you want.
+When one event is coming then the only thing to do is to [execute a task](execute-a-task.md) of the service that you want.
 
 You can find some example in the [use cases](use-cases.md) page.
 

@@ -10,7 +10,7 @@ MESG saves developers hundreds of hours bridging multiple APIs to an application
 
 **In Q3 2018**, rather than writing any code whatsoever, you will be able to write a simple configuration file including desired events and tasks, then allow Core to assemble your application on your behalf.
 
-An application on MESG can be anything from a multinational dApp store to automating a workflow for a small business, to paying personal bills or adding notifications to events on the blockchain. 
+An application on MESG could be anything from a multinational dApp store, to the automation of a workflow for a small business, to paying personal bills or adding notifications to events on the blockchain. 
 
 MESG allows decentralized applications to deliver the same outstanding user experience that centralized apps deliver. The possibilities and use cases are truly endless.
 

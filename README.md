@@ -1,20 +1,14 @@
----
-description: >-
-  MESG is a New Paradigm of technology development where the implementation of
-  ideas is easy.
----
-
 # Introduction
 
 {% hint style="info" %}
 Work in progress
 {% endhint %}
 
-MESG is an open-source decentralized infrastructure which makes all technologies interoperable, including blockchain. It’s a building platform for developers.
+MESG is an open-source decentralized infrastructure which makes all technologies interoperable, including blockchains. It’s a building platform for developers.
 
-Instead of making individual connections to each technology you want to use, you can now make a single connection to [Core](start-here/core.md), which manages connections to all other technologies. It handles the receiving and deployment of information and tasks, meaning that maintaining dApps can be a breeze.  
+Instead of individually connecting all technologies you want to use in an application, now you can make a single connection to [Core](start-here/core.md), then allow Core to manage all connections to all other technologies so your application doesn't have to. MESG handles the communication of information and tasks between any technologies, making the creation and maintenance of dApps a breeze.  
 
-This technology-agnostic hub allows all technologies to play nicely together, ushering in a new era of productivity and possibilities.
+This technology-agnostic architecture allows all technologies and languages to play nicely together, ushering in a new era of productivity and possibilities.
 
 **Arriving Q3 2018:**
 
@@ -22,7 +16,7 @@ Once a connection from a technology to Core is made, it can be shared in a Marke
 
 Take the best of what has already been created to build your custom solution. Our building platform allows you to easily connect technologies without needing to code or know the languages of the technologies you're using.
 
-Get involved by writing code or creating viable products, all while benefiting from an incentive system designed to reward building.
+You can get involved by writing code or creating viable solutions, all while benefiting from an incentive system designed to reward building.
 
 We’re excited to see what you come up with.  
 
