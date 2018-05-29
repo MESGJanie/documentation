@@ -167,20 +167,20 @@ const yaml = require('js-yaml')
 const fs = require('fs')
 const api = grpc.load(__dirname + '/api/service/api.proto').api
 const service = new api.Service(
-  process.env.MESG_ENDPOINT,
+  process.env.MESG_ENDPOINT_TCP,
   grpc.credentials.createInsecure()
 )
 
 const listenTaskStream = service.ListenTask({
   service: yaml.safeLoad(fs.readFileSync("./mesg.yml")),
 })
-listenTaskStream.on('error', function(error) {
+listenTaskStream.on('error', error => {
   // An error has occurred and the stream has been closed.
 })
-listenTaskStream.on('data', function(data) {
-  console.log('receive', data)
+listenTaskStream.on('data', ({ executionID, taskKey, inputData }) => {
+  console.log('receive', taskKey, inputData)
 })
-listenTaskStream.on('status', function(status) {
+listenTaskStream.on('status', status => {
   // process status
 })
 
@@ -282,7 +282,7 @@ const yaml = require('js-yaml')
 const fs = require('fs')
 const api = grpc.load(__dirname + '/api/service/api.proto').api
 const service = new api.Service(
-  process.env.MESG_ENDPOINT,
+  process.env.MESG_ENDPOINT_TCP,
   grpc.credentials.createInsecure()
 )
 

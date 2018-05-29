@@ -133,7 +133,7 @@ const yaml = require('js-yaml')
 const fs = require('fs')
 const api = grpc.load(__dirname + '/api/service/api.proto').api
 const service = new api.Service(
-  process.env.MESG_ENDPOINT,
+  process.env.MESG_ENDPOINT_TCP,
   grpc.credentials.createInsecure()
 )
 

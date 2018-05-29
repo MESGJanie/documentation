@@ -50,7 +50,7 @@ To listen for events, the application needs to open a stream with Core with [gRP
 const grpc = require('grpc')
 const api = grpc.load(__dirname + '/api/core/api.proto').api
 const core = new api.Core(
-  process.env.MESG_ENDPOINT,
+  "localhost:50052",
   grpc.credentials.createInsecure()
 )
 

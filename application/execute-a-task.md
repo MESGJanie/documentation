@@ -52,7 +52,7 @@ To execute a task, applications need to connect to Core through [gRPC](https://g
 const grpc = require('grpc')
 const api = grpc.load(__dirname + '/api/client/api.proto').api
 const core = new api.Core(
-  process.env.MESG_ENDPOINT,
+  "localhost:50052",
   grpc.credentials.createInsecure()
 )
 ​
