@@ -13,12 +13,14 @@ To listen for events, the application needs to open a stream with Core with [gRP
 ### `Client.ListenEvent`
 
 | **Name** | **Type** | **Required** | **Description** |
-| --- | --- |
+| --- | --- | --- |
 | **serviceID** | `String` | Required | ID of the service that you want to listen. |
+| **eventFilter** | `String` | Optional | Only listens for this given event ID. |
 
 ```javascript
 {
   "serviceID": "v1_fe25be776e1e256400c77067a1cb7666",
+  "eventFilter": "eventIDToOnlyListenTo"
 }
 ```
 {% endtab %}

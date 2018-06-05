@@ -116,12 +116,15 @@ Outputs are sent asynchronously. Make sure that the application listens for outp
 ### `Client.ListenResult`
 
 | **Name** | **Type** | **Required** | **Description** |
-| --- | --- |
+| --- | --- | --- | --- |
 | **serviceID** | `String` | Required | ID of the service. |
+| **taskFilter** | `String` | Optional | Only listens for this given task ID. |
+| **outputFilter** | `String` | Optional | Only listens for this given output ID. If set, the attribute `taskFilter` should also be provided. |
 
 ```javascript
-{
-  "serviceID": "v1_fe25be776e1e256400c77067a1cb7666"
+  "serviceID": "v1_fe25be776e1e256400c77067a1cb7666",
+  "taskFilter": "taskIDToOnlyListenTo",
+  "outputFilter": "outputIDToOnlyListenTo"
 }
 ```
 {% endtab %}
