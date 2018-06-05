@@ -57,7 +57,7 @@ const core = new api.Core(
 )
 
 const listenEventStream = core.ListenEvent({
-  serviceId: "v1_fe25be776e1e256400c77067a1cb7666",
+  serviceID: "v1_fe25be776e1e256400c77067a1cb7666",
 })
 listenEventStream.on('error', function(error) {
   // An error has occurred and the stream has been closed.
