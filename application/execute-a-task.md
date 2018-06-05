@@ -10,7 +10,7 @@ To execute a task, applications need to connect to Core through [gRPC](https://g
 
 {% tabs %}
 {% tab title="Request" %}
-### `Client.ExecuteTask`
+### `Core.ExecuteTask`
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ Outputs are sent asynchronously. Make sure that the application listens for outp
 
 {% tabs %}
 {% tab title="Request" %}
-### `Client.ListenResult`
+### `Core.ListenResult`
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
@@ -160,7 +160,7 @@ Outputs are sent asynchronously. Make sure that the application listens for outp
 const grpc = require('grpc')
 const api = grpc.load(__dirname + '/api/client/api.proto').api
 const core = new api.Core(
-  process.env.MESG_ENDPOINT,
+  "localhost:50052",
   grpc.credentials.createInsecure()
 )
 

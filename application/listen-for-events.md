@@ -10,7 +10,7 @@ To listen for events, the application needs to open a stream with Core with [gRP
 
 {% tabs %}
 {% tab title="Request" %}
-### `Client.ListenEvent`
+### `Core.ListenEvent`
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- |
