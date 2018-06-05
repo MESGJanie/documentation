@@ -7,7 +7,8 @@ Services run in Docker to provide a sandbox and a normalized environment to remo
 ## Steps to be compatible with Docker
 
 * [ ] [Create the Dockerfile](dockerize-the-service.md#create-your-dockerfile)
-* [ ] [Add dependencies](dockerize-the-service.md#add-dependencies) in your [`mesg.yml`](service-file.md) file
+* [ ] [Add a config](dockerize-the-service.md#add-dependencies) in your [`mesg.yml`](service-file.md) file if needed
+* [ ] [Add dependencies](dockerize-the-service.md#add-dependencies) in your [`mesg.yml`](service-file.md) file if needed
 
 ## Create the Dockerfile
 
@@ -52,22 +53,23 @@ CMD ["/app/main"]
 {% endtab %}
 {% endtabs %}
 
-## Add dependencies
+## Add a configuration and dependencies
 
-Once the Service can run on Docker, [Core](../start-here/core.md) should be able to start it automatically. Update the [`mesg.yml`](service-file.md) file with the dependencies the service needs.
+Once the Service can run on Docker, [Core](../start-here/core.md) should be able to start it automatically. Update the [`mesg.yml`](service-file.md) file with the config and the optional dependencies the service needs.
 
-{% hint style="warning" %}
-The Service always needs to be declared as a dependency.
-{% endhint %}
+The `configuration` key is a Dependency object that will be use to configure the main Docker container of the service. All Dependency attributes are available except image. The attribute `image` will be set automatically when the service is deployed.
+
+If the service requires dependencies to other Docker container, specify them in the `dependencies` map.
 
 {% tabs %}
 {% tab title="Detail" %}
 | **Attribute** | **Type** | **Description** |
-| --- | --- | --- | --- | --- |
-| **image** | `String` | The docker image of the Service. |
+| --- | --- | --- | --- | --- | --- |
+| **image** | `String` | The docker image of the Service. Only available for dependencies. |
 | **volumes** | `array[string]` | A list of [volumes](https://docs.docker.com/storage/volumes/) that will be mounted in the Service. |
 | **ports** | `array[string]` | A list of ports that the Service needs to expose. |
 | **command** | `String` | The command to run when the Service starts if not defined in your [Dockerfile](dockerize-the-service.md#create-your-dockerfile). |
+| **volumeFrom** | `array[string]` | List of dependencies' name to mount a volume from. |
 {% endtab %}
 
 {% tab title="Example" %}
@@ -77,10 +79,9 @@ The Service always needs to be declared as a dependency.
 name: serviceX
 tasks: {}
 events: {}
+configuration:
+  command: "node start"
 dependencies:
-  service:
-    image: "serviceXImage"
-    command: "node start"
   serviceToConnectWith:
     image: "..."
     volumes:
