@@ -8,14 +8,14 @@ To ensure that the Application is able to start your Service and receive an even
 mesg-core service test ./PATH_TO_SERVICE_FOLDER
 ```
 
-If you don't specify the path to the service folder, the method searches in the current folder for the `mesg.yml` file.
+If you don't specify the path to the service folder, the command searches in the current folder for the `mesg.yml` file.
 
 ## Listen to a specific event
 
-To only listen to one specific event, you can specify the name of the event with the `--event` flag:
+To only listen to one specific event, you can specify the name of the event with the `--event-filter` flag:
 
 ```bash
-mesg-core service test --event myServiceEventName
+mesg-core service test --event-filter myServiceEventName
 ```
 
 ## Run a task
@@ -26,17 +26,33 @@ To test a task from your Service, run:
 mesg-core service test --task myServiceTaskName
 ```
 
-If your task requires inputs you will need to specify the file that contains all the input values in `yml` format.
+If your task requires inputs you will need to specify the file that contains all the input values in `json` format.
 
 ```bash
-mesg-core service test --task myServiceTaskName --inputs ./PATH_TO_INPUTS_FILE.yml
+mesg-core service test --task myServiceTaskName --data ./PATH_TO_DATA_FILE.json
 ```
 
-The file should be a `yaml`with a format similar to the following:
+The file should be a `json` with a format similar to the following:
 
-```yaml
-inputX: "..."
-inputY: "..."
+```javascript
+{
+    "inputX": "...",
+    "inputY": "..."
+}
+```
+
+## Listen to a specific task
+
+To listen to the result of a specific task, you can use the flag `--task-filter`
+
+```bash
+mesg-core service test --task-filter myServiceTaskName
+```
+
+You can also listen to a specific output of the result of a task by using the flag `--task-filter` and `--output-filter`
+
+```bash
+mesg-core service test --task-filter myServiceTaskName --output-filter myServiceOutputName
 ```
 
 ## Keep it alive
@@ -45,6 +61,14 @@ All previous commands will stop your service upon quitting. If you want to leave
 
 ```bash
 mesg-core service test --task myServiceTaskName --keep-alive
+```
+
+## Test an already deployed service
+
+If you want to test a service that has already been deployed, you can pass its ID to the flag `--serviceID`
+
+```bash
+mesg-core service test --serviceID myServiceID
 ```
 
 
