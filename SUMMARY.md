@@ -7,8 +7,8 @@
 * [What is MESG?](start-here/what-is-mesg.md)
 * [Core](start-here/core.md)
 * [MESG Infrastructure](start-here/mesg-infrastructure.md)
-* [Quickstart Guide](start-here/quick-start-guide.md)
-* [Installing Core](start-here/installing-core.md)
+* [Quick Start Guide](start-here/quickstart-guide.md)
+* [Join Us](start-here/help-us-develop.md)
 
 ## Service
 
@@ -28,5 +28,4 @@
 * [Use cases](application/use-cases.md)
 * [Listen for events](application/listen-for-events.md)
 * [Execute a task](application/execute-a-task.md)
-* [Help us develop](application/help-us-develop.md)
 
