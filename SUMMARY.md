@@ -26,6 +26,7 @@
 
 * [Create an Application](application/create-an-application.md)
 * [Use cases](application/use-cases.md)
+* [Create an application](application/create-an-application-1.md)
 * [Listen for events](application/listen-for-events.md)
 * [Execute a task](application/execute-a-task.md)
 
