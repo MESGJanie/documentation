@@ -1,4 +1,4 @@
-# Create an application
+# Code your application
 
 Now that you have your different services ready and deployed you need to connect them through an application. You will be able to connect a task to an event with libraries that we provide, otherwise you can always connect directly to the MESG core to [listen for events](listen-for-events.md) and [execute task](execute-a-task.md).
 
