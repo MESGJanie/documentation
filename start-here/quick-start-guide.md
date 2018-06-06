@@ -1,5 +1,6 @@
 # Quickstart Guide
 
+
 **MESG is a platform which helps you create efficient and easy-to-maintain applications that connect any and all technologies** You can create your application to listen to an event on a Blockchain and execute a task on a web server. The technology you decide to connect isn't important, as long as it can send and/or receive data.
 
 The idea with MESG is to create different services that connect to a specific technology and/or a specific feature and expose 2 different things:
