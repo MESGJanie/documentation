@@ -24,8 +24,6 @@ When these services are created you can then create your business logic with the
 
 First thing you need to do is to download the CLI to be able to interact with the MESG Core. You can either download the binaries directly from the [release page](https://github.com/mesg-foundation/core/releases/latest) then rename it to `mesg-core` and install it your path or you can follow the instructions below: 
 
-# Installing Core
-
 Please follow the following installation process for your system.
 
 {% tabs %}
