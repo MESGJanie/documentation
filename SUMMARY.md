@@ -24,7 +24,7 @@
 
 ## Application
 
-* [Create an Application](application/create-an-application.md)
+* [What is an Application](application/create-an-application.md)
 * [Use cases](application/use-cases.md)
 * [Code your application](application/create-an-application-1.md)
 * [Listen for events](application/listen-for-events.md)
