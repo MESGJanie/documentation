@@ -162,28 +162,12 @@ Consider listening for tasks when your service is ready. If your service needs t
 {% code-tabs %}
 {% code-tabs-item title="index.js" %}
 ```javascript
-const grpc = require('grpc')
-const yaml = require('js-yaml')
-const fs = require('fs')
-const api = grpc.load(__dirname + '/api/service/api.proto').api
-const service = new api.Service(
-  process.env.MESG_ENDPOINT_TCP,
-  grpc.credentials.createInsecure()
-)
+const MESG = require('mesg-js').service()
 
-const listenTaskStream = service.ListenTask({
-  service: yaml.safeLoad(fs.readFileSync("./mesg.yml")),
+MESG.listenTask({
+// task      inputs           outputs
+  taskX: ({ foo, bar }, { outputX, outputY }) => outputX({ foo })
 })
-listenTaskStream.on('error', error => {
-  // An error has occurred and the stream has been closed.
-})
-listenTaskStream.on('data', ({ executionID, taskKey, inputData }) => {
-  console.log('receive', taskKey, inputData)
-})
-listenTaskStream.on('status', status => {
-  // process status
-})
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -277,59 +261,16 @@ Once the task execution is finished, the Service has to send the outputs of the 
 {% code-tabs %}
 {% code-tabs-item title="index.js" %}
 ```javascript
-const grpc = require('grpc')
-const yaml = require('js-yaml')
-const fs = require('fs')
-const api = grpc.load(__dirname + '/api/service/api.proto').api
-const service = new api.Service(
-  process.env.MESG_ENDPOINT_TCP,
-  grpc.credentials.createInsecure()
-)
+const MESG = require('mesg-js').service()
 
-service.SubmitResult({
-  executionID: "xxxx",
-  outputKey: "outputX",
-  outputData: JSON.stringify({
-    foo: "hello",
-    bar: false
-  })
-}, (err, reply) => {
-  // handle response if needed
+MESG.listenTask({
+// task      inputs           outputs
+  taskX: ({ foo, bar }, { outputX, outputY }) => outputX({ foo })
 })
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-{% endtab %}
 
-{% tab title="Go" %}
-{% code-tabs %}
-{% code-tabs-item title="main.go" %}
-```go
-type OutputX struct {
-	OutputDataX string `json:"outputDataX"`
-	OutputDataY int    `json:"outputDataY"`
-}
-// Job to listen event, see "Listen for task executions" part
-cli := types.NewServiceClient(connection)
-...
-// do my processing
-outputX := OutputX{
-  OutputDataX: "...",
-  OutputDataY: 0,
-}
-...
-outputXResult, _ := json.Marshal(outputX)
-
-res, _ := cli.Submit(context.Background(), &types.SubmitResultRequest{
-    ExecutionId: "...",
-    OutputKey: "outputX",
-    OutputData: outputXResult,
-})
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 {% endtab %}
 {% endtabs %}
-
-
 
