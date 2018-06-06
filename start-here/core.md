@@ -14,7 +14,7 @@ The network will be deployed **in Q3 of 2018.** At that time, users will be able
   
 Until Q3 2018, applications will be temporarily centralized on the user's machine until the decentralized network is ready for deployment.
 
-Begin now by [installing Core.](installing-core/)
+Begin now by [installing Core.](installing-core.md)
 
 
 

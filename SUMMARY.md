@@ -7,8 +7,8 @@
 * [What is MESG?](start-here/what-is-mesg.md)
 * [Core](start-here/core.md)
 * [MESG Infrastructure](start-here/mesg-infrastructure.md)
-* [Installing Core](start-here/installing-core/README.md)
-  * [Quick Start Guide](start-here/installing-core/quick-start-guide.md)
+* [Quickstart Guide](start-here/quick-start-guide.md)
+* [Installing Core](start-here/installing-core.md)
 
 ## Service
 
@@ -19,7 +19,7 @@
 * [Dockerize the Service](service/dockerize-the-service.md)
 * [Validate](service/validate.md)
 * [Test](service/test.md)
-* [Deploy a service](service/publish-a-service.md)
+* [Deploy a service](service/deploy-a-service.md)
 * [Run the Service](service/run-the-service.md)
 
 ## Application
