@@ -10,6 +10,14 @@
 * [Quick Start Guide](start-here/quickstart-guide.md)
 * [Join Us](start-here/help-us-develop.md)
 
+## Application
+
+* [What is an Application](application/create-an-application.md)
+* [Use cases](application/use-cases.md)
+* [Create your application](application/create-an-application-1.md)
+* [Listen for events](application/listen-for-events.md)
+* [Execute a task](application/execute-a-task.md)
+
 ## Service
 
 * [What is a Service?](service/what-is-a-service.md)
@@ -21,12 +29,3 @@
 * [Test](service/test.md)
 * [Deploy a service](service/deploy-a-service.md)
 * [Run the Service](service/run-the-service.md)
-
-## Application
-
-* [What is an Application](application/create-an-application.md)
-* [Use cases](application/use-cases.md)
-* [Create your application](application/create-an-application-1.md)
-* [Listen for events](application/listen-for-events.md)
-* [Execute a task](application/execute-a-task.md)
-
