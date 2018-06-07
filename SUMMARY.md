@@ -7,14 +7,14 @@
 * [What is MESG?](start-here/what-is-mesg.md)
 * [Core](start-here/core.md)
 * [MESG Infrastructure](start-here/mesg-infrastructure.md)
-* [Quick Start Guide](start-here/quickstart-guide.md)
-* [Join Us](start-here/help-us-develop.md)
+* [Quick Start Guide](start-here/quick-start-guide.md)
+* [Join Us](start-here/join-us.md)
 
 ## Application
 
-* [What is an Application](application/create-an-application.md)
+* [What is an Application?](application/what-is-an-application.md)
 * [Use cases](application/use-cases.md)
-* [Create your application](application/create-an-application-1.md)
+* [Create your application](application/create-your-application.md)
 * [Listen for events](application/listen-for-events.md)
 * [Execute a task](application/execute-a-task.md)
 
@@ -29,3 +29,4 @@
 * [Test](service/test.md)
 * [Deploy a service](service/deploy-a-service.md)
 * [Run the Service](service/run-the-service.md)
+
