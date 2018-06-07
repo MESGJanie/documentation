@@ -8,54 +8,6 @@
 
 First, download the CLI so you're able to interact with the MESG Core. You can either download the binaries directly from the [release page](https://github.com/mesg-foundation/core/releases/latest) then rename it to `mesg-core` and install it your path, or you can follow the installation process for your system: 
 
-{% tabs %}
-{% tab title="MacOS" %}
-{% code-tabs %}
-{% code-tabs-item title="install.sh" %}
-```bash
-curl https://github.com/mesg-foundation/core/releases/download/release-dev/mesg-core-darwin-10.6-amd64 --progress-bar -L -o ~/.local/bin/mesg-core
-chmod +x ~/.local/bin/mesg-core
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-{% endtab %}
-
-{% tab title="Linux" %}
-{% code-tabs %}
-{% code-tabs-item title="install.sh" %}
-```bash
-sudo curl https://github.com/mesg-foundation/core/releases/download/release-dev/mesg-core-linux-amd64 --progress-bar -L -o /usr/local/bin/mesg-core
-sudo chmod +x /usr/local/bin/mesg-core
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-{% endtab %}
-{% endtabs %}
-
-Then, to start Core, execute the following in a terminal:
-
-```bash
-mesg-core
-```
-
-{% hint style="warning" %}
-If your system is not listed in the block before, please go to our [GitHub release page](https://github.com/mesg-foundation/core/releases) and download the correct one.
-{% endhint %}
-
-#### Docker CE
-
-MESG also requires [Docker](https://www.docker.com/) to run on your machine.
-
-If you don't have Docker installed on your machine yet, you can download it now from their official website:
-
-* [Mac OS](https://store.docker.com/editions/community/docker-ce-desktop-mac)
-* [Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows)
-* [Ubuntu](https://store.docker.com/editions/community/docker-ce-server-ubuntu)
-* [Other](https://store.docker.com/search?type=edition&offering=community)
-
-One this is done open a new terminal and type `mesg-core` and you should have something similar to this.
-
-\[\[ TODO: Insert screenshot of the command line \]\]
 
 ### **Run MESG Core**
 
@@ -125,34 +77,4 @@ curl -XPOST http://localhost:3000/webhook
 ```
 
 You should now have an email in your inbox with your precious invitation to our Discord.
-
-## Service
-
-MESG depends heavily on services. These services are automatically built and ran inside Docker. You can connect anything you want, as long as it can run inside Docker \(as long as it can run on a computer\). If you need more details about how to connect dependencies to your service [check out the documentation](https://docs.mesg.tech/service/dockerize-the-service).
-
-A service needs to implement two types of communications:
-
-#### Receiving Tasks
-
-Tasks are designed to receive information from Core and the Application that you run. Tasks can have multiple parameters as inputs and multiple outputs with varying data. You can visualize a task as a simple function that can return any kind of object.
-
-You could have a task that takes a name as an input, and shows `success` as an output. This task factors the type of name with its probability like `{ "type": "female", "proabiliy": 92.34% }` but could also have an `error` output with a type of error like this `{ "message": "This doesn't looks like a name" }`.
-
-Click here for more information on how info how to create [tasks](https://docs.mesg.tech/service/listen-for-tasks).
-
-#### Submitting Events
-
-Events are data that your service will emit in real time. Let's say you are doing a webserver. One event could be when there is a request with the data in the payload or different events for the different routes of your api or in a blockchain world when a smart contract emits an event.
-
-More info how to create your [events in the documentation](https://docs.mesg.tech/service/emit-an-event)
-
-## Architecture
-
-\[\[ TODO: Add a nice graphic with the Application, the core and the services with the communication \]\]
-
-## Examples
-
-You can find a list of different examples and services that you can re-use [here](https://github.com/mesg-foundation/awesome)
-
-## Roadmap
 
