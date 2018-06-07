@@ -28,3 +28,11 @@ You can check all the services that are running anytime by running the following
 mesg-core service status
 ```
 
+## Share your Services
+
+Nice work on connecting a Service to MESG!   
+  
+Our community thrives on the sharing of Services.  If you'd like to contribute to our ecosystem, please share your Service with the community on our [Awesome](https://github.com/mesg-foundation/awesome) page.   
+  
+We are excited to see what you've built!
+

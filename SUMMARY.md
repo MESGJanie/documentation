@@ -8,6 +8,7 @@
 * [Core](start-here/core.md)
 * [MESG Infrastructure](start-here/mesg-infrastructure.md)
 * [Quick Start Guide](start-here/quick-start-guide.md)
+* [Installing the CLI](start-here/installing-the-cli.md)
 * [Join Us](start-here/join-us.md)
 
 ## Application
