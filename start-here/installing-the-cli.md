@@ -1,8 +1,8 @@
 # Installing the CLI
 
-### **Download the CLI**
+## **Download the CLI**
 
-First, download the CLI so you're able to interact with the MESG Core. You can either download the binaries directly from the [release page](https://github.com/mesg-foundation/core/releases/latest) then rename it to `mesg-core` and install it your path, or you can follow the installation process for your system: 
+First, download the CLI so you're able to interact with the MESG Core. You can either download the binaries directly from the [release page](https://github.com/mesg-foundation/core/releases/latest) then rename it to `mesg-core` and install it your path, or you can follow the installation process for your system:
 
 {% tabs %}
 {% tab title="MacOS" %}
@@ -38,7 +38,7 @@ mesg-core
 If your system is not listed in the block before, please go to our [GitHub release page](https://github.com/mesg-foundation/core/releases) and download the correct one.
 {% endhint %}
 
-#### Docker CE
+### Docker CE
 
 MESG also requires [Docker](https://www.docker.com/) to run on your machine.
 
@@ -52,3 +52,4 @@ If you don't have Docker installed on your machine yet, you can download it now 
 One this is done open a new terminal and type `mesg-core` and you should have something similar to this.
 
 \[\[ TODO: Insert screenshot of the command line \]\]
+
