@@ -67,7 +67,7 @@ One this is done open a new terminal and type `mesg-core` and you should have so
 
 \[\[ TODO: Insert screenshot of the command line \]\]
 
-### **2 - Run the MESG Daemon**
+### **2 - Run the MESG Core**
 
 MESG needs to have a daemon running to process all the different commands that you might need to execute. In order to start the daemon you can run:
 
