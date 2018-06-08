@@ -13,7 +13,7 @@ First, download the CLI so you're able to interact with the MESG Core. You can e
 MESG needs to have a daemon running to process all the different commands that you might need to execute. In order to start the daemon you can run:
 
 ```text
-mesg-core daemon start
+mesg-core start
 ```
 
 ### **Deploy a service**
