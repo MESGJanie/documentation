@@ -1,81 +1,91 @@
 # Quick Start Guide
 
-## Start Here
+This guide will show you steps-by-step how to create an application that sends a Discord invitation email when a webhook is called.
 
-### Installation
 
-Run the following command in a console:
+## 1. Installation
+
+Run the following command in a console to install MESG Core:
 
 ```bash
 bash <(curl -fsSL https://mesg.com/install)
 ```
 
-### **Run MESG Core**
+You can also install it manually by following [this guide](https://docs.mesg.tech/start-here/installation#manual-installation).
 
-MESG needs to have a daemon running to process all the different commands that you might need to execute. In order to start the daemon you can run:
+## 2. Run MESG Core
 
-```text
+MESG Core runs as a daemon. To start it, execute:
+
+```bash
 mesg-core start
 ```
 
-### **Deploy a service**
+## 3. Deploy the services
 
-Next step is to deploy the service that your application will need. You can [create your own service](https://docs.mesg.tech/service/what-is-a-service), but for now, let's just use an existing one and deploy it.
+You need to deploy every service your application is using.
 
-```text
-mesg-core deploy https://github.com/mesg-foundation/service-webhook
+In this guide, the application is using 2 services.
+
+Let's start by deploying the [webhook service](https://github.com/mesg-foundation/service-webhook):
+
+```bash
+mesg-core service deploy https://github.com/mesg-foundation/service-webhook
 ```
 
-Let's deploy another one.
+Now let's deploy the [invite discord service](https://github.com/mesg-foundation/service-discord-invitation):
 
-```text
-mesg-core deploy https://github.com/mesg-foundation/service-invite-discord
+```bash
+mesg-core service deploy https://github.com/mesg-foundation/service-discord-invitation
 ```
 
-Every time you deploy a service, the console will display the ID for the service you've just deployed.
+Once the service is deployed, the console displays its Service ID. The Service ID is the unique way for the application to connect to the right service through MESG Core. You'll need to use them inside the application.
 
-### **Connect the services**
+## 4. Create the application
 
-Now, let's connect these services and create our application that will send you an email with an invitation to the MESG Discord every time you call the webhook.
+Now that the services are up and running, let's create the application.
 
-```text
-npm init && npm install --save mesg
+The application is using [NodeJS](https://nodejs.org) and [NPM](https://www.npmjs.com/).
+
+Let's init the app and install the [MESG JS library](https://www.npmjs.com/package/mesg-js).
+
+```bash
+npm init && npm install --save mesg-js
 ```
 
-Now create an `index.js` file and add the following code:
+Now, let's create an `index.js` file and with the following code:
 
 ```javascript
-const MESG = require('mesg/application')
+const MESG = require('mesg-js').application()
 
-const webhook    = '__ID_SERVICE_WEBHOOK__'
-const invitation = '__ID_SERVICE_INVITATION_DISCORD__'
-const email      = '__YOUR_EMAIL_HERE__'
+const webhook    = '__ID_SERVICE_WEBHOOK__' // To replace by the Service ID of the Webhook service
+const invitation = '__ID_SERVICE_INVITATION_DISCORD__' // To replace by the Service ID of the Invite Discord service
+const email      = '__YOUR_EMAIL_HERE__' // To replace by your email
 
-MESG.ListenEvent({ serviceID: webhook, eventFilter: 'request' })
-  .on('data', data => MESG.ExecuteTask({
-    serviceID: invitation,
-    taskKey: 'invite',
-    taskData: JSON.stringify({ email })
-  }, console.log))
+MESG.whenEvent(
+  { serviceID: webhook, filter: 'request' },
+  { serviceID: invitation, taskKey: 'send', inputs: { email } },
+)
 ```
 
 Don't forget to replace the values `__ID_SERVICE_WEBHOOK__`, `__ID_SERVICE_INVITATION_DISCORD__` and `__YOUR_EMAIL_HERE__`.
 
-### **Start the application**
+## 5. Start the application
 
-Start your application now like any node application:
+Start your application like any node application:
 
-```javascript
-npm start
+```bash
+node index.js
 ```
 
-### **Test the application**
+## 6. Test the application
 
-Now we need to call the webhook in order to trigger the email, so let's do that with a curl command:
+Now let's give this super small application a try.
 
-```text
+Let's trigger the webhook with the following command:
+
+```bash
 curl -XPOST http://localhost:3000/webhook
 ```
 
-You should now have an email in your inbox with your precious invitation to our Discord.
-
+:tada: You should have received an email in your inbox with your precious invitation to our Discord.
