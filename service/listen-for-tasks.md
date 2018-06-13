@@ -255,5 +255,57 @@ MESG.listenTask({
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 {% endtab %}
+
+{% tab title="Go" %}
+{% code-tabs %}
+{% code-tabs-item title="main.go" %}
+```go
+package main
+
+import (
+	"context"
+	"encoding/json"
+	"io/ioutil"
+	"log"
+	"os"
+
+	api "github.com/mesg-foundation/core/api/service"
+	"google.golang.org/grpc"
+	yaml "gopkg.in/yaml.v2"
+)
+
+type OutputX struct {
+	Foo string
+	Bar bool
+}
+
+func main() {
+	connection, _ := grpc.Dial(os.Getenv("MESG_ENDPOINT"), grpc.WithInsecure())
+	cli := api.NewServiceClient(connection)
+
+	stream, _ := cli.ListenTask(context.Background(), &api.ListenTaskRequest{
+		Token: os.Getenv("MESG_TOKEN"),
+	})
+
+	for {
+		res, _ := stream.Recv()
+		fmt.Println("receive task", res.TaskKey, "with inputs", res.InputData)
+		
+		outputX, _ := json.Marshal(OutputX{
+			Foo: "hello",
+			Bar: false,
+		})
+		reply, _ := cli.EmitEvent(context.Background(), &api.EmitEventRequest{
+			ExecutionID: res.ExecutionID,
+			OutputKey:  "outputX",
+			OutputData: string(outputX),
+		})
+		log.Println(reply)
+	}
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+{% endtab %}
 {% endtabs %}
 
