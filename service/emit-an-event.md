@@ -85,23 +85,13 @@ Consider emitting event when the service is ready. If the service needs to synch
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- | --- | --- |
-| **service** | [Service](service-file.md) | Required | Object containing the service definition loaded from the yml service file. |
+| **token** | `String` | Required | The token given by the Core as environment variable `MESG_TOKEN` |
 | **eventKey** | `String` | Required | The event's key defined in the [service file](https://github.com/mesg-foundation/documentation/tree/c1028b6f9d709adf2ad46364ce7baaa37e27ff8e/service/service/service-file.md) |
 | **eventData** | `String` | Required | The event's data in JSON format |
 
 ```javascript
 {
-    "service": {
-      ...
-      "events": {
-        "eventX": {
-          "data": {
-            "foo": { "type": "String" }
-          }
-        }
-      },
-      ...
-    },
+    "token": "TOKEN_FROM_ENV",
     "eventKey": "eventX",
     "eventData": "{\"foo\":\"hello\",\"bar\":false}"
 }
@@ -152,9 +142,7 @@ import (
 	"log"
 	"os"
 
-
 	api "github.com/mesg-foundation/core/api/service"
-	"github.com/mesg-foundation/core/service"
 	"google.golang.org/grpc"
 	yaml "gopkg.in/yaml.v2"
 )
@@ -165,10 +153,6 @@ type EventX struct {
 }
 
 func main() {
-	content, _ := ioutil.ReadFile("./mesg.yml")
-	var service service.Service
-	yaml.UnmarshalStrict(content, &service)
-
 	connection, _ := grpc.Dial(os.Getenv("MESG_ENDPOINT"), grpc.WithInsecure())
 	cli := api.NewServiceClient(connection)
 
@@ -178,7 +162,7 @@ func main() {
 	})
 
 	reply, _ := cli.EmitEvent(context.Background(), &api.EmitEventRequest{
-		Service:   &service,
+		Token:   os.Getenv("MESG_TOKEN"),
 		EventKey:  "eventX",
 		EventData: string(eventX),
 	})

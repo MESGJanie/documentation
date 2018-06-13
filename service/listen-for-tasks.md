@@ -115,23 +115,11 @@ Consider listening for tasks when your service is ready. If your service needs t
 
 | **Name** | **Type** | **Required** | **Description** |
 | --- | --- |
-| **service** | [`Service`](service-file.md) | Required | Object containing the service definition loaded from the yml service file. |
+| **token** | `String` | Required | The token given by the Core as environment variable `MESG_TOKEN` |
 
 ```javascript
 {
-    "service": {
-      ...
-      "tasks": {
-        "taskX": {
-          "inputs": {
-            "foo": { "type": "String" },
-            "bar": { "type": "Boolean" }
-          }
-          ...
-        }
-      },
-      ...
-    }
+    "token": "TOKEN_FROM_ENV"
 }
 ```
 {% endtab %}
@@ -186,21 +174,16 @@ import (
 	"os"
 
 	api "github.com/mesg-foundation/core/api/service"
-	"github.com/mesg-foundation/core/service"
 	"google.golang.org/grpc"
 	yaml "gopkg.in/yaml.v2"
 )
 
 func main() {
-	content, _ := ioutil.ReadFile("./mesg.yml")
-	var service service.Service
-	yaml.UnmarshalStrict(content, &service)
-
 	connection, _ := grpc.Dial(os.Getenv("MESG_ENDPOINT"), grpc.WithInsecure())
 	cli := api.NewServiceClient(connection)
 
 	stream, _ := cli.ListenTask(context.Background(), &api.ListenTaskRequest{
-		Service: &service,
+		Token: os.Getenv("MESG_TOKEN"),
 	})
 
 	for {
