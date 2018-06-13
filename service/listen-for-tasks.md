@@ -14,8 +14,6 @@ To implement tasks in your Service, you need to :
 
 ## Create a Task
 
-{% tabs %}
-{% tab title="Detail" %}
 The first step is to declare the tasks that the service will be able to execute in the service's [`mesg.yml`](service-file.md) file. The events should be indexed by their ID and should describe the following attributes :
 
 | **Attribute** | **Default value** | **Type** | **Description** |
@@ -51,9 +49,7 @@ The parameter can be one of the following:
 * `Boolean`
 * `Number`
 * `Object`
-{% endtab %}
 
-{% tab title="Example" %}
 Example of a task definition in a [`mesg.yml`](https://docs.mesg.tech/service/service-file) file :
 
 {% code-tabs %}
@@ -98,8 +94,6 @@ tasks:
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-{% endtab %}
-{% endtabs %}
 
 ## Listen for task executions
 
@@ -168,31 +162,29 @@ MESG.listenTask({
 package main
 
 import (
-	"context"
-	"fmt"
-	"io/ioutil"
-	"os"
+    "context"
+    "fmt"
+    "io/ioutil"
+    "os"
 
-	api "github.com/mesg-foundation/core/api/service"
-	"google.golang.org/grpc"
-	yaml "gopkg.in/yaml.v2"
+    api "github.com/mesg-foundation/core/api/service"
+    "google.golang.org/grpc"
+    yaml "gopkg.in/yaml.v2"
 )
 
 func main() {
-	connection, _ := grpc.Dial(os.Getenv("MESG_ENDPOINT"), grpc.WithInsecure())
-	cli := api.NewServiceClient(connection)
+    connection, _ := grpc.Dial(os.Getenv("MESG_ENDPOINT"), grpc.WithInsecure())
+    cli := api.NewServiceClient(connection)
 
-	stream, _ := cli.ListenTask(context.Background(), &api.ListenTaskRequest{
-		Token: os.Getenv("MESG_TOKEN"),
-	})
+    stream, _ := cli.ListenTask(context.Background(), &api.ListenTaskRequest{
+        Token: os.Getenv("MESG_TOKEN"),
+    })
 
-	for {
-		res, _ := stream.Recv()
-		fmt.Println("receive task", res.TaskKey, "with inputs", res.InputData)
-	}
+    for {
+        res, _ := stream.Recv()
+        fmt.Println("receive task", res.TaskKey, "with inputs", res.InputData)
+    }
 }
-
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -250,7 +242,6 @@ MESG.listenTask({
 // task      inputs           outputs
   taskX: ({ foo, bar }, { outputX, outputY }) => outputX({ foo })
 })
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -263,45 +254,45 @@ MESG.listenTask({
 package main
 
 import (
-	"context"
-	"encoding/json"
-	"io/ioutil"
-	"log"
-	"os"
+    "context"
+    "encoding/json"
+    "io/ioutil"
+    "log"
+    "os"
 
-	api "github.com/mesg-foundation/core/api/service"
-	"google.golang.org/grpc"
-	yaml "gopkg.in/yaml.v2"
+    api "github.com/mesg-foundation/core/api/service"
+    "google.golang.org/grpc"
+    yaml "gopkg.in/yaml.v2"
 )
 
 type OutputX struct {
-	Foo string
-	Bar bool
+    Foo string
+    Bar bool
 }
 
 func main() {
-	connection, _ := grpc.Dial(os.Getenv("MESG_ENDPOINT"), grpc.WithInsecure())
-	cli := api.NewServiceClient(connection)
+    connection, _ := grpc.Dial(os.Getenv("MESG_ENDPOINT"), grpc.WithInsecure())
+    cli := api.NewServiceClient(connection)
 
-	stream, _ := cli.ListenTask(context.Background(), &api.ListenTaskRequest{
-		Token: os.Getenv("MESG_TOKEN"),
-	})
+    stream, _ := cli.ListenTask(context.Background(), &api.ListenTaskRequest{
+        Token: os.Getenv("MESG_TOKEN"),
+    })
 
-	for {
-		res, _ := stream.Recv()
-		fmt.Println("receive task", res.TaskKey, "with inputs", res.InputData)
-		
-		outputX, _ := json.Marshal(OutputX{
-			Foo: "hello",
-			Bar: false,
-		})
-		reply, _ := cli.SubmitResult(context.Background(), &api.SubmitResultRequest{
-			ExecutionID: res.ExecutionID,
-			OutputKey:  "outputX",
-			OutputData: string(outputX),
-		})
-		log.Println(reply)
-	}
+    for {
+        res, _ := stream.Recv()
+        fmt.Println("receive task", res.TaskKey, "with inputs", res.InputData)
+
+        outputX, _ := json.Marshal(OutputX{
+            Foo: "hello",
+            Bar: false,
+        })
+        reply, _ := cli.SubmitResult(context.Background(), &api.SubmitResultRequest{
+            ExecutionID: res.ExecutionID,
+            OutputKey:  "outputX",
+            OutputData: string(outputX),
+        })
+        log.Println(reply)
+    }
 }
 ```
 {% endcode-tabs-item %}
