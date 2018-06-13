@@ -1,12 +1,14 @@
 # Quick Start Guide
 
-**MESG is a platform for the creation of efficient and easy-to-maintain applications that connect any and all technologies.**
-
 ## Start Here
 
-### **Download the CLI**
+### Installation
 
-First, download the CLI so you're able to interact with the MESG Core. You can either download the binaries directly from the [release page](https://github.com/mesg-foundation/core/releases/latest) then rename it to `mesg-core` and install it your path, or you can follow the installation process for your system:
+Run the following command in a console:
+
+```bash
+bash <(curl -fsSL https://mesg.com/install)
+```
 
 ### **Run MESG Core**
 
