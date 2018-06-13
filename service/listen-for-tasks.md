@@ -295,7 +295,7 @@ func main() {
 			Foo: "hello",
 			Bar: false,
 		})
-		reply, _ := cli.EmitEvent(context.Background(), &api.EmitEventRequest{
+		reply, _ := cli.SubmitResult(context.Background(), &api.SubmitResultRequest{
 			ExecutionID: res.ExecutionID,
 			OutputKey:  "outputX",
 			OutputData: string(outputX),
