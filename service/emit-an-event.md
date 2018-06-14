@@ -13,8 +13,6 @@ To emit events from your Service, you'll need to:
 
 ## Event definitions
 
-{% tabs %}
-{% tab title="Definition" %}
 To create an event, the first step is to update the Service's [`mesg.yml`](service-file.md) file and add an event indexed by its key with the following attributes:
 
 | **Attribute** | **Default value** | **Type** | **Description** |
@@ -40,9 +38,9 @@ The data type can be one of the following:
 * `Boolean`
 * `Number`
 * `Object`
-{% endtab %}
 
-{% tab title="Example" %}
+### Example
+
 Example of an event definition in a [`mesg.yml`](service-file.md) file:
 
 {% code-tabs %}
@@ -68,8 +66,6 @@ events:
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-{% endtab %}
-{% endtabs %}
 
 ## Emit an Event
 
