@@ -6,7 +6,7 @@ Work in progress
 
 MESG is an open-source decentralized infrastructure which makes all technologies interoperable, including blockchains. In short, it’s a building platform for developers.
 
-Instead of individually connecting each technology to your application, you can now make a single connection to [Core](start-here/core.md) and allow Core to manage connections to all other technologies on your application's behalf. It handles the communication of information and tasks between any technologies and your application, making the creation and maintenance of dApps a breeze.  
+Instead of individually connecting each technology to your application, you can now make a single connection to [Core](start-here/core.md) and allow Core to manage connections to all other technologies on your application's behalf. It handles the communication of information and tasks between any technologies and your application, making the creation and maintenance of DApps a breeze.  
 
 This technology-agnostic architecture allows all technologies and languages to play nicely together for the first time in a decentralized way, ushering in a new era of productivity and possibilities.
 

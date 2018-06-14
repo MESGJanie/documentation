@@ -15,7 +15,7 @@ bash <(curl -fsSL https://mesg.com/install)
 * Rename the binary to `mesg-core`
 * Give it the execution permission: `chmod +x mesg-core`
 * Move it to your local bin folder: `mv ./mesg-core /usr/local/bin/mesg-core`
-* Start the MESG Core with the command: `mesg-core start`
+* Start MESG Core with the command: `mesg-core start`
 
 
 

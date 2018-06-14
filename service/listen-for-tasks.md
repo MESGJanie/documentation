@@ -6,10 +6,10 @@ The Service needs to receive a command sent by Core in order to execute any desi
 
 ## Steps to follow
 
-To implement tasks in your Service, you need to :
+To implement tasks in your Service, you'll need to :
 
 * [ ] [Add the task definition](listen-for-tasks.md#create-your-task) in the Service's [`mesg.yml`](service-file.md) file
-* [ ] [Listen for task execution](listen-for-tasks.md) from the [Core](../start-here/core.md)
+* [ ] [Listen for task's execution](listen-for-tasks.md) from the [Core](../start-here/core.md)
 * [ ] [Submit the outputs](listen-for-tasks.md#submit-outputs-of-your-execution) of the task
 
 ## Task definitions
@@ -18,8 +18,8 @@ The first step is to declare the tasks that the service will be able to execute 
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- | --- | --- |
-| **name** | `id` | `String` | Name of the task, if not set, the name will be the ID of the task. |
-| **description** | `""` | `String` | Description of the task, what the task is doing and why it is useful. |
+| **name** | `id` | `String` | Name of the task. If it is not set, the name will be the ID of the task. |
+| **description** | `""` | `String` | Description of the task: what the task is doing and why it is useful. |
 | **inputs** | `{}` | `map<id,`[`Input`](listen-for-tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of inputs that the task needs in order to be executed. |
 | **outputs** | `{}` | `map<id,`[`Outputs`](listen-for-tasks.md#outputs-data)`>` | Map of outputs that the task will emit. The task can declare multiple outputs but can only submit one output per execution. |
 | **secrets** | `{}` | `map<id,`[`Secret`](listen-for-tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of secrets that the task may need. Secrets are environmental variables that are set directly by the user. |
@@ -28,18 +28,18 @@ The first step is to declare the tasks that the service will be able to execute 
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- |
-| **name** | `id` | `String` | Name of the output, the default is the ID. |
-| **description** | `""` | `String` | A description of the output, what kind of output, and how is it useful. |
+| **name** | `id` | `String` | Name of the output. The default is the ID. |
+| **description** | `""` | `String` | A description of the output: what kind of output, and how is it useful. |
 | **data** | `{}` | `map<id,`[`Output`](listen-for-tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of the data  the output will return. |
 
 ### Input, Output and Secret parameter
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- | --- |
-| **name** | `id` | `String` | Name or the parameter, default: the ID. |
+| **name** | `id` | `String` | Name or the parameter. The default is the ID. |
 | **description** | `""` | `String` | Description of the parameter. |
 | **type** | `String` | [`Type`](listen-for-tasks.md#type-of-your-data) | Type of the parameter. |
-| **optional** | `false` | `Boolean` | If true, this parameter is considered as optional and might be empty. |
+| **optional** | `false` | `Boolean` | If true, this parameter is considered as optional and might remain empty. |
 
 ### Type of parameter {#type-of-your-data}
 
@@ -220,7 +220,7 @@ Once the task execution is finished, the Service has to send the outputs of the 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | **error** | `String` | Error during submission of the execution's output. |
-| **executionID** | `String` | The execution's id. |
+| **executionID** | `String` | The ID of the execution. |
 
 ```javascript
 {

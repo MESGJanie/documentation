@@ -7,8 +7,8 @@ Services run in Docker to provide a sandbox and a normalized environment to remo
 ## Steps to be compatible with Docker
 
 * [ ] [Create the Dockerfile](dockerize-the-service.md#create-your-dockerfile)
-* [ ] [Add a config](dockerize-the-service.md#add-dependencies) in your [`mesg.yml`](service-file.md) file if needed
-* [ ] [Add dependencies](dockerize-the-service.md#add-dependencies) in your [`mesg.yml`](service-file.md) file if needed
+* [ ] [Add a config](dockerize-the-service.md#add-dependencies) in your [`mesg.yml`](service-file.md) file, if needed
+* [ ] [Add dependencies](dockerize-the-service.md#add-dependencies) in your [`mesg.yml`](service-file.md) file, if needed
 
 ## Create the Dockerfile
 
@@ -59,7 +59,7 @@ CMD ["/app/main"]
 Configuration and dependencies are an advanced feature and your service might not need this. This is totally optional and really depends on your service needs.
 {% endhint %}
 
-Once the Service can run on Docker, [Core](../start-here/core.md) should be able to start it automatically. Update the [`mesg.yml`](service-file.md) file with the config and the optional dependencies the service needs.
+Once the Service can run on Docker, [Core](../start-here/core.md) should be able to start it automatically. Update the [`mesg.yml`](service-file.md) file with the config. and optional dependencies the service needs.
 
 The `configuration` key is a Dependency object that will be use to configure the main Docker container of the service. All Dependency attributes are available except image. The attribute `image` will be set automatically when the service is deployed.
 
@@ -73,7 +73,7 @@ If the service requires dependencies to other Docker container, specify them in 
 | **volumes** | `array[string]` | A list of [volumes](https://docs.docker.com/storage/volumes/) that will be mounted in the Service. |
 | **ports** | `array[string]` | A list of ports that the Service needs to expose. |
 | **command** | `String` | The command to run when the Service starts if not defined in your [Dockerfile](dockerize-the-service.md#create-your-dockerfile). |
-| **volumeFrom** | `array[string]` | List of dependencies' name to mount a volume from. |
+| **volumeFrom** | `array[string]` | List of dependencies' names to mount a volume from. |
 
 ### Example
 

@@ -17,8 +17,8 @@ To create an event, the first step is to update the Service's [`mesg.yml`](servi
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- |
-| **name** | `id` | `String` | Name of the event, if not set the name will be the same as the ID you choose for the event. |
-| **description** | `""` | `String` | Describe the event, what's its purpose and why users might want to use it. |
+| **name** | `id` | `String` | Name of the event. If the name is not set, it will be the same as the ID you choose for the event. |
+| **description** | `""` | `String` | Describe the event, what's its purpose is and why users would want to use it. |
 | **data** | `{}` | `map<id,`[`Data`](emit-an-event.md#data-of-your-event)`>` | The structure of the event's data. |
 
 ### Event's data
@@ -97,7 +97,7 @@ Consider emitting event when the service is ready. If the service needs to synch
 {% tab title="Reply" %}
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| **error** | `String` | A string that contains the error if any |
+| **error** | `String` | A string that contains the error, if any |
 
 ```javascript
 {
