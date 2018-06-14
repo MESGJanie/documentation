@@ -67,8 +67,8 @@ The `configuration` key is a Dependency object that will be use to configure the
 
 If the service requires dependencies to other Docker container, specify them in the `dependencies` map.
 
-{% tabs %}
-{% tab title="Detail" %}
+### Definitions
+
 | **Attribute** | **Type** | **Description** |
 | --- | --- | --- | --- | --- | --- |
 | **image** | `String` | The docker image of the Service. Only available for dependencies. |
@@ -76,9 +76,9 @@ If the service requires dependencies to other Docker container, specify them in 
 | **ports** | `array[string]` | A list of ports that the Service needs to expose. |
 | **command** | `String` | The command to run when the Service starts if not defined in your [Dockerfile](dockerize-the-service.md#create-your-dockerfile). |
 | **volumeFrom** | `array[string]` | List of dependencies' name to mount a volume from. |
-{% endtab %}
 
-{% tab title="Example" %}
+### Example
+
 {% code-tabs %}
 {% code-tabs-item title="mesg.yml" %}
 ```yaml
@@ -97,8 +97,3 @@ dependencies:
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-{% endtab %}
-{% endtabs %}
-
-
-
