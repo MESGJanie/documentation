@@ -12,7 +12,7 @@ To implement tasks in your Service, you need to :
 * [ ] [Listen for task execution](listen-for-tasks.md) from the [Core](../start-here/core.md)
 * [ ] [Submit the outputs](listen-for-tasks.md#submit-outputs-of-your-execution) of the task
 
-## Create a Task
+## Task definitions
 
 The first step is to declare the tasks that the service will be able to execute in the service's [`mesg.yml`](service-file.md) file. The events should be indexed by their ID and should describe the following attributes :
 
@@ -49,6 +49,8 @@ The parameter can be one of the following:
 * `Boolean`
 * `Number`
 * `Object`
+
+### Example
 
 Example of a task definition in a [`mesg.yml`](https://docs.mesg.tech/service/service-file) file :
 
