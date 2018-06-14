@@ -18,7 +18,7 @@ The first step is to declare the tasks that the service will be able to execute 
 
 | **Attribute** | **Default value** | **Type** | **Description** |
 | --- | --- | --- | --- | --- | --- |
-| **name** | `id` | `String` | Name of the task. If it is not set, the name will be the ID of the task. |
+| **name** | `id` | `String` | If the name of the task is not set, the name will be the ID of the task. |
 | **description** | `""` | `String` | Description of the task: what the task is doing and why it is useful. |
 | **inputs** | `{}` | `map<id,`[`Input`](listen-for-tasks.md#data-of-your-parameter-input-output-secret)`>` | Map of inputs that the task needs in order to be executed. |
 | **outputs** | `{}` | `map<id,`[`Outputs`](listen-for-tasks.md#outputs-data)`>` | Map of outputs that the task will emit. The task can declare multiple outputs but can only submit one output per execution. |
