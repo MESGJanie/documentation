@@ -1,8 +1,8 @@
 # Emit an Event
 
-## Why emit an Event? 
+## Why emit an Event?
 
-Events are emitted from a Service \(e.g.: a web server receiving a request, or a blockchain technology receiving a new transaction\). These events are emitted to achieve a desired effect or to be used as a trigger to make another task happen. Each Service has different kinds of events that you can send to Core. 
+Events are emitted from a Service \(e.g.: a web server receiving a request, or a blockchain technology receiving a new transaction\). These events are emitted to achieve a desired effect or to be used as a trigger to make another task happen. Each Service has different kinds of events that you can send to Core.
 
 ## Steps to follow
 
@@ -119,7 +119,7 @@ const MESG = require('mesg-js').service()
 MESG.emitEvent("eventX", {
   foo: "hello",
   bar: false,
-}) 
+})
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -132,44 +132,41 @@ MESG.emitEvent("eventX", {
 package main
 
 import (
-	"context"
-	"encoding/json"
-	"io/ioutil"
-	"log"
-	"os"
+    "context"
+    "encoding/json"
+    "io/ioutil"
+    "log"
+    "os"
 
-	api "github.com/mesg-foundation/core/api/service"
-	"google.golang.org/grpc"
-	yaml "gopkg.in/yaml.v2"
+    api "github.com/mesg-foundation/core/api/service"
+    "google.golang.org/grpc"
+    yaml "gopkg.in/yaml.v2"
 )
 
 type EventX struct {
-	Foo string
-	Bar bool
+    Foo string
+    Bar bool
 }
 
 func main() {
-	connection, _ := grpc.Dial(os.Getenv("MESG_ENDPOINT"), grpc.WithInsecure())
-	cli := api.NewServiceClient(connection)
+    connection, _ := grpc.Dial(os.Getenv("MESG_ENDPOINT"), grpc.WithInsecure())
+    cli := api.NewServiceClient(connection)
 
-	eventX, _ := json.Marshal(EventX{
-		Foo: "hello",
-		Bar: false,
-	})
+    eventX, _ := json.Marshal(EventX{
+        Foo: "hello",
+        Bar: false,
+    })
 
-	reply, _ := cli.EmitEvent(context.Background(), &api.EmitEventRequest{
-		Token:   os.Getenv("MESG_TOKEN"),
-		EventKey:  "eventX",
-		EventData: string(eventX),
-	})
-	log.Println(reply)
+    reply, _ := cli.EmitEvent(context.Background(), &api.EmitEventRequest{
+        Token:   os.Getenv("MESG_TOKEN"),
+        EventKey:  "eventX",
+        EventData: string(eventX),
+    })
+    log.Println(reply)
 }
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 {% endtab %}
 {% endtabs %}
-
-
 

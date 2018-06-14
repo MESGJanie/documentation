@@ -59,8 +59,6 @@ CMD ["/app/main"]
 Configuration and dependencies are an advanced feature and your service might not need this. This is totally optional and really depends on your service needs.
 {% endhint %}
 
-
-
 Once the Service can run on Docker, [Core](../start-here/core.md) should be able to start it automatically. Update the [`mesg.yml`](service-file.md) file with the config and the optional dependencies the service needs.
 
 The `configuration` key is a Dependency object that will be use to configure the main Docker container of the service. All Dependency attributes are available except image. The attribute `image` will be set automatically when the service is deployed.
@@ -97,3 +95,4 @@ dependencies:
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
