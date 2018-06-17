@@ -80,5 +80,5 @@ func main() {
 {% endtab %}
 {% endtabs %}
 
-These kind of workflows should be enough for most of use cases but if you really want to some some more complex application you can always use directly the API and keep reading the documentation.
+These kind of workflows should be enough for most use cases but if you want to create more complex applications you can connect directly to APIs and keep reading the documentation.
 
