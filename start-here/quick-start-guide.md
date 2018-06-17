@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-This guide will show you steps-by-step how to create an application that sends a Discord invitation email when a webhook is called.
+This is a step-by-step guide to create an application that sends a Discord invitation email when a webhook is called.
 
 ## 1. Installation
 
@@ -80,7 +80,7 @@ node index.js
 
 ## 6. Test the application
 
-Now let's give this super small application a try.
+Now let's give this super simple application a try.
 
 Let's trigger the webhook with the following command:
 
@@ -88,5 +88,5 @@ Let's trigger the webhook with the following command:
 curl -XPOST http://localhost:3000/webhook
 ```
 
-:tada: You should have received an email in your inbox with your precious invitation to our Discord.
+:tada: You should have received an email in your inbox with your invitation to our Discord. Come join our community. 
 
